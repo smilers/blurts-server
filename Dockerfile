@@ -1,4 +1,4 @@
-FROM node:14.17-alpine
+FROM node:14.18-alpine
 
 # Add glibc packages missing from Alpine to satisfy node-canvas, a @wdio dependency
 # https://github.com/node-gfx/node-canvas-prebuilt/issues/77
