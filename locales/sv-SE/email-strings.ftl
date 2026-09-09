@@ -1,104 +1,106 @@
-# Firefox Monitor is a product name and should not be translated.
--product-name = Firefox Monitor
-# Firefox is a brand name and should not be translated.
--brand-name = Firefox
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+## Email headers
+
+email-header-button-sign-in = Logga in
+
+## Email footers
+
+email-footer-support-heading = Frågor om { -brand-mozilla-monitor }?
+email-footer-support-content = Besök vårt <support-link>Supportcenter</support-link> för hjälp
+email-footer-trigger-transactional = Du får det här e-postmeddelandet som prenumerant på { -brand-mozilla-monitor }.
+email-footer-reason-subscriber = Du får detta automatiska e-postmeddelande som prenumerant på { -brand-mozilla-monitor }. Om du fick det av misstag krävs ingen åtgärd. För mer information, besök <support-link>{ -brand-mozilla } Support</support-link>.
+email-footer-reason-subscriber-one-time = Du har fått detta automatiska engångsmejl eftersom du prenumererar på { -brand-monitor-plus }. Du kommer inte att få några fler mejl som detta. För mer information, besök <support-link>{ -brand-mozilla } Support</support-link>.
+# Variables:
+#    $support_link (string) - The URL the user can visit for support, e.g. "https://support.mozilla.org"
+email-footer-support-content-plain = Besök vårt supportcenter för hjälp: { $support_link }
+# Variables:
+#   $hibp_link (string) - URL to Have I Been Pwned, e.g. "https://haveibeenpwned.com".
+email-footer-source-hibp-plain = Intrångsdata tillhandahålls av { -brand-HIBP }: { $hibp_link }
+email-footer-source-hibp = Intrångsdata tillhandahållen av <hibp-link>{ -brand-HIBP }</hibp-link>
+email-footer-logo-mozilla-alt = { -brand-mozilla }
+email-footer-meta-privacy-notice = Sekretess
+email-unsubscribe-link = <link_to_unsub>Avsluta prenumeration</link_to_unsub>
+# Variables:
+#   $unsub_link (string) - URL to the unsubscribe page, e.g. "https://monitor.mozilla.org/unsubscribe/...".
+email-unsubscribe-link-plain = Avsluta prenumeration: { $unsub_link }
 # Firefox Relay is a product name and should not be translated.
 -product-name-relay = Firefox Relay
 # Mozilla VPN is a product name and should not be translated.
 -product-name-vpn = Mozilla VPN
-# A Firefox Monitor Report is an emailed statement from Firefox Monitor containing a list of known data breaches where the user’s email address was found amongst the stolen data.
-firefox-monitor-report = Rapport { -product-name }
-report-date = Rapportdatum:
-email-address = E-postadress:
-# A link to legal information about mozilla products.
-legal = Juridisk information
-# Unsubscribe link in email.
-email-unsub-link = Avsluta prenumeration
-# This string appears in the footer of breach report and breach alert emails.
-# { $unsubLink } is a link to the user's dashboard where they can unsubscribe from Monitor
-# and uses the text from { email-unsub-link }. { $faqLink } is a link to the 
-# Firefox Monitor SUMO page and uses the text from { frequently-asked-questions }.
-email-footer-blurb =
-    Du får detta meddelande eftersom du anmälde dig till { -product-name } för
-    varningar. Vill du inte längre ha dessa e-postmeddelanden? { $unsubLink }. Det här är ett automatiserat e-postmeddelande. För support, besök { $faqLink }.
-# This string appears in the footer of verification emails. { $faqLink } is a link
-# to the Firefox Monitor SUMO page and uses the text from { frequently-asked-questions }.
-email-verify-footer-copy =
-    Du får detta meddelande eftersom du anmälde dig till { -product-name } för
-    varningar. Det här är ett automatiserat e-postmeddelande. För support, besök { $faqLink }.
 # Button text
 verify-email-cta = Verifiera e-postadress
-# Button text
-see-all-breaches = Se alla intrång
 # Headline of verification email
 email-link-expires = Den här länken upphör inom 24 timmar
-email-verify-blurb = Verifiera din e-postadress för att lägga till den i { -product-name } och registrera dig för intrångsvarningar.
-# Email headline
-email-found-breaches-hl = Här är din sammanfattning av tidigare dataintrång
-# Email headline
-email-breach-summary-for-email = Intrångssammanfattning för { $userEmail }
-# Email headline
-email-no-breaches-hl = { $userEmail } förekom i 0 kända dataintrång
-# Email headline
-email-alert-hl = { $userEmail } förekom i ett nytt dataintrång
+
+##
+
 # Subject line of email
 email-subject-found-breaches = { -product-name } hittade din information i dessa intrång
 # Subject line of email
 email-subject-no-breaches = { -product-name } hittade inga kända intrång
 # Subject line of email
 email-subject-verify = Verifiera din e-postadress för { -product-name }
-# { $fxmLink } is a link to Firefox Monitor and uses the text from { -product-name }.
-learn-more-about-fxm = Läs mer om { $fxmLink }
-email-sensitive-disclaimer =
-    På grund av den känsliga karaktären av detta intrång är inblandade e-postadresser inte offentligt tillgängliga.
-    Du tar emot den här varningen eftersom du är den verifierade ägaren till den här e-postadressen.
 fxm-warns-you-no-breaches =
     { -product-name } varnar dig om intrång av uppgifter som involverar din personliga information.
     Hittills har inga intrång hittats. Vi skickar en varning om din e-postadress visas i ett nytt intrång.
-fxm-warns-you-found-breaches =
-    { -product-name } varnar dig om intrång av uppgifter som involverar din personliga information.
-    Du är också registrerad för att få varningar om din e-postadress visas i ett nytt intrång.
-email-breach-alert-blurb =
-    { -product-name } varnar dig om intrång av uppgifter som involverar din personliga information.
-    Vi har precis fått uppgifter om ett dataintrång från ett annat företag.
-# List headline
-faq-list-headline = Vanliga frågor
-# Link Title
-faq-v2-1 = Jag känner inte igen detta företag eller webbplats. Varför finns jag med i detta intrång?
-# Link Title
-faq-v2-2 = Behöver jag göra någonting om ett intrång inträffade för några år sedan eller om det är ett gammalt konto?
-# Link Title
-faq-v2-3 = Jag fick reda på att jag finns med i ett dataintrång. Vad ska jag göra nu?
-# Link Title
-faq-v2-4 = Hur behandlar { -product-name } känsliga webbplatser?
-# This string contains nested markup that becomes a link to Firefox Monitor
-# later in the code. Please do not modify or remove "<a>" and "</a>".
-pre-fxa-message = <a>Skapa ett gratis { -brand-fxa }</a> och du kan lägga till upp till 15 e-postadresser.
-# Section headline
-monitor-another-email = Vill du övervaka en ny e-postadress?
-# Subject line of email
-pre-fxa-subject = En uppdatering från { -product-name }
-pre-fxa-headline = Vad förändras med { -product-name }
-pre-fxa-blurb =
-    Det här är vad som har ändrats sedan du registrerade dig för { -product-name }, tjänsten som
-    övervakar kända dataintrång för din personliga information. Vi länkar det till ditt Firefox-konto.
-pre-fxa-tout-1 = Var uppmärksam på fler intrång
-pre-fxa-p-1 =
-    <a>Skapa ett konto</a> för att övervaka upp till 15 e-postadresser för
-    dataintrång. Vi rekommenderar att du lägger till alla e-postadresser som du har använt för att skapa onlinekonton.
-pre-fxa-tout-2 = Få en översikt
-pre-fxa-p-2 =
-    Se alla dataintrång på ett ställe så att du vet vilka lösenord som ska ändras.
-    Översikten är endast tillgänglig med ett konto.
-pre-fxa-tout-3 = Fortsätt få e-postvarningar
-pre-fxa-p-3 =
-    Du kommer fortfarande att få varningar från { -product-name }. Vi berättar om din information
-    förekommer i ett nytt dataintrång.
-# Button at the bottom of pre-fxa email.
-create-account = Skapa konto
-# More security products
-more-products-headline = Skydda dig själv med fler av våra produkter
-more-products-vpn = Skydd för hela din enhet, på varje enhet.
-more-products-cta-vpn = Hämta { -product-name-vpn }
-more-products-relay = Dölj din riktiga e-postadress för att skydda din identitet.
-more-products-cta-relay = Hämta { -product-name-relay }
+
+## 2022 email template. HTML tags should not be translated, e.g. `<a>`
+
+# Have I Been Pwned attribution
+# Variables:
+#   $hibp-link-attr (String) - Link to Have I Been Pwned
+email-2022-hibp-attribution = Intrångsdata tillhandahållen av <a { $hibp-link-attr }>{ -brand-HIBP }</a>
+
+## Verification email
+
+email-verify-heading = Skydda dina data, från och med nu
+email-verify-simply-click = Klicka på länken nedan för att slutföra verifieringen av ditt konto.
+
+## Breach report
+
+email-breach-summary = Här är din sammanfattning av dataintrång
+# Variables:
+#   $email-address (string) - Email address, bolded
+email-breach-detected = Sökresultat för ditt { $email-address }-konto har upptäckt att din e-post kan ha blivit avslöjad. Vi rekommenderar att du agerar nu för att lösa detta intrång.
+email-dashboard-cta = Gå till översikten
+
+## Breach alert email
+
+email-breach-alert-all-subject = Nytt dataintrång upptäcktes
+email-breach-alert-all-preview = Vi guidar dig genom stegen för att lösa det.
+email-breach-alert-all-hero-heading = Du har varit med i ett nytt dataintrång
+email-breach-alert-all-hero-subheading = Oroa dig inte, vi kan hjälpa dig att lösa denna exponering
+email-breach-alert-all-lead = { -brand-mozilla-monitor } upptäckte följande dataintrång som inkluderar din personliga information:
+email-breach-alert-all-source-title = Källa intrång:
+email-breach-alert-all-data-points-title = Din exponerade data:
+email-breach-alert-all-next-steps-lead = Vi guidar dig steg för steg om hur du löser detta dataintrång.
+email-breach-alert-all-next-steps-cta-label = Låt oss börja
+email-breach-alert-all-next-steps-button-dashboard = Gå till översikten
+
+## Breach alert redesigned strings
+
+# $company-name is the name of the company/site that was breached.
+email-breach-alert-all-hero-heading-1 = Detaljer om dataintrång i { $company-name }
+# $company-name is the name of the company/site that was breached.
+# $breach-date is the date of the breach.
+email-breach-alert-all-lead-1 = { -brand-mozilla-monitor } hittade din information i ett dataintrång i { $company-name } den { $breach-date }. Du får den här varningen eftersom du registrerade dig för <link_to_settings>meddelanden om intrång</link_to_settings>.
+email-breach-alert-all-source-title-1 = Detaljer om intrång
+email-breach-alert-company = Företag:
+email-breach-alert-date-of-breach = Datum för intrång:
+email-breach-alert-info-exposed = Din exponerade information:
+email-breach-alert-next-steps = Nästa steg
+email-breach-alert-next-steps-description = <sign_in_link>Logga in</sign_in_link> till din { -brand-mozilla-monitor }-översikt. Vi guidar dig genom de steg som behövs för att lösa det.
+email-breach-alert-all-next-steps-button-resolve-breach-on-dashboard = Lös intrång på översikten
+email-breach-alert-faqs-title = Vanliga frågor
+email-breach-alert-faq-qn-1 = Varför får jag detta?
+email-breach-alert-faq-ans-1 = Du registrerade dig för varningar om dataintrång. <link_to_settings>Uppdatera dina inställningar</link_to_settings> när som helst i inställningarna.
+email-breach-alert-faq-qn-2 = Varför känner jag inte igen det här företaget eller webbplatsen?
+email-breach-alert-faq-ans-2 = De kan ha bytt ägare eller namn, röra ett gammalt konto eller ett som har skapats för dig eller komma från en köpt lista med exponerad personlig information.
+email-breach-alert-faq-qn-3 = Vad är en dataintrångsvarning?
+email-breach-alert-faq-ans-3 = En meddelande som { -brand-mozilla-monitor } skickar när personlig information som du övervakar avslöjas, stjäls eller kopieras utan tillstånd.
+email-breach-alert-faq-qn-4 = Vad är { -brand-mozilla-monitor }?
+email-breach-alert-faq-ans-4 = En gratis varningstjänst för dataintrång som varnar dig om dina onlinekonton har varit inblandade i ett dataintrång.

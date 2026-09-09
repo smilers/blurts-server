@@ -1,9 +1,16 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+
+# Breach Data Classes
+
+academic-records = Utdanningsopplysninger
 account-balances = Kontosaldoer
 address-book-contacts = Adressebokskontakter
 age-groups = Aldersgrupper
 ages = Aldre
+ai-prompts = AI-instrukser
 # Refers to medical appointments.
 appointments = Avtaler
 apps-installed-on-devices = Apper installert på enheter
@@ -14,7 +21,7 @@ avatars = Avatarer
 bank-account-numbers = Bankkontonummer
 beauty-ratings = Skjønnhetsvurderinger
 biometric-data = Biometriske data
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = Personopplysninger
 browser-user-agent-details = Informasjon om nettleserens brukeragent
@@ -25,21 +32,34 @@ career-levels = Karrierenivå
 cellular-network-names = Navn på mobilnettverk
 charitable-donations = Donasjoner til veldedige formål
 chat-logs = Chat-logger
+citizenship-statuses = Status for statsborgerskap
+clothing-sizes = Klesstørrelser
+comments = Kommentarer
+company-names = Firmanavn
 credit-card-cvv = CVV-koder for betalingskort
 credit-cards = Betalingskort
+credit-scores = Kredittvurderinger
 credit-status-information = Informasjon om kredittverdighet
+cryptocurrency-wallet-addresses = Adresser til kryptovaluta-lommebøker
 cryptocurrency-wallet-hashes = Hash-verdier for kryptovaluta-lommebøker
 customer-feedback = Tilbakemeldinger fra kunder
 customer-interactions = Kundesamhandling
+customer-service-comments = Kommentarer fra kundeservice
 dates-of-birth = Fødselsdatoer
 deceased-date = Dødsdato
 deceased-statuses = Status for avdøde
+# Instructions that you can set up in online shopping services to get your orders
+# delivered (e.g. deliver to a specific neighbor, entrance location, etc.).
+delivery-instructions = Leveringsinstruksjoner
 device-information = Enhetsinformasjon
 device-serial-numbers = Serienummer på enheter
 device-usage-tracking-data = Sporingsdata for bruk av enheter
+disabilities = Funksjonsnedsettelser
+display-names = Visningsnavn
 drinking-habits = Drikkevaner
 driver-s-licenses = Førerkort
 drug-habits = Narkotikavaner
+earnings = Inntekter
 eating-habits = Spisevaner
 education-levels = Utdanningsnivå
 email-addresses = E-postadresser
@@ -54,11 +74,14 @@ family-structure = Familiestruktur
 financial-investments = Finansielle investeringer
 financial-transactions = Finansielle transaksjoner
 fitness-levels = Treningsnivå
+flights-taken = Flyreiser tatt
+forum-posts = Foruminnlegg
 genders = Kjønn
 geographic-locations = Geografiske plasseringer
 government-issued-ids = ID-kort utstedt av myndighetene
 health-insurance-information = Informasjon om helseforsikring
 historical-passwords = Historiske passord
+hiv-statuses = HIV-status
 home-loan-information = Informasjon om boliglån
 home-ownership-statuses = Status for boligeierskap
 homepage-urls = Hjemmesideadresser
@@ -67,14 +90,21 @@ imsi-numbers = IMSI-nummer
 income-levels = Inntektsnivå
 instant-messenger-identities = Identiteter på Instant messenger-tjenester
 ip-addresses = IP-adresser
+iq-levels = IQ-nivåer
 job-applications = Jobbsøknader
 job-titles = Jobbtitler
-# This string refers to vehicle license plates. 
+language-preferences = Språkinnstillinger
+latitude-and-longitude-pairs = Bredde- og lengdegradskoordinater
+# This string refers to vehicle license plates.
 licence-plates = Bilskilt
 living-costs = Levekostnader
+# This string refers to financial loans.
+loan-information = Låneinformasjon
 login-histories = Innloggingshistorikk
+loyalty-program-details = Detaljer om lojalitetsprogram
 mac-addresses = MAC-adresser
 marital-statuses = Sivilstand
+military-service = Militærtjeneste
 # Mnemonic phrases are a group of words used to access the content of cryptocurrency wallets.
 mnemonic-phrases = Mnemoniske fraser
 mothers-maiden-names = Mors pikenavn
@@ -82,16 +112,22 @@ names = Navn
 nationalities = Nasjonaliteter
 net-worths = Formue
 nicknames = Kallenavn
+# no data classes found
+none-data-class = Ingen
 occupations = Yrke
+# various data classes grouped together
+other-data-class = Annet
 parenting-plans = Foreldreplaner
 partial-credit-card-data = Delvis betalingskorts-data
 partial-dates-of-birth = Delvis fødselsdatoer
+partial-government-issued-ids = Delvise offentlig utstedte ID-er
+partial-phone-numbers = Delvise telefonnumre
 passport-numbers = Passnummer
 password-hints = Passordhint
 password-strengths = Passordstyrke
 passwords = Passord
 payment-histories = Betalingshistorikk
-payment-methods = Betalingsmetoder
+payment-methods = Betalingsmåter
 personal-descriptions = Personlige beskrivelser
 personal-health-data = Personlige helsedata
 personal-interests = Personlige interesser
@@ -106,6 +142,7 @@ political-views = Politisk syn
 private-messages = Private meldinger
 professional-skills = Faglige kvalifikasjoner
 profile-photos = Profilbilder
+profile-statistics = Profilstatistikk
 purchases = Innkjøp
 purchasing-habits = Innkjøpsvaner
 races = Kappløp
@@ -118,23 +155,32 @@ school-grades-class-levels = Skolekarakterer (klassenivå)
 security-questions-and-answers = Sikkerhetsspørsmål og -svar
 sexual-fetishes = Seksuelle fetisjer
 sexual-orientations = Seksuell legning
+shipment-tracking-numbers = Sporingsnumre for forsendelser
 smoking-habits = Røykevaner
 sms-messages = SMS-meldinger
 social-connections = Sosiale forbindelser
 social-media-profiles = Profiler på sosiale medier
 social-security-numbers = Personnummer
+socioeconomic-levels = Sosioøkonomiske nivåer
 spoken-languages = Talte språk
 spouses-names = Navn på ektefeller
 support-tickets = Support-spørsmål
 survey-results = Undersøkelsesresultater
+tattoo-status = Tatoveringsstatus
 taxation-records = Skateopplysninger
+telecommunications-carrier = Teleoperatører
 time-zones = Tidssoner
 travel-habits = Reisevaner
+travel-plans = Reiseplaner
 user-statuses = Brukerstatuser
 user-website-urls = Adresser til brukernettsteder
 usernames = Brukernavn
 utility-bills = El-regninger
 vehicle-details = Informasjon om kjøretøy
+vehicle-identification-numbers-vins = Chassisnummer (VIN)
+vehicle-registration-plates = Kjøretøyets registreringsskilt
+vip-statuses = VIP-statuser
+warranty-claims = Garantikrav
 website-activity = Nettstedsaktivitet
 work-habits = Arbeidsvaner
 years-of-birth = Fødselsår

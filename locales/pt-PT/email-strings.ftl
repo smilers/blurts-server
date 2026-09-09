@@ -1,102 +1,106 @@
-# Firefox Monitor is a product name and should not be translated.
--product-name = Firefox Monitor
-# Firefox is a brand name and should not be translated.
--brand-name = Firefox
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+## Email headers
+
+email-header-button-sign-in = Iniciar sessão
+
+## Email footers
+
+email-footer-support-heading = Questões sobre o { -brand-mozilla-monitor }?
+email-footer-support-content = Visite o nosso <support-link>Centro de Apoio</support-link> para ajuda
+email-footer-trigger-transactional = Está a receber este e-mail como subscritor do { -brand-mozilla-monitor }.
+email-footer-reason-subscriber = Está a receber este email automático como subscritor do { -brand-mozilla-monitor }. Se o recebeu por erro, nenhuma ação é necessária. Para mais informação, por favor visite o <support-link>Suporte do { -brand-mozilla }</support-link>.
+email-footer-reason-subscriber-one-time = Recebeu este email automático porque subscreve o { -brand-monitor-plus }. Não irá receber mais emails como este. Para mais informação, por favor visite o <support-link>Suporte do { -brand-mozilla }</support-link>.
+# Variables:
+#    $support_link (string) - The URL the user can visit for support, e.g. "https://support.mozilla.org"
+email-footer-support-content-plain = Para ajuda visite o nosso Centro de Suporte: { $support_link }
+# Variables:
+#   $hibp_link (string) - URL to Have I Been Pwned, e.g. "https://haveibeenpwned.com".
+email-footer-source-hibp-plain = Dados de fugas de informação fornecidos por { -brand-HIBP }: { $hibp_link }
+email-footer-source-hibp = Dados de violação de dados fornecidos por <hibp-link>{ -brand-HIBP }</hibp-link>
+email-footer-logo-mozilla-alt = { -brand-mozilla }
+email-footer-meta-privacy-notice = Privacidade
+email-unsubscribe-link = <link_to_unsub>Cancelar subscrição</link_to_unsub>
+# Variables:
+#   $unsub_link (string) - URL to the unsubscribe page, e.g. "https://monitor.mozilla.org/unsubscribe/...".
+email-unsubscribe-link-plain = Cancelar a subscrição: { $unsub_link }
 # Firefox Relay is a product name and should not be translated.
 -product-name-relay = Firefox Relay
 # Mozilla VPN is a product name and should not be translated.
 -product-name-vpn = Mozilla VPN
-# A Firefox Monitor Report is an emailed statement from Firefox Monitor containing a list of known data breaches where the user’s email address was found amongst the stolen data.
-firefox-monitor-report = Relatório do { -product-name }
-report-date = Data do relatório:
-email-address = Endereço de email:
-# A link to legal information about mozilla products.
-legal = Informação legal
-# Unsubscribe link in email.
-email-unsub-link = Anular a subscrição
-# This string appears in the footer of breach report and breach alert emails.
-# { $unsubLink } is a link to the user's dashboard where they can unsubscribe from Monitor
-# and uses the text from { email-unsub-link }. { $faqLink } is a link to the 
-# Firefox Monitor SUMO page and uses the text from { frequently-asked-questions }.
-email-footer-blurb = Está a receber este e-mail porque subscreveu a alertas de { -product-name }. Não está interessado em receber estes e-mails? { $unsubLink }. Este é um e-mail automático. Para apoio, consulte as { $faqLink }.
-# This string appears in the footer of verification emails. { $faqLink } is a link
-# to the Firefox Monitor SUMO page and uses the text from { frequently-asked-questions }.
-email-verify-footer-copy =
-    Está a receber este e-mail porque subscreveu a alertas de { -product-name }. 
-    Este é um e-mail automático. Para apoio, visite { $faqLink }.
 # Button text
 verify-email-cta = Confirmar e-mail
-# Button text
-see-all-breaches = Ver todas as brechas
 # Headline of verification email
 email-link-expires = Esta ligação expira em 24 horas
-email-verify-blurb = Confirme o seu e-mail para o adicionar a { -product-name } e subscreva aos alertas de violações de dados.
-# Email headline
-email-found-breaches-hl = Eis o seu resumo para violações de dados de dados anteriores
-# Email headline
-email-breach-summary-for-email = Resumo de violações de dados para { $userEmail }
-# Email headline
-email-no-breaches-hl = { $userEmail } apareceu em 0 violações de dados conhecidas
-# Email headline
-email-alert-hl = { $userEmail } apareceu numa nova violação de dados
+
+##
+
 # Subject line of email
 email-subject-found-breaches = { -product-name } encontrou a sua informação numa destas violações de dados
 # Subject line of email
 email-subject-no-breaches = { -product-name } não encontrou violações de dados conhecidas
 # Subject line of email
 email-subject-verify = Confirme o seu e-mail para { -product-name }
-# { $fxmLink } is a link to Firefox Monitor and uses the text from { -product-name }.
-learn-more-about-fxm = Saiba mais sobre { $fxmLink }
-email-sensitive-disclaimer =
-    Devido à natureza sensível desta violação de dados, os e-mails envolvidos não são pesquisáveis publicamente. 
-    Se está a receber este alerta, isto deve-se ao facto de ser o proprietário confirmado deste endereço de e-mail.
 fxm-warns-you-no-breaches =
     O { -product-name } alerta sobre violações de dados que envolvam os seus dados pessoais. 
     Até ao momento, não foram encontradas violações de dados. Nós iremos enviar-lhe um alerta se o seu endereço de e-mail aparecer numa nova violação de dados.
-fxm-warns-you-found-breaches =
-    O { -product-name } alerta sobre violações de dados que envolvam os seus dados pessoais. 
-    Também tem ativa a subscrição ao envio de alertas se o seu endereço de e-mail for encontrado numa nova violação de dados.
-email-breach-alert-blurb =
-    O { -product-name } alerta sobre violações de dados que envolvam os seus dados pessoais. 
-    Acabámos de receber detalhes sobre uma violação de dados de outra empresa.
-# List headline
-faq-list-headline = Perguntas frequentes
-# Link Title
-faq-v2-1 = Eu não reconheço nenhuma destas empresas ou sites. Porque estou envolvido nesta violação de dados?
-# Link Title
-faq-v2-2 = Preciso de fazer alguma coisa se a violação de dados aconteceu há vários anos ou se esta é uma conta antiga?
-# Link Title
-faq-v2-3 = Acabei de descobrir que estou numa violação de dados. O que preciso de fazer a seguir?
-# Link Title
-faq-v2-4 = Como é que { -product-name } trata sites sensíveis?
-# This string contains nested markup that becomes a link to Firefox Monitor
-# later in the code. Please do not modify or remove "<a>" and "</a>".
-pre-fxa-message = <a>Crie uma { -brand-fxa } gratuitamente</a> e pode adicionar até 15 endereços de e-mail.
-# Section headline
-monitor-another-email = Quer monitorizar outro e-mail?
-# Subject line of email
-pre-fxa-subject = Uma atualização do { -product-name }
-pre-fxa-headline = O que está a mudar com o { -product-name }
-pre-fxa-blurb =
-    Aqui tem o que mudou desde que se registou no { -product-name }, o serviço que 
-    monitoriza as violações de dados conhecidas para sua informação pessoal. Nós estamos a associar o serviço às contas do Firefox.
-pre-fxa-tout-1 = Fique atento a mais violações de dados
-pre-fxa-p-1 =
-    <a>Crie uma conta</a> para monitorizar até 15 endereços de e-mail para 
-    as violações de dados. Nós recomendamos que adicione quaisquer endereços de e-mail que utilizou para criar contas na Internet.
-pre-fxa-tout-2 = Obter uma visualização do painel
-pre-fxa-p-2 =
-    Consulte todas as violações de dados num único local, para saber quais as palavras-passe a alterar. 
-    O painel de violações de dados só está disponível com uma conta.
-pre-fxa-tout-3 = Continue a receber alertas por e-mail
-pre-fxa-p-3 =
-    Irá continuar a receber alertas do { -product-name }. Nós iremos informá-lo 
-    se a sua informação aparecer numa nova violação de dados.
-# Button at the bottom of pre-fxa email.
-create-account = Criar conta
-# More security products
-more-products-headline = Proteja-se com mais produtos nossos
-more-products-vpn = Proteção completa para o seu dispositivo, em todos os dispositivos.
-more-products-cta-vpn = Obter a { -product-name-vpn }
-more-products-relay = Oculte o seu endereço de e-mail real para ajudar a proteger sua identidade.
-more-products-cta-relay = Obter o { -product-name-relay }
+
+## 2022 email template. HTML tags should not be translated, e.g. `<a>`
+
+# Have I Been Pwned attribution
+# Variables:
+#   $hibp-link-attr (String) - Link to Have I Been Pwned
+email-2022-hibp-attribution = Dados de violação de dados fornecidos por <a { $hibp-link-attr }>{ -brand-HIBP }</a>
+
+## Verification email
+
+email-verify-heading = Proteja os seus dados, a partir de agora
+email-verify-simply-click = Basta clicar na ligação abaixo para concluir a confirmação da sua conta.
+
+## Breach report
+
+email-breach-summary = Eis o resumo da sua violação de dados
+# Variables:
+#   $email-address (string) - Email address, bolded
+email-breach-detected = Os resultados da pesquisa para a sua conta { $email-address } detetaram que o seu e-mail pode ter sido exposto. Recomendamos que atue imediatamente para resolver esta violação de dados.
+email-dashboard-cta = Ir para o painel
+
+## Breach alert email
+
+email-breach-alert-all-subject = Nova violação de dados detetada
+email-breach-alert-all-preview = Iremos apoiar, passo a passo, na resolução da mesma.
+email-breach-alert-all-hero-heading = Esteve numa nova violação de dados
+email-breach-alert-all-hero-subheading = Não se preocupe, nós podemos ajudar a resolver esta exposição
+email-breach-alert-all-lead = O { -brand-mozilla-monitor } descobriu a seguinte violação de dados que inclui a sua informação pessoal:
+email-breach-alert-all-source-title = Fonte da violação de dados
+email-breach-alert-all-data-points-title = Os seus dados expostos:
+email-breach-alert-all-next-steps-lead = Iremos apoiar, passo a passo, na forma para resolver esta violação de dados.
+email-breach-alert-all-next-steps-cta-label = Vamos começar
+email-breach-alert-all-next-steps-button-dashboard = Ir para o painel
+
+## Breach alert redesigned strings
+
+# $company-name is the name of the company/site that was breached.
+email-breach-alert-all-hero-heading-1 = { $company-name } detalhes da violação de dados
+# $company-name is the name of the company/site that was breached.
+# $breach-date is the date of the breach.
+email-breach-alert-all-lead-1 = { -brand-mozilla-monitor } encontrou a sua informação numa violação de dados { $company-name } em { $breach-date }. Está a receber este alerta porque subscreveu às <link_to_settings>notificações de violação de dados</link_to_settings>.
+email-breach-alert-all-source-title-1 = Detalhes da violação de dados
+email-breach-alert-company = Empresa:
+email-breach-alert-date-of-breach = Data da violação de dados:
+email-breach-alert-info-exposed = A sua informação exposta:
+email-breach-alert-next-steps = Passos seguintes
+email-breach-alert-next-steps-description = <sign_in_link>Inicie sessão</sign_in_link> no seu painel { -brand-mozilla-monitor }. Iremos guiar-lhe através dos passos necessários para o resolver.
+email-breach-alert-all-next-steps-button-resolve-breach-on-dashboard = Resolver violação de dados no painel
+email-breach-alert-faqs-title = Perguntas frequentes
+email-breach-alert-faq-qn-1 = Porque é que estou a receber isto?
+email-breach-alert-faq-ans-1 = Inscreveu-se para alertas de violações de dados. <link_to_settings>Atualize as suas preferências</link_to_settings> a qualquer momento nas definições.
+email-breach-alert-faq-qn-2 = Porque é que não reconheço esta empresa ou site?
+email-breach-alert-faq-ans-2 = Pode ter alterado a propriedade ou o nome, envolver uma conta antiga ou uma que foi criada para si, ou vir de uma lista comprada de informação pessoal exposta.
+email-breach-alert-faq-qn-3 = O que é um alerta de violação de dados?
+email-breach-alert-faq-ans-3 = Uma notificação que o { -brand-mozilla-monitor } envia quando uma informação pessoal que está a monitorizar é exposta, roubada ou copiada sem permissão.
+email-breach-alert-faq-qn-4 = O que é o { -brand-mozilla-monitor }?
+email-breach-alert-faq-ans-4 = Um serviço gratuito de notificação de violações de dados que avisa se as suas contas online estiveram envolvidas numa violação de dados.

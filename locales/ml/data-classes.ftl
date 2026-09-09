@@ -1,4 +1,9 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+# Breach Data Classes
 
 account-balances = അക്കൗണ്ട് ബാലൻസുകൾ
 address-book-contacts = വിലാസപുസ്തകത്തിലെ സമ്പർക്കങ്ങൾ
@@ -46,7 +51,7 @@ genders = ലിംഗഭേദങ്ങള്‍
 geographic-locations = സ്ഥലങ്ങള്‍
 government-issued-ids = ഗവൺമെന്റ് ഐഡികൾ
 health-insurance-information = ആരോഗ്യ ഇൻഷ്വറൻസ് വിവരങ്ങൾ
-historical-passwords = പഴയ രഹസ്യവാക്കുകള്‍
+historical-passwords = പഴയ ഒളിവാക്കുകള്‍
 home-loan-information = ഭവന വായ്പ വിവരം
 home-ownership-statuses = വീട്ടുടമസ്ഥാവകാശ നിലകള്‍
 homepage-urls = പൂമുഖത്തെ URL കൾ
@@ -56,18 +61,23 @@ income-levels = വരുമാന നിലകൾ
 instant-messenger-identities = ഇന്‍സ്റ്റന്റ് മെസഞ്ചർ വ്യക്തിത്വങ്ങള്‍
 ip-addresses = ഐപി വിലാസങ്ങള്‍
 job-titles = ജോലിയുടെ പദവികള്‍
+login-histories = പ്രവേശന നാൾവഴി
 mac-addresses = MAC വിലാസങ്ങൾ
 marital-statuses = വൈവാഹിക നിലകൾ
 names = പേരുകൾ
 nationalities = ദേശീയതകള്‍
 net-worths = മൊത്തം മൂല്യങ്ങൾ
 nicknames = വട്ടപേരുകള്‍
+# no data classes found
+none-data-class = ഒരെണ്ണവുമല്ല
 occupations = തൊഴിലുകൾ
+# various data classes grouped together
+other-data-class = മറ്റുള്ളവ
 parenting-plans = രക്ഷാകർതൃ പദ്ധതികൾ
 partial-credit-card-data = ഭാഗിക ക്രെഡിറ്റ് കാർഡ് ഡാറ്റ
 passport-numbers = പാസ്പോർട്ട് നമ്പറുകൾ
-password-hints = രഹസ്യവാക്കിന്റെ സൂചനകൾ
-passwords = രഹസ്യവാക്കുകൾ
+password-hints = ഒളിവാക്കിന്റെ സൂചനകൾ
+passwords = ഒളിവാക്കുകൾ
 payment-histories = പേയ്മെന്റ് നാള്‍വഴികള്‍
 payment-methods = പേയ്മെന്റ് രീതികൾ
 personal-descriptions = വ്യക്തിഗത വിവരണങ്ങൾ

@@ -1,15 +1,17 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
 # Recommendation subhead
-rec-ssn-subhead = Preglejte svoja kreditna poročila
+rec-ssn-subhead = Preglejte svoja poročila o dobroimetju
 # Link title
-rec-ssn-cta = Zahtevajte kreditna poročila
+rec-ssn-cta = Zahtevajte poročila o dobroimetju
+rec-ssn = Po zakonu letno prejmete tri brezplačna poročila o dobroimetju. Zahteve in pregledi poročil ne vplivajo na vaše dobroimetje. Poiščite račune, posojila ali kreditne kartice, ki jih ne prepoznate.
 # Recommendation subhead
 rec-pw-1-subhead = Spremenite svoje geslo
 # Link title
 rec-pw-1-cta = Spremeni geslo za to stran
-rec-pw-1 =
-    Geslo naj bo edinstveno in različno od ostalih, ki jih uporabljate. 
-    Dobra strategija je združiti dve ali več nepovezanih
-    besed za ustvarjanje celotnega gesla.
+rec-pw-1-2 = Naj bo to geslo edinstveno in drugačno od ostalih, ki jih uporabljate. Dobra strategija je, da dve ali več nepovezanih besed združite v besedno zvezo, ki ji dodate številke in simbole.
 # Recommendation subhead
 rec-pw-2-subhead = Posodobite druge prijave z enakim geslom
 # Link title
@@ -23,10 +25,10 @@ rec-pw-3-subhead = Uporabite upravitelja gesel in vzemite gesla s seboj
 rec-pw-3-cta = Prenesite { -brand-lockwise }
 rec-pw-3-fx = Uporabite { -brand-lockwise } za varen dostop do gesel, ki ste jih shranili v { -brand-name } od koder koli – tudi izven brskalnika.
 rec-pw-3-non-fx =
-    Uporabite { -brand-lockwise } za sledenje vseh različnih 
-    gesel in varno dostopajte do njih na telefonu ali tablici.
+    Uporabite { -brand-lockwise } za spremljanje vseh različnih 
+    gesel in jih varno uporabljajte na telefonu ali tablici.
 # Recommendation subhead
-rec-pw-4-subhead = Nastavite dvofaktorsko overjanje (2FA)
+rec-pw-4-subhead = Nastavite dvostopenjsko overjanje (2FA)
 # Link title
 rec-pw-4-cta = Oglejte si strani, ki ponujajo 2FA
 rec-pw-4 =
@@ -44,30 +46,20 @@ rec-cc =
     Bodite pozorni na nenavadne stroške svoje kreditne kartice. Morda boste želeli 
     pri izdajatelju kartice zahtevati novo številko kartice.
 # Recommendation subhead
-rec-email-subhead = Uporabljajte pomožne e-poštne naslove
+rec-email-mask-subhead = Uporabite e-poštno masko
 rec-email-cta = Preskusite { -brand-relay }
 rec-email =
     Izpostavljenost vašega pravega e-poštnega naslova olajšuje napadalcem, da
     odkrijejo vaša gesla ali se na spletu spravijo na vas. Storitev, kot je { -brand-relay },
     skrije vaš pravi e-poštni naslov, sporočila pa posreduje v vaš poštni predal.
 # Recommendation subhead
-rec-ip-subhead = Uporabite storitev, ki prikrije vaš IP-naslov.
-# Link title
-rec-ip-us-cta = Preskusite { -brand-fpn }
-rec-ip-us =
-    Vaš naslov internetnega protokola (naslov IP) natančno določa vašo lokacijo 
-    in ponudnika internetnih storitev. Storitev kot je { -brand-fpn } 
-    prikrije vaš naslov IP, da skrije vašo lokacijo.
-rec-ip-non-us =
-    Vaš naslov internetnega protokola (naslov IP) natančno določa vašo lokacijo 
-    in ponudnika internetnih storitev. Z uporabo navideznega zasebnega omrežja (VPN) lahko skrijete vašo lokacijo 
-    in prikrijete vaš naslov IP.
+rec-ip-subhead-2 = Skrijte svoj naslov IP z omrežjem VPN
 # Recommendation subhead
 rec-moz-vpn-cta = Poskusite { -brand-mozilla-vpn }
-rec-moz-vpn =
-    Vaš naslov IP (internetni protokol) lahko razkrije vašo lokacijo in ponudnika internetnih storitev. Storitev, kot je
-    { -brand-fpn }, skrije vaš naslov IP in lokacijo za { -brand-name }, storitev, kot je { -brand-mozilla-vpn }, pa skrije vaš
-    IP in lokacijo za celotno napravo.
+rec-moz-vpn-update-2 =
+    Iz naslova internetnega protokola (IP) je mogoče razbrati vašo lokacijo
+    in ponudnika internetnih storitev. Storitev, kot je { -brand-mozilla-vpn },
+    prikrije vaš naslov IP in zakrije vašo lokacijo.
 rec-hist-pw-subhead = Izogibajte se ponovni uporabi gesel
 # Link title
 rec-hist-pw-cta-fx = Oglejte si prijave v { -brand-name }
@@ -114,7 +106,7 @@ rec-gen-2-subhead = Gesla shranjujte na varno mesto
 rec-gen-2-cta = Zmote o upraviteljih gesel
 rec-gen-2 =
     Podatke za prijavo shranite na varno mesto, do katerega lahko dostopate le vi, npr. v
-    upravitelja gesel. Tako boste lahko tudi hitreje sledili vsem različnim geslom.
+    upravitelja gesel. Tako boste lahko tudi hitreje spremljati vsa svoja gesla.
 # Recommendation subhead
 rec-gen-3-subhead = Bodite previdni pri posredovanju osebnih podatkov
 # Link title

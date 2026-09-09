@@ -1,0 +1,66 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+# Settings page
+
+settings-page-title = Rregullime { -product-short-name }-i
+
+## Breach alert preferences
+
+settings-alert-email-preferences-title = Parapëlqime email-i
+settings-alert-email-preferences-subtitle = Na thoni cilët email-e do të donit të merrnit.
+settings-alert-preferences-allow-breach-alerts-title = Sinjalizime të menjëhershme cenimesh
+settings-alert-preferences-allow-breach-alerts-subtitle = Këto sinjalizime dërgohen menjëherë, sapo të jetë pikasur një cenim të dhënash
+settings-alert-preferences-option-one = Dërgo sinjalizime shkeljesh te adresa email e prekur
+settings-alert-preferences-option-two = Dërgoji krejt sinjalizimet mbi cenime te adresa parësore email
+
+## Monitored email addresses
+
+settings-email-verification-callout = Lypset verifikim email-i
+settings-remove-email-button-label = Hiqe
+settings-email-addresses-header = Adresa email
+settings-email-addresses-description = { -brand-monitor } do t’ju sinjalizojë, nëse këta email-e shfaqen në cenime të njohura.
+settings-email-addresses-add-email-button = Shtoni adresë email
+# Variables:
+#   $limit (number) - Number of emails that can be added for monitoring.
+settings-email-addresses-add-email-indicator-limit = Shtoni deri në { $limit }
+settings-email-addresses-add-email-resend-button-label = Ridërgo lidhje verifikimi
+input-error-alt = Gabim
+
+## Email address dialog
+
+settings-email-addresses-initial-dialog-header = Shtoni një adresë email
+settings-email-addresses-initial-dialog-description = Do t’ju dërgojmë një lidhje verifikimi që të ripohoni se dëshironi të përfshihet në një kontroll të ardhshëm nga { -brand-monitor }.
+settings-email-addresses-initial-dialog-add-email-input-label = Jepni adresë email
+settings-email-addresses-initial-dialog-add-email-button-label = Dërgo lidhje verifikimi
+# Variables:
+#   $email (string) - Email address the confirmation has been sent to.
+settings-email-addresses-confirmation-dialog-header = Lidhja e verifikimit u dërgua te <b>{ $email }</b>
+settings-email-addresses-confirmation-dialog-description = Hapeni këtë lidhje që të shtohet te kjo llogari për kontrolle të ardhshëm nga { -brand-monitor }.
+settings-email-addresses-confirmation-dialog-close-button = Mbylle
+
+## Delete Monitor account
+
+settings-delete-monitor-free-account-title = Fshije llogarinë { -brand-monitor }
+settings-delete-monitor-free-account-description = Kjo do të fshijë përgjithnjë llogarinë tuaj { -brand-monitor } dhe do të çaktivizojë krejt njoftimet.
+settings-delete-monitor-free-account-cta-label = Fshije llogarinë
+settings-delete-monitor-free-account-dialog-title = Llogaria juaj { -brand-monitor } do të fshihet përgjithnjë
+settings-delete-monitor-free-account-dialog-lead-v2 = Krejt informacioni i llogarisë tuaj { -brand-monitor } do të fshihet dhe s’do të mbikëqyrim më për cenime të reja të dhënash. Kjo s’do të fshijë llogarinë tuaj { -brand-mozilla-account }.
+settings-delete-monitor-free-account-dialog-cta-label = Fshije llogarinë
+settings-delete-monitor-free-account-dialog-cancel-button-label = S’prish punë, kthemëni
+settings-delete-monitor-account-confirmation-toast-label-2 = Llogaria juaj { -brand-monitor } tani është fshirë.
+settings-delete-monitor-account-confirmation-toast-dismiss-label = Hidhe tej
+
+## Settings page redesign
+
+# Label for a navigation bar link to settings for updating the users scan profile info – “update” is used as a verb.
+settings-tab-label-update-scan-info = Përditësoni të dhëna kontrolli
+settings-tab-label-edit-info = Përpunoni hollësitë tuaja
+settings-tab-label-notifications = Ujdisni njoftime
+settings-tab-label-manage-account = Administroni llogarinë
+settings-tab-subtitle-manage-account = Administroni llogarinë tuaj { -product-name }.
+settings-tab-notifications-marketing-title = Komunikime marketingu
+settings-tab-notifications-marketing-text = Përditësime periodike rreth { -brand-monitor }, { -brand-mozilla }-s dhe të tjera produktesh tona për sigurinë.
+settings-tab-notifications-marketing-link-label = Kaloni te rregullime { -brand-mozilla } email-i

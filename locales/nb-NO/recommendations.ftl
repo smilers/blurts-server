@@ -1,3 +1,7 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
 # Recommendation subhead
 rec-ssn-subhead = Gå gjennom kredittrapportene dine
 # Link title
@@ -5,15 +9,15 @@ rec-ssn-cta = Be om kredittrapporter
 rec-ssn =
     Du får tre gratis kredittrapporter i året ved lov. 
     Å be om og gjennomgå dem påvirker ikke kreditten din. 
-    Se etter kontoer, lån eller kredittkort du ikke kjenner igjen.
+    Se etter kontoer, lån eller betalingskort du ikke kjenner igjen.
 # Recommendation subhead
 rec-pw-1-subhead = Endre passordet ditt
 # Link title
 rec-pw-1-cta = Endre passord for dette nettstedet
-rec-pw-1 =
+rec-pw-1-2 =
     Gjør dette passordet unikt og forskjellig fra alle de andre du bruker. 
     En god strategi å følge er å kombinere to eller flere ubeslektede 
-    ord for å lage en hel passordfrase.
+    ord for å lage en hel passordfrase og inkluder tall og symboler.
 # Recommendation subhead
 rec-pw-2-subhead = Oppdater andre innlogginger som bruker det samme passordet
 # Link title
@@ -45,35 +49,25 @@ rec-bank-acc =
     Kontroller kontoutskriftene dine for mistenkelig aktivitet eller uvanlig 
     kostnader. Gi beskjed til banken din hvis du ser noe du ikke kjenner igjen
 # Recommendation subhead
-rec-cc-subhead = Overvåk kredittkortkontoutskriftene dine
+rec-cc-subhead = Overvåk betalingskortkontoutskriftene dine
 rec-cc =
-    Se opp for merkelige kostnader på kredittkortet ditt. Det kan være lurt 
-    å be om et nytt kort med et nytt nummer fra kredittkortutstederen din.
+    Se opp for merkelige kostnader på betalingskortet ditt. Det kan være lurt 
+    å be om et nytt kort med et nytt nummer fra betalingskortutstederen din.
 # Recommendation subhead
-rec-email-subhead = Bruk e-postaliaser
+rec-email-mask-subhead = Masker din e-postadresse
 rec-email-cta = Prøv { -brand-relay }
 rec-email =
     Å gi ut din virkelige e-postadresse gjør det lettere for hackere eller sporere å
     finn passordene dine eller følge deg på deg på nettet. En tjeneste som { -brand-relay }
     skjuler din virkelige e-postadresse mens du videresender e-post til den virkelige innboksen din.
 # Recommendation subhead
-rec-ip-subhead = Bruk en tjeneste som maskerer din IP-adresse
-# Link title
-rec-ip-us-cta = Prøv { -brand-fpn }
-rec-ip-us =
-    Din Internet Protocol-adresse (IP-adresse) kan si noe om hvor du befinner deg 
-    og din internettleverandør. En tjeneste som { -brand-fpn } 
-    maskerer IP-adressen din for å skjule plasseringen din.
-rec-ip-non-us =
-    Din Internet Protocol-adresse (IP-adresse) kan si noe om hvor du befinner deg 
-    og din internettleverandør. Med et virtuelt privat nettverk (VPN) kan du skjule posisjonen din
-    og maskere din IP-adresse.
+rec-ip-subhead-2 = Bruk et VPN for å skjule IP-adressen din
 # Recommendation subhead
 rec-moz-vpn-cta = Prøv { -brand-mozilla-vpn }
-rec-moz-vpn-update =
-    Din Internet Protocol-adresse (IP-adresse) kan avsløre hvor du befinner deg 
-    og din internettleverandør. En tjeneste som { -brand-mozilla-vpn }
-    skjuler IP-adressen og plasseringen din for hele enheten.
+rec-moz-vpn-update-2 =
+    Din Internet Protocol-adresse (IP-adresse) kan si noe om hvor du befinner deg 
+    og din internettleverandør. En tjeneste som { -brand-mozilla-vpn } 
+    maskerer IP-adressen din for å skjule plasseringen din.
 rec-hist-pw-subhead = Unngå å bruke passord på nytt
 # Link title
 rec-hist-pw-cta-fx = Se innlogginger i { -brand-name }

@@ -1,9 +1,16 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+
+# Breach Data Classes
+
+academic-records = Akademik kayıtlar
 account-balances = Hesap bakiyeleri
 address-book-contacts = Adres defteri kişileri
 age-groups = Yaş grupları
 ages = Yaşlar
+ai-prompts = Yapay zekâ istemleri
 # Refers to medical appointments.
 appointments = Randevular
 apps-installed-on-devices = Cihazlarda yüklü uygulamalar
@@ -14,7 +21,7 @@ avatars = Avatarlar
 bank-account-numbers = Banka hesap numaraları
 beauty-ratings = Güzellik derecelendirmeleri
 biometric-data = Biyometrik veriler
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = Biyografiler
 browser-user-agent-details = Tarayıcı istemcisi ayrıntıları
@@ -25,21 +32,34 @@ career-levels = Kariyer seviyeleri
 cellular-network-names = Hücresel şebeke adları
 charitable-donations = Bağışlar
 chat-logs = Sohbet kayıtları
+citizenship-statuses = Vatandaşlık durumları
+clothing-sizes = Kıyafet bedenleri
+comments = Yorumlar
+company-names = Şirket adları
 credit-card-cvv = Kredi kartı CVV
 credit-cards = Kredi kartları
+credit-scores = Kredi notları
 credit-status-information = Kredi durumu bilgisi
+cryptocurrency-wallet-addresses = Kripto para cüzdan adresleri
 cryptocurrency-wallet-hashes = Kripto para cüzdan hash'leri
 customer-feedback = Müşteri görüşleri
 customer-interactions = Müşteri etkileşimleri
+customer-service-comments = Müşteri hizmetleri yorumları
 dates-of-birth = Doğum tarihleri
 deceased-date = Ölüm tarihi
 deceased-statuses = Ölüm durumları
+# Instructions that you can set up in online shopping services to get your orders
+# delivered (e.g. deliver to a specific neighbor, entrance location, etc.).
+delivery-instructions = Teslimat talimatları
 device-information = Cihaz bilgileri
 device-serial-numbers = Cihaz seri numaraları
 device-usage-tracking-data = Cihaz kullanımı izleme verileri
+disabilities = Engellilik kayıtları
+display-names = Görünen adlar
 drinking-habits = İçki alışkanlıkları
 driver-s-licenses = Sürücü belgeleri
 drug-habits = İlaç alışkanlıkları
+earnings = Kazançlar
 eating-habits = Yeme alışkanlıkları
 education-levels = Eğitim seviyeleri
 email-addresses = E-posta adresleri
@@ -54,11 +74,14 @@ family-structure = Aile yapısı
 financial-investments = Finansal yatırımlar
 financial-transactions = Finansal işlemler
 fitness-levels = Fitness seviyeleri
+flights-taken = Uçuşlar
+forum-posts = Forum mesajları
 genders = Cinsiyetler
 geographic-locations = Coğrafi konumlar
 government-issued-ids = Devlet tarafından verilen kimlikler
 health-insurance-information = Sağlık sigortası bilgisi
 historical-passwords = Eski parolalar
+hiv-statuses = HIV durumları
 home-loan-information = Ev kredisi bilgileri
 home-ownership-statuses = Ev sahipliği durumları
 homepage-urls = Web sitesi adresleri
@@ -67,14 +90,21 @@ imsi-numbers = IMSI numaraları
 income-levels = Gelir seviyeleri
 instant-messenger-identities = Anlık mesajlaşma kimlikleri
 ip-addresses = IP adresleri
+iq-levels = IQ seviyeleri
 job-applications = İş başvuruları
 job-titles = İş unvanları
-# This string refers to vehicle license plates. 
+language-preferences = Dil tercihleri
+latitude-and-longitude-pairs = Enlem ve boylam çiftleri
+# This string refers to vehicle license plates.
 licence-plates = Plaka numaraları
 living-costs = Yaşam maliyetleri
+# This string refers to financial loans.
+loan-information = Kredi bilgileri
 login-histories = Giriş geçmişleri
+loyalty-program-details = Sadakat programı ayrıntıları
 mac-addresses = MAC adresleri
 marital-statuses = Medeni durumları
+military-service = Askerlik hizmeti
 # Mnemonic phrases are a group of words used to access the content of cryptocurrency wallets.
 mnemonic-phrases = Anımsatıcı ifadeler
 mothers-maiden-names = Annenin kızlık soyadları
@@ -82,10 +112,16 @@ names = İsimler
 nationalities = Uyruklar
 net-worths = Net değerler
 nicknames = Takma adlar
+# no data classes found
+none-data-class = Yok
 occupations = Meslekler
+# various data classes grouped together
+other-data-class = Diğer
 parenting-plans = Ebeveynlik planları
 partial-credit-card-data = Kısmi kredi kartı verileri
 partial-dates-of-birth = Kısmi doğum tarihleri
+partial-government-issued-ids = Devlet tarafından verilen kimlikler (kısmi)
+partial-phone-numbers = Kısmi telefon numaraları
 passport-numbers = Pasaport numaraları
 password-hints = Parola ipuçları
 password-strengths = Parola güçleri
@@ -106,6 +142,7 @@ political-views = Siyasi görüşler
 private-messages = Özel mesajlar
 professional-skills = Profesyonel yetenekler
 profile-photos = Profil fotoğrafları
+profile-statistics = Profil istatistikleri
 purchases = Satın almalar
 purchasing-habits = Satın alma alışkanlıkları
 races = Irklar
@@ -118,23 +155,32 @@ school-grades-class-levels = Okul notları (sınıf seviyeleri)
 security-questions-and-answers = Güvenlik soruları ve yanıtları
 sexual-fetishes = Cinsel fetişler
 sexual-orientations = Cinsel yönelimler
+shipment-tracking-numbers = Gönderi takip numaraları
 smoking-habits = Sigara alışkanlıkları
 sms-messages = SMS mesajları
 social-connections = Sosyal bağlantılar
 social-media-profiles = Sosyal medya profilleri
 social-security-numbers = Sosyal güvenlik numaraları
+socioeconomic-levels = Sosyoekonomik seviyeler
 spoken-languages = Konuşulan diller
 spouses-names = Eşlerin adları
 support-tickets = Destek talepleri
 survey-results = Anket sonuçları
+tattoo-status = Dövme durumu
 taxation-records = Vergi kayıtları
+telecommunications-carrier = Telekomünikasyon operatörleri
 time-zones = Saat dilimleri
 travel-habits = Seyahat alışkanlıkları
+travel-plans = Seyahat planları
 user-statuses = Kullanıcı durumları
 user-website-urls = Kullanıcı web sitesi adresleri
 usernames = Kullanıcı adları
 utility-bills = Hizmet faturaları
 vehicle-details = Taşıt ayrıntıları
+vehicle-identification-numbers-vins = Araç şasi numaraları (VIN’ler)
+vehicle-registration-plates = Taşıt plakaları
+vip-statuses = VIP durumları
+warranty-claims = Garanti talepleri
 website-activity = Web sitesi etkinliği
 work-habits = İş alışkanlıkları
 years-of-birth = Doğum yılları

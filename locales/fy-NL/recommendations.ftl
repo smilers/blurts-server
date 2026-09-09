@@ -1,3 +1,7 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
 # Recommendation subhead
 rec-ssn-subhead = Besjoch jo creditkaartoersjoch
 # Link title
@@ -10,10 +14,10 @@ rec-ssn =
 rec-pw-1-subhead = Jo wachtwurd wizigje
 # Link title
 rec-pw-1-cta = Wachtwurd foar dizze website wizigje
-rec-pw-1 =
+rec-pw-1-2 =
     Meitsje dit wachtwurd unyk en oars dan oare dy’t jo brûke. 
     In goede te folgjen strategy is om twa of mear net-ferwante wurden te kombinearjen 
-    om in folsleine wachtwurdsin te meitsjen.
+    om in folsleine wachtwurdsin te meitsjen en sifers en symboalen op te nimmen.
 # Recommendation subhead
 rec-pw-2-subhead = Wurkje oare oanmeldingen mei itselde wachtwurd by
 # Link title
@@ -50,29 +54,20 @@ rec-cc =
     Let op frjemde kosten op jo creditcard. Jo wolle miskien 
     in nije kaart mei in nij nûmer oanfreegje by jo creditcardmaatskippij.
 # Recommendation subhead
-rec-email-subhead = E-mailaliassen brûke
+rec-email-mask-subhead = In e-mailmasker brûke
 rec-email-cta = { -brand-relay } probearje
 rec-email =
     Troch jo echte e-mailadres te jaan, meitsje jo it makliker foar hackers of trackers om
     jo wachtwurden te finen of jo online op it harspit nimme. In tsjinst as { -brand-relay }
-    ferberget jo echte e-mailadres en stjoert e-mailberjochten troch nei jo echte postfek.
+    ferberget jo wiere e-mailadres en stjoert e-mailberjochten troch nei jo wiere postfek.
 # Recommendation subhead
-rec-ip-subhead = Brûk in tsjinst dy’t jo IP-adres maskearret
-# Link title
-rec-ip-us-cta = { -brand-fpn } probearje
-rec-ip-us =
-    Jo Internet Protocol-adres (IP-adres) bringt jo lokaasje  
-    en ynternetprovider oan it ljocht. In tsjinst as { -brand-fpn } 
-    maskearret jo IP-adres om jo lokaasje te ferbergjen.
-rec-ip-non-us =
-    Jo Internet Protocol-adres (IP-adres) bringt jo lokaasje 
-    en ynternetprovider oan it ljocht. Mei in firtueel partikulier netwurk (VPN) kinne jo jo lokaasje ferbergje 
-    en jo IP-adres maskearje.
+rec-ip-subhead-2 = Brûk in VPN om jo IP-adres te maskearjen
 # Recommendation subhead
 rec-moz-vpn-cta = Probearje { -brand-mozilla-vpn }
-rec-moz-vpn-update =
-    Jo Internet Protocol-adres (IP-adres) kin jo lokaasje en ynternetprovider oan it ljocht bringe. In tsjinst as { -brand-mozilla-vpn } 
-    maskearret jo IP-adres en foar jo folsleine apparaat.
+rec-moz-vpn-update-2 =
+    Jo Internet Protocol-adres (IP-adres) bringt jo lokaasje  
+    en ynternetprovider oan it ljocht. In tsjinst as { -brand-mozilla-vpn }
+    maskearret jo IP-adres om jo lokaasje te ferbergjen.
 rec-hist-pw-subhead = Mij opnij gebrûk fan wachtwurden
 # Link title
 rec-hist-pw-cta-fx = Oanmeldingen besjen yn { -brand-name }

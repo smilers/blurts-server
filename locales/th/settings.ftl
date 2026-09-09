@@ -1,0 +1,66 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+# Settings page
+
+settings-page-title = การตั้งค่า { -product-short-name }
+
+## Breach alert preferences
+
+settings-alert-email-preferences-title = การกำหนดลักษณะอีเมล
+settings-alert-email-preferences-subtitle = บอกเราว่าคุณต้องการรับอีเมลใดบ้าง
+settings-alert-preferences-allow-breach-alerts-title = แจ้งเตือนการละเมิดทันที
+settings-alert-preferences-allow-breach-alerts-subtitle = การแจ้งเตือนเหล่านี้จะถูกส่งทันทีเมื่อตรวจพบการละเมิดข้อมูล
+settings-alert-preferences-option-one = ส่งการแจ้งเตือนการละเมิดไปยังที่อยู่อีเมลที่ได้รับผลกระทบ
+settings-alert-preferences-option-two = ส่งการแจ้งเตือนการละเมิดทั้งหมดไปยังที่อยู่อีเมลหลัก
+
+## Monitored email addresses
+
+settings-email-verification-callout = ต้องมีการยืนยันอีเมล
+settings-remove-email-button-label = เอาออก
+settings-email-addresses-header = ที่อยู่อีเมล
+settings-email-addresses-description = { -brand-monitor } จะแจ้งเตือนคุณหากอีเมลเหล่านี้ถูกพบในการรั่วไหลที่เป็นที่รับรู้
+settings-email-addresses-add-email-button = เพิ่มที่อยู่อีเมล
+# Variables:
+#   $limit (number) - Number of emails that can be added for monitoring.
+settings-email-addresses-add-email-indicator-limit = เพิ่มได้ถึง { $limit } อีเมล
+settings-email-addresses-add-email-resend-button-label = ส่งลิงก์ยืนยันอีกครั้ง
+input-error-alt = ข้อผิดพลาด
+
+## Email address dialog
+
+settings-email-addresses-initial-dialog-header = เพิ่มที่อยู่อีเมล
+settings-email-addresses-initial-dialog-description = เราจะส่งลืงก์ยืนยันเพื่อให้คุณยืนยันว่าคุณต้องการเพิ่มอีเมลในการสแกนของ { -brand-monitor } ในอนาคตหรือไม่
+settings-email-addresses-initial-dialog-add-email-input-label = ป้อนที่อยู่อีเมล
+settings-email-addresses-initial-dialog-add-email-button-label = ส่งลิงก์ยืนยัน
+# Variables:
+#   $email (string) - Email address the confirmation has been sent to.
+settings-email-addresses-confirmation-dialog-header = ลิงก์ยืนยันถูกส่งไปที่ <b>{ $email }</b>
+settings-email-addresses-confirmation-dialog-description = เปิดลิงก์เพื่อเพิ่มอีเมลไปที่บัญชีนี้สำหรับการสแกนของ { -brand-monitor } ในอนาคต
+settings-email-addresses-confirmation-dialog-close-button = ปิด
+
+## Delete Monitor account
+
+settings-delete-monitor-free-account-title = ลบบัญชี { -brand-monitor }
+settings-delete-monitor-free-account-description = การกระทำนี้จะลบบัญชี { -brand-monitor } ของคุณอย่างถาวรและปิดการแจ้งเตือนทั้งหมด
+settings-delete-monitor-free-account-cta-label = ลบบัญชี
+settings-delete-monitor-free-account-dialog-title = บัญชี { -brand-monitor } ของคุณจะถูกลบออกอย่างถาวร
+settings-delete-monitor-free-account-dialog-lead-v2 = ข้อมูลบัญชี { -brand-monitor } ของคุณทั้งหมดจะถูกลบ และเราจะไม่ตรวจสอบการละเมิดข้อมูลใหม่อีกต่อไป การกระทำนี้จะไม่ลบ { -brand-mozilla-account } ของคุณ
+settings-delete-monitor-free-account-dialog-cta-label = ลบบัญชี
+settings-delete-monitor-free-account-dialog-cancel-button-label = ไม่เป็นไร พาฉันกลับไปดีกว่า
+settings-delete-monitor-account-confirmation-toast-label-2 = บัญชี { -brand-monitor } ของคุณถูกลบแล้ว
+settings-delete-monitor-account-confirmation-toast-dismiss-label = ปิด
+
+## Settings page redesign
+
+# Label for a navigation bar link to settings for updating the users scan profile info – “update” is used as a verb.
+settings-tab-label-update-scan-info = อัปเดตข้อมูลการสแกน
+settings-tab-label-edit-info = แก้ไขข้อมูลของคุณ
+settings-tab-label-notifications = ตั้งค่าการแจ้งเตือน
+settings-tab-label-manage-account = จัดการบัญชี
+settings-tab-subtitle-manage-account = จัดการบัญชี { -product-name } ของคุณ
+settings-tab-notifications-marketing-title = การสื่อสารทางการตลาด
+settings-tab-notifications-marketing-text = การอัปเดตเป็นระยะเกี่ยวกับ { -brand-monitor }, { -brand-mozilla } และผลิตภัณฑ์ด้านความปลอดภัยอื่นๆ ของเรา
+settings-tab-notifications-marketing-link-label = ไปที่การตั้งค่าอีเมล { -brand-mozilla }

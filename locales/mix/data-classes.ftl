@@ -1,4 +1,9 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+# Breach Data Classes
 
 account-balances = Kuenta
 address-book-contacts = Chaa kue sivi nu tutu direccion
@@ -12,7 +17,7 @@ avatars = Avatares
 bank-account-numbers = Números de cuentas de banco
 beauty-ratings = Puntajes de belleza
 biometric-data = Datos biométricos
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = Bios
 browser-user-agent-details = Tu'un ña sachu'un  navegador

@@ -1,3 +1,7 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
 # Link title
 rec-ssn-cta = کریڈٹ رپورٹس کی درخواست کریں۔
 # Recommendation subhead
@@ -14,11 +18,7 @@ rec-pw-3-cta = { -brand-lockwise } حاصل کریں
 rec-pw-4-cta = وہ سائٹیں دیکھیں جو 2FA پیش کرتی ہیں۔
 # Recommendation subhead
 rec-bank-acc-subhead = اپنے بینک اسٹیٹمنٹ کی نگرانی کریں
-# Recommendation subhead
-rec-email-subhead = ای میل عرفی نام استعمال کریں۔
 rec-email-cta = { -brand-relay } کو آزمائیں
-# Link title
-rec-ip-us-cta = { -brand-fpn } کو آزمائیں
 # Recommendation subhead
 rec-moz-vpn-cta = { -brand-mozilla-vpn }  کو آزمائیں
 rec-hist-pw-subhead = پاس ورڈ کو دوبارہ استعمال کرنے سے گریز کریں

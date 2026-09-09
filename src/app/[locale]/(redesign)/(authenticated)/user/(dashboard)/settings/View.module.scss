@@ -1,0 +1,7 @@
+@use "../../../../../../tokens";
+
+.wrapper {
+  height: 100%;
+  background-color: tokens.$color-grey-05;
+  width: 100%;
+}

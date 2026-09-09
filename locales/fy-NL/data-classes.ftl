@@ -1,9 +1,16 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+
+# Breach Data Classes
+
+academic-records = Akademyske dossiers
 account-balances = Banksaldo’s
 address-book-contacts = Adresboekkontakten
 age-groups = Leeftiidsgroepen
 ages = Leeftiden
+ai-prompts = AI-prompts
 # Refers to medical appointments.
 appointments = Ofspraken
 apps-installed-on-devices = Op apparaten ynstallearre apps
@@ -14,7 +21,7 @@ avatars = Avatars
 bank-account-numbers = Bankrekkeningnûmers
 beauty-ratings = Skjintmewurdearringen
 biometric-data = Biometryske gegevens
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = Bio's
 browser-user-agent-details = Details oer de brûkte browser
@@ -25,21 +32,34 @@ career-levels = Karriêrenivo's
 cellular-network-names = Mobyl-netwurknammen
 charitable-donations = Goeddiedigensdoelen
 chat-logs = Chatlochboeken
+citizenship-statuses = Staatsburgerskipsstatussen
+clothing-sizes = Kleanmjitten
+comments = Opmerkingen
+company-names = Bedriuwsnammen
 credit-card-cvv = Creditcard-CVV
 credit-cards = Creditcards
+credit-scores = Creditcards
 credit-status-information = Ynformaasje oer kreditsteat
+cryptocurrency-wallet-addresses = Cryptocurrency-portemonnee-adressen
 cryptocurrency-wallet-hashes = Cryptocurrency-portemonnee-hashes
 customer-feedback = Klantekommentaar
 customer-interactions = Ynteraksje mei klanten
+customer-service-comments = Klantetsjinstopmerkingen
 dates-of-birth = Bertedatum
 deceased-date = Datum fan ferstjerren
 deceased-statuses = Steat fan ferstjerren
+# Instructions that you can set up in online shopping services to get your orders
+# delivered (e.g. deliver to a specific neighbor, entrance location, etc.).
+delivery-instructions = Ofleverynstruksjes
 device-information = Apparaatgegevens
 device-serial-numbers = Searjenûmers fan apparaten
 device-usage-tracking-data = Folchgegevens oer apparaatgebrûk
+disabilities = Beheiningen
+display-names = Nammen werjaan
 drinking-habits = Drinkgewoanten
 driver-s-licenses = Rydbewizen
 drug-habits = Drugsgewoanten
+earnings = Fertsjinsten
 eating-habits = Ytgewoanten
 education-levels = Opleidingsnivo's
 email-addresses = E-mailadressen
@@ -54,11 +74,14 @@ family-structure = Famyljestruktuer
 financial-investments = Finansjele ynfestearingen
 financial-transactions = Finansjele transaksjes
 fitness-levels = Fitheidsnivo's
+flights-taken = Nommen fluchten
+forum-posts = Foarumberjochten
 genders = Geslachten
 geographic-locations = Geografyske lokaasjes
 government-issued-ids = Troch de oerheid útjûne ID’s
 health-insurance-information = Ynformaasje oer soarchfersekering
 historical-passwords = Alde wachtwurden
+hiv-statuses = HIV-statussen
 home-loan-information = Hypoteekynformaasje
 home-ownership-statuses = Steaten oer hûseigendom
 homepage-urls = Startsiden-URL’s
@@ -67,14 +90,21 @@ imsi-numbers = IMSI-nûmers
 income-levels = Ynkommensnivo's
 instant-messenger-identities = Chat-identiteiten
 ip-addresses = IP-adressen
+iq-levels = IQ-nivo’s
 job-applications = Sollisitaasjes
 job-titles = Funksjetitels
-# This string refers to vehicle license plates. 
+language-preferences = Taalfoarkarren
+latitude-and-longitude-pairs = Breedte- en lingtegraadpearen
+# This string refers to vehicle license plates.
 licence-plates = Kentekens
 living-costs = Kosten libbensûnderhâld
+# This string refers to financial loans.
+loan-information = Lieningsgegevens
 login-histories = Oanmeldskiednissen
+loyalty-program-details = Details klanteprogramma
 mac-addresses = MAC-adressen
 marital-statuses = Troude steaten
+military-service = Militêre tsjinst
 # Mnemonic phrases are a group of words used to access the content of cryptocurrency wallets.
 mnemonic-phrases = Mnemonyske sinnen
 mothers-maiden-names = Famkesnammen mem
@@ -82,10 +112,16 @@ names = Nammen
 nationalities = Nasjonaliteiten
 net-worths = Fermogenswearden
 nicknames = Bynammen
+# no data classes found
+none-data-class = Gjin
 occupations = Beroppen
+# various data classes grouped together
+other-data-class = Oars
 parenting-plans = Alderskipsplannen
 partial-credit-card-data = Part fan creditcardgegevens
 partial-dates-of-birth = Parten fan bertedata
+partial-government-issued-ids = Foar in part troch oerheid útjûne ID’s
+partial-phone-numbers = In part fan telefoannûmers
 passport-numbers = Paspoartnûmers
 password-hints = Wachtwurdhints
 password-strengths = Wachtwurdsterktes
@@ -106,6 +142,7 @@ political-views = Politike stânpunten
 private-messages = Priveeberjochten
 professional-skills = Beropsfeardichheden
 profile-photos = Profylfoto’s
+profile-statistics = Profylstatistiken
 purchases = Oankeapen
 purchasing-habits = Oankeapgedrach
 races = Rassen
@@ -118,23 +155,32 @@ school-grades-class-levels = Skoalsifers (klasnivo's)
 security-questions-and-answers = Befeiligingsfragen en -antwurden
 sexual-fetishes = Seksuele fetishes
 sexual-orientations = Seksuele foarkarren
+shipment-tracking-numbers = Ferstjoernûmers
 smoking-habits = Smookgewoanten
 sms-messages = Sms-berjochten
 social-connections = Sosjale konneksjes
 social-media-profiles = Profilen op sosjale media
 social-security-numbers = Sofinûmers
+socioeconomic-levels = Sosjaal-ekonomyske nivo’s
 spoken-languages = Sprutsen talen
 spouses-names = Nammen oarehelten
 support-tickets = Stipeoanfragen
 survey-results = Resultaten fan fragelisten
+tattoo-status = Tatoeaazjestatus
 taxation-records = Belestinggegevens
+telecommunications-carrier = Telecomproviders
 time-zones = Tiidsônen
 travel-habits = Reisgewoanten
+travel-plans = Reisplannen
 user-statuses = Brûkerssteaten
 user-website-urls = URL’s fan brûkerswebsites
 usernames = Brûkersnammen
 utility-bills = Nutsrekkeningen
 vehicle-details = Details fan ferfiermiddel
+vehicle-identification-numbers-vins = Reau-identifikaasjenûmers (RIN’s)
+vehicle-registration-plates = Kentekenplaten
+vip-statuses = VIP-statussen
+warranty-claims = Garânsjeclaims
 website-activity = Website-aktiviteit
 work-habits = Wurkgewoanten
 years-of-birth = Bertejierren

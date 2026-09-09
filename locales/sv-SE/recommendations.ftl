@@ -1,3 +1,7 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
 # Recommendation subhead
 rec-ssn-subhead = Granska dina kreditrapporter
 # Link title
@@ -10,10 +14,10 @@ rec-ssn =
 rec-pw-1-subhead = Ändra ditt lösenord
 # Link title
 rec-pw-1-cta = Ändra lösenord för den här webbplatsen
-rec-pw-1 =
-    Gör det här lösenordet unikt och skilj det från alla andra du använder.
-    En bra strategi att följa är att kombinera två eller flera relaterade
-    ord för att skapa en hel lösenfras.
+rec-pw-1-2 =
+    Gör detta lösenord unikt och annorlunda från alla andra du använder.
+    En bra strategi att följa är att kombinera två eller flera orelaterade ord
+    för att skapa en hel lösenordsfras och inkludera siffror och symboler.
 # Recommendation subhead
 rec-pw-2-subhead = Uppdatera andra inloggningar med samma lösenord
 # Link title
@@ -50,29 +54,17 @@ rec-cc =
     Se upp för konstiga avgifter på ditt kreditkort. Du kanske vill 
     begära ett nytt kort med ett nytt nummer från din kreditkortsutgivare.
 # Recommendation subhead
-rec-email-subhead = Använd e-postalias
+rec-email-mask-subhead = Använd ett e-postalias
 rec-email-cta = Prova { -brand-relay }
 rec-email =
     Att ge ut din riktiga e-postadress gör det lättare för hackare eller spårare att hitta
     dina lösenord eller spåra dig online. En tjänst som { -brand-relay } döljer din 
     riktiga e-postadress medan du vidarebefordrar e-post till din riktiga inkorg.
 # Recommendation subhead
-rec-ip-subhead = Använd en tjänst som maskerar din IP-adress
-# Link title
-rec-ip-us-cta = Prova { -brand-fpn }
-rec-ip-us =
-    Din IP-adress anger din plats
-    och internetleverantör. En tjänst som { -brand-fpn }
-    maskerar din IP-adress för att dölja din plats.
-rec-ip-non-us =
-    Din IP-adress anger din plats
-    och internetleverantör. Med ett virtuellt privat nätverk (VPN) kan du dölja din plats
-    och maskera din IP-adress.
+rec-ip-subhead-2 = Använd ett VPN för att maskera din IP-adress
 # Recommendation subhead
 rec-moz-vpn-cta = Testa { -brand-mozilla-vpn }
-rec-moz-vpn-update =
-    Din IP-adress kan avslöja din plats och din internetleverantör. En tjänst
-    som { -brand-mozilla-vpn } döljer din IP-adress och plats för hela din enhet.
+rec-moz-vpn-update-2 = Din IP-adress pekar ut din plats och din internetleverantör. En tjänst som { -brand-mozilla-vpn } maskerar din IP-adress för att dölja din plats.
 rec-hist-pw-subhead = Undvik att återanvända lösenord
 # Link title
 rec-hist-pw-cta-fx = Visa inloggningar i { -brand-name }

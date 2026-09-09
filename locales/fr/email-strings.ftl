@@ -1,98 +1,108 @@
-# Firefox Monitor is a product name and should not be translated.
--product-name = Firefox Monitor
-# Firefox is a brand name and should not be translated.
--brand-name = Firefox
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+## Email headers
+
+email-header-button-sign-in = Connexion
+
+## Email footers
+
+email-footer-support-heading = Des questions sur { -brand-mozilla-monitor } ?
+email-footer-support-content = Consultez notre <support-link>Centre d’assistance</support-link> pour obtenir de l’aide
+email-footer-trigger-transactional = Vous recevez ce message en tant qu’abonné·e à { -brand-mozilla-monitor }.
+email-footer-reason-subscriber = Vous recevez cet e-mail automatique en tant qu’abonné·e de { -brand-mozilla-monitor }. Si vous l’avez reçu par erreur, aucune action n’est requise. Pour davantage d’informations, veuillez consulter <support-link>l’assistance de { -brand-mozilla }</support-link>.
+email-footer-reason-subscriber-one-time = Vous avez reçu cet e-mail automatique unique, car vous êtes abonné·e à { -brand-monitor-plus }. Vous ne recevrez plus d’e-mails similaires. Pour davantage d’informations, veuillez consulter <support-link>l’assistance de { -brand-mozilla }</support-link>.
+# Variables:
+#    $support_link (string) - The URL the user can visit for support, e.g. "https://support.mozilla.org"
+email-footer-support-content-plain =
+    Consultez notre centre d’assistance pour obtenir de l’aide :
+    { $support_link }
+# Variables:
+#   $hibp_link (string) - URL to Have I Been Pwned, e.g. "https://haveibeenpwned.com".
+email-footer-source-hibp-plain = Les informations sur les fuites de données sont fournies par { -brand-HIBP } : { $hibp_link }
+email-footer-source-hibp = Les informations sur les fuites de données sont fournies par <hibp-link>{ -brand-HIBP }</hibp-link>
+email-footer-logo-mozilla-alt = { -brand-mozilla }
+email-footer-meta-privacy-notice = Vie privée
+email-unsubscribe-link = <link_to_unsub>Désinscription</link_to_unsub>
+# Variables:
+#   $unsub_link (string) - URL to the unsubscribe page, e.g. "https://monitor.mozilla.org/unsubscribe/...".
+email-unsubscribe-link-plain = Désinscription : { $unsub_link }
 # Firefox Relay is a product name and should not be translated.
 -product-name-relay = Firefox Relay
 # Mozilla VPN is a product name and should not be translated.
 -product-name-vpn = Mozilla VPN
-# A Firefox Monitor Report is an emailed statement from Firefox Monitor containing a list of known data breaches where the user’s email address was found amongst the stolen data.
-firefox-monitor-report = Rapport { -product-name }
-report-date = Date du rapport :
-email-address = Adresse électronique :
-# A link to legal information about mozilla products.
-legal = Mentions légales
-# Unsubscribe link in email.
-email-unsub-link = vous désabonner
-# This string appears in the footer of breach report and breach alert emails.
-# { $unsubLink } is a link to the user's dashboard where they can unsubscribe from Monitor
-# and uses the text from { email-unsub-link }. { $faqLink } is a link to the 
-# Firefox Monitor SUMO page and uses the text from { frequently-asked-questions }.
-email-footer-blurb =
-    Vous recevez ce message, car vous vous êtes abonné·e aux alertes de { -product-name }.
-    Vous ne voulez plus recevoir ces messages ? Vous pouvez { $unsubLink }. Ceci est un message automatisé. Pour obtenir de l’aide, consultez notre { $faqLink }.
-# This string appears in the footer of verification emails. { $faqLink } is a link
-# to the Firefox Monitor SUMO page and uses the text from { frequently-asked-questions }.
-email-verify-footer-copy =
-    Vous recevez ce message, car vous vous êtes abonné·e aux alertes de { -product-name }.
-    Ceci est un message automatisé. Pour obtenir de l’aide, consultez notre { $faqLink }.
 # Button text
-verify-email-cta = Vérifier l’adresse électronique
-# Button text
-see-all-breaches = Voir toutes les fuites de données
+verify-email-cta = Vérifier l’adresse e-mail
 # Headline of verification email
 email-link-expires = Ce lien expire dans 24 heures
-email-verify-blurb = Vérifiez votre adresse électronique pour l’ajouter à { -product-name } et vous inscrire aux alertes de fuites de données.
-# Email headline
-email-found-breaches-hl = Récapitulatif des fuites de données vous concernant
-# Email headline
-email-breach-summary-for-email = Récapitulatif des fuites de données pour { $userEmail }
-# Email headline
-email-no-breaches-hl = { $userEmail } n’apparaît dans aucune fuite de données connue
-# Email headline
-email-alert-hl = { $userEmail } est apparu dans une nouvelle fuite de données
+
+##
+
 # Subject line of email
 email-subject-found-breaches = { -product-name } a détecté vos informations dans ces fuites de données
 # Subject line of email
 email-subject-no-breaches = { -product-name } n’a trouvé aucune fuite de données connue
 # Subject line of email
-email-subject-verify = Vérifiez votre adresse électronique pour { -product-name }
-# { $fxmLink } is a link to Firefox Monitor and uses the text from { -product-name }.
-learn-more-about-fxm = En savoir plus sur { $fxmLink }
-email-sensitive-disclaimer =
-    En raison de la nature sensible de cette fuite de données, les adresses électroniques concernées ne sont pas publiquement consultables.
-    Vous recevez cette alerte car vous avez confirmé détenir cette adresse électronique.
+email-subject-verify = Vérifiez votre adresse e-mail pour { -product-name }
 fxm-warns-you-no-breaches =
     { -product-name } vous avertit des fuites de données impliquant vos informations personnelles.
-    Jusqu’à présent, aucune fuite n’a été détectée. Nous vous enverrons une alerte si votre adresse électronique apparaît dans une nouvelle fuite.
-fxm-warns-you-found-breaches =
-    { -product-name } vous avertit des fuites de données impliquant vos informations personnelles.
-    Vous êtes également inscrit·e pour recevoir des alertes si votre adresse électronique apparaît dans une nouvelle fuite.
-email-breach-alert-blurb =
-    { -product-name } vous avertit des fuites de données impliquant vos informations personnelles.
-    Nous venons de recevoir des informations à propos d’une fuite de données concernant une autre entreprise.
-# List headline
-faq-list-headline = Foire aux questions
-# Link Title
-faq-v2-1 = Je ne reconnais pas l’une de ces sociétés ou l’un de ces sites web. Pourquoi cette fuite me concerne-t-elle ?
-# Link Title
-faq-v2-2 = Dois-je faire quelque chose si une fuite de données s’est produite il y a des années ou s’il s’agit d’un ancien compte ?
-# Link Title
-faq-v2-3 = Je viens de découvrir qu’une fuite de données me concerne. Que dois-je faire ?
-# Link Title
-faq-v2-4 = Comment { -product-name } traite-t-il les sites sensibles ?
-# This string contains nested markup that becomes a link to Firefox Monitor
-# later in the code. Please do not modify or remove "<a>" and "</a>".
-pre-fxa-message = <a>Créez un { -brand-fxa } gratuit</a> et vous pourrez ajouter jusqu’à 15 adresses électroniques.
-# Section headline
-monitor-another-email = Vous souhaitez vérifier une autre adresse électronique ?
-# Subject line of email
-pre-fxa-subject = Du nouveau pour { -product-name }
-pre-fxa-headline = Ce qui change avec { -product-name }
-pre-fxa-blurb = Voici ce qui a changé depuis votre inscription à { -product-name }, le service qui surveille l’apparition de vos informations personnelles dans les fuites de données connues : nous le lions aux comptes Firefox.
-pre-fxa-tout-1 = Tenez-vous au courant des nouvelles fuites de données
-pre-fxa-p-1 = <a>Créer un compte</a> et surveillez les fuites de données pour jusqu’à 15 adresses électroniques. Nous vous recommandons d’ajouter toutes les adresses électroniques que vous avez utilisées pour créer des comptes en ligne.
-pre-fxa-tout-2 = Obtenez une vue d’ensemble depuis le tableau de bord
-pre-fxa-p-2 = Visualisez toutes les fuites de données en un seul endroit afin de connaître les mots de passe à changer. Le tableau de bord des fuites de données est accessible uniquement avec un compte.
-pre-fxa-tout-3 = Continuez à recevoir des alertes par courrier électronique
-pre-fxa-p-3 =
-    Vous recevrez toujours les alertes de { -product-name }. Nous vous ferons savoir si vos informations
-    apparaissent dans une nouvelle fuite de données.
-# Button at the bottom of pre-fxa email.
-create-account = Créer un compte
-# More security products
-more-products-headline = Protégez-vous grâce à davantage de nos produits
-more-products-vpn = Protection complète de votre appareil, pour chacun de vos appareils.
-more-products-cta-vpn = Installez { -product-name-vpn }
-more-products-relay = Masquez votre véritable adresse e-mail pour protéger votre identité
-more-products-cta-relay = Installez { -product-name-relay }
+    Jusqu’à présent, aucune fuite n’a été détectée. Nous vous enverrons une alerte si votre adresse e-mail apparaît dans une nouvelle fuite.
+
+## 2022 email template. HTML tags should not be translated, e.g. `<a>`
+
+# Have I Been Pwned attribution
+# Variables:
+#   $hibp-link-attr (String) - Link to Have I Been Pwned
+email-2022-hibp-attribution = Les informations sur les fuites de données sont fournies par <a { $hibp-link-attr }>{ -brand-HIBP }</a>
+
+## Verification email
+
+email-verify-heading = Protégez vos données dès maintenant
+email-verify-simply-click = Cliquez simplement sur le lien ci-dessous pour terminer la vérification de votre compte.
+
+## Breach report
+
+email-breach-summary = Voici le résumé de vos fuites de données
+# Variables:
+#   $email-address (string) - Email address, bolded
+email-breach-detected = Les résultats de la recherche pour votre compte { $email-address } indiquent que votre adresse e-mail a peut-être été divulguée. Nous vous recommandons d’agir maintenant pour résoudre cette fuite de données.
+email-dashboard-cta = Accéder au tableau de bord
+
+## Breach alert email
+
+email-breach-alert-all-subject = Nouvelle fuite de données détectée
+email-breach-alert-all-preview = Nous allons vous guider pas à pas pour résoudre le problème.
+email-breach-alert-all-hero-heading = Une nouvelle fuite de données vous concerne
+email-breach-alert-all-hero-subheading = Ne vous inquiétez pas, nous pouvons vous aider à résoudre ce problème
+email-breach-alert-all-lead = { -brand-mozilla-monitor } a détecté la fuite de données suivante qui comprend vos informations personnelles :
+email-breach-alert-all-source-title = Source de la fuite :
+email-breach-alert-all-data-points-title = Vos données qui ont fuité :
+email-breach-alert-all-next-steps-lead = Nous vous guiderons pas à pas sur la façon de résoudre cette fuite de données.
+email-breach-alert-all-next-steps-cta-label = Voyons tout ça de plus près
+email-breach-alert-all-next-steps-button-dashboard = Accéder au tableau de bord
+
+## Breach alert redesigned strings
+
+# $company-name is the name of the company/site that was breached.
+email-breach-alert-all-hero-heading-1 = Détails de la fuite de données de { $company-name }
+# $company-name is the name of the company/site that was breached.
+# $breach-date is the date of the breach.
+email-breach-alert-all-lead-1 = { -brand-mozilla-monitor } a détecté vos informations dans une fuite de données de { $company-name } le { $breach-date }. Vous recevez cette alerte car vous vous êtes abonné·e aux <link_to_settings>notifications de fuites de données</link_to_settings>.
+email-breach-alert-all-source-title-1 = Détails de la fuite
+email-breach-alert-company = Entreprise :
+email-breach-alert-date-of-breach = Date de la fuite de données :
+email-breach-alert-info-exposed = Vos informations qui ont fuité :
+email-breach-alert-next-steps = Prochaines étapes
+email-breach-alert-next-steps-description = <sign_in_link>Connectez-vous</sign_in_link> à votre tableau de bord { -brand-mozilla-monitor }. Nous vous accompagnerons dans les démarches à suivre pour résoudre la fuite.
+email-breach-alert-all-next-steps-button-resolve-breach-on-dashboard = Résoudre la fuite de données sur le tableau de bord
+email-breach-alert-faqs-title = FAQ
+email-breach-alert-faq-qn-1 = Pourquoi reçois-je ceci ?
+email-breach-alert-faq-ans-1 = Vous vous êtes abonné·e aux alertes pour les fuites de données. <link_to_settings>Modifiez vos préférences</link_to_settings> depuis les paramètres.
+email-breach-alert-faq-qn-2 = Pourquoi est-ce que je ne reconnais pas cette entreprise ou ce site ?
+email-breach-alert-faq-ans-2 = Il peut avoir changé de propriétaire ou de nom, s’agir d’un compte ancien ou qui a été créé pour vous, ou encore provenir d’une liste d’informations personnelles compromises achetée.
+email-breach-alert-faq-qn-3 = Qu’est-ce qu’une alerte de fuite de données ?
+email-breach-alert-faq-ans-3 = Une notification { -brand-mozilla-monitor } est envoyée lorsque des informations personnelles que vous surveillez sont exposées, volées ou copiées sans autorisation.
+email-breach-alert-faq-qn-4 = { -brand-mozilla-monitor }, qu’est-ce que c’est ?
+email-breach-alert-faq-ans-4 = Un service gratuit de notification de fuite de données qui vous alerte si l’un de vos comptes en ligne a été compromis lors d’une fuite de données.

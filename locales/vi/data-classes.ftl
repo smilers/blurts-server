@@ -1,9 +1,16 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+
+# Breach Data Classes
+
+academic-records = Hồ sơ học tập
 account-balances = Số dư tài khoản
 address-book-contacts = Danh bạ
 age-groups = Nhóm tuổi
 ages = Tuổi
+ai-prompts = Lời nhắc AI
 # Refers to medical appointments.
 appointments = Cuộc hẹn
 apps-installed-on-devices = Ứng dụng được cài đặt trên thiết bị
@@ -14,7 +21,7 @@ avatars = Ảnh đại diện
 bank-account-numbers = Số tài khoản ngân hàng
 beauty-ratings = Xếp hạng sắc đẹp
 biometric-data = Dữ liệu sinh trắc học
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = Tiểu sử
 browser-user-agent-details = Chi tiết chuỗi nhận dạng trình duyệt
@@ -25,21 +32,34 @@ career-levels = Cấp độ nghề nghiệp
 cellular-network-names = Tên mạng di động
 charitable-donations = Quyên góp từ thiện
 chat-logs = Nhật ký trò chuyện
+citizenship-statuses = Tình trạng công dân
+clothing-sizes = Kích cỡ quần áo
+comments = Bình luận
+company-names = Tên công ty
 credit-card-cvv = Thẻ tín dụng CVV
 credit-cards = Thẻ tín dụng
+credit-scores = Điểm tín dụng
 credit-status-information = Thông tin trạng thái tín dụng
+cryptocurrency-wallet-addresses = Địa chỉ ví tiền điện tử
 cryptocurrency-wallet-hashes = Hàm băm ví tiền điện tử
 customer-feedback = Phản hồi của khách hàng
 customer-interactions = Tương tác của khách hàng
+customer-service-comments = Nhận xét về dịch vụ khách hàng
 dates-of-birth = Ngày sinh
 deceased-date = Ngày mất
 deceased-statuses = Tình trạng đã mất
+# Instructions that you can set up in online shopping services to get your orders
+# delivered (e.g. deliver to a specific neighbor, entrance location, etc.).
+delivery-instructions = Hướng dẫn giao hàng
 device-information = Thông tin thiết bị
 device-serial-numbers = Số sê-ri thiết bị
 device-usage-tracking-data = Dữ liệu theo dõi sử dụng thiết bị
+disabilities = Người khuyêt tật
+display-names = Tên hiển thị
 drinking-habits = Thói quen uống
 driver-s-licenses = Giấy phép lái xe
 drug-habits = Thói quen dùng thuốc
+earnings = Thu nhập
 eating-habits = Thói quen ăn
 education-levels = Trình độ học vấn
 email-addresses = Địa chỉ email
@@ -54,11 +74,14 @@ family-structure = Cơ cấu gia đình
 financial-investments = Sự đầu tư tài chính
 financial-transactions = Giao dịch tài chính
 fitness-levels = Mức độ thể dục
+flights-taken = Các chuyến bay đã thực hiện
+forum-posts = Bài đăng trên diễn đàn
 genders = Giới tính
 geographic-locations = Vị trí địa lý
 government-issued-ids = ID do chính phủ cấp
 health-insurance-information = Thông tin bảo hiểm y tế
 historical-passwords = Mật khẩu quá khứ
+hiv-statuses = Tình trạng nhiễm HIV
 home-loan-information = Thông tin cho vay mua nhà
 home-ownership-statuses = Tình trạng sở hữu nhà
 homepage-urls = URL trang chủ
@@ -67,14 +90,21 @@ imsi-numbers = Số IMSI
 income-levels = Mức thu nhập
 instant-messenger-identities = Nhận dạng tin nhắn tức thời
 ip-addresses = Các địa chỉ IP
+iq-levels = Mức độ IQ
 job-applications = Đơn xin việc
 job-titles = Chức danh công việc
-# This string refers to vehicle license plates. 
+language-preferences = Ngôn ngữ đã chọn
+latitude-and-longitude-pairs = Cặp vĩ độ và kinh độ
+# This string refers to vehicle license plates.
 licence-plates = Biển số xe
 living-costs = Chi phí sinh hoạt
+# This string refers to financial loans.
+loan-information = Thông tin khoản vay
 login-histories = Lịch sử đăng nhập
+loyalty-program-details = Chi tiết chương trình khách hàng thân thiết
 mac-addresses = Địa chỉ MAC
 marital-statuses = Tình trạng hôn nhân
+military-service = Nghĩa vụ quân sự
 # Mnemonic phrases are a group of words used to access the content of cryptocurrency wallets.
 mnemonic-phrases = Từ vựng giúp ghi nhớ
 mothers-maiden-names = Tên thời con gái
@@ -82,10 +112,16 @@ names = Tên
 nationalities = Quốc tịch
 net-worths = Giá trị ròng
 nicknames = Biệt danh
+# no data classes found
+none-data-class = Không có
 occupations = Nghề nghiệp
+# various data classes grouped together
+other-data-class = Khác
 parenting-plans = Kế hoạch nuôi dạy con
 partial-credit-card-data = Dữ liệu một phần thẻ tín dụng
 partial-dates-of-birth = Một phần ngày sinh
+partial-government-issued-ids = Một phần của giấy tờ tuỳ thân do chính phủ cấp
+partial-phone-numbers = Một phần số điện thoại
 passport-numbers = Số hộ chiếu
 password-hints = Mật khẩu gợi ý
 password-strengths = Độ mạnh mật khẩu
@@ -106,6 +142,7 @@ political-views = Quan điểm chính trị
 private-messages = Tin nhắn riêng tư
 professional-skills = Kỹ năng chuyên nghiệp
 profile-photos = Ảnh đại diện
+profile-statistics = Thống kê hồ sơ
 purchases = Mua hàng
 purchasing-habits = Thói quen mua hàng
 races = Chủng tộc
@@ -118,23 +155,32 @@ school-grades-class-levels = Khối (lớp) học
 security-questions-and-answers = Câu hỏi và câu trả lời bảo mật
 sexual-fetishes = Quan hệ tình dục
 sexual-orientations = Xu hướng tính dục
+shipment-tracking-numbers = Số theo dõi lô hàng
 smoking-habits = Thói quen hút thuốc
 sms-messages = Tin nhắn SMS
 social-connections = Kết nối xã hội
 social-media-profiles = Hồ sơ truyền thông xã hội
 social-security-numbers = Số an sinh xã hội
+socioeconomic-levels = Mức độ kinh tế xã hội
 spoken-languages = Ngôn ngữ nói
 spouses-names = Tên vợ/chồng
 support-tickets = Vé hỗ trợ
 survey-results = Kết quả khảo sát
+tattoo-status = Tình trạng hình xăm
 taxation-records = Hồ sơ thuế
+telecommunications-carrier = Các hãng viễn thông
 time-zones = Múi giờ
 travel-habits = Thói quen du lịch
+travel-plans = Kế hoạch du lịch
 user-statuses = Trạng thái người dùng
 user-website-urls = URL trang web của người dùng
 usernames = Tên đăng nhập
 utility-bills = Các hóa đơn tiện ích
 vehicle-details = Chi tiết về xe cộ
+vehicle-identification-numbers-vins = Số nhận dạng phương tiện (VINs)
+vehicle-registration-plates = Biển số đăng ký xe
+vip-statuses = Trạng thái VIP
+warranty-claims = Yêu cầu bảo hành
 website-activity = Hoạt động trang web
 work-habits = Thói quen làm việc
 years-of-birth = Năm sinh

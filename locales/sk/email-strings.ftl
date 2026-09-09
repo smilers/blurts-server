@@ -1,98 +1,108 @@
-# Firefox Monitor is a product name and should not be translated.
--product-name = Firefox Monitor
-# Firefox is a brand name and should not be translated.
--brand-name = Firefox
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+## Email headers
+
+email-header-button-sign-in = Prihlásiť sa
+
+## Email footers
+
+email-footer-support-heading = Máte otázky týkajúce sa { -brand-mozilla-monitor(case: "gen") }?
+email-footer-support-content = Ak potrebujete pomoc, navštívte naše <support-link>Centrum podpory</support-link>
+email-footer-trigger-transactional = Tento e‑mail ste dostali ako odberateľ služby { -brand-mozilla-monitor }.
+email-footer-reason-subscriber = Tento automatický e‑mail dostávate ako odberateľ služby { -brand-mozilla-monitor }. Ak ste ho dostali omylom, nie je potrebné podniknúť žiadne kroky. Ďalšie informácie nájdete na stránke <support-link>Podpora { -brand-mozilla(case: "gen") }</support-link>.
+email-footer-reason-subscriber-one-time = Tento jednorazový automatický e‑mail ste dostali, pretože ste prihlásený/á na odber služby { -brand-monitor-plus }. Už nebudete dostávať žiadne ďalšie podobné e‑maily. Ďalšie informácie nájdete na stránke <support-link>Podpora { -brand-mozilla(case: "gen") }</support-link>.
+# Variables:
+#    $support_link (string) - The URL the user can visit for support, e.g. "https://support.mozilla.org"
+email-footer-support-content-plain =
+    Navštívte naše Centrum podpory, kde vám pomôžu:
+    { $support_link }
+# Variables:
+#   $hibp_link (string) - URL to Have I Been Pwned, e.g. "https://haveibeenpwned.com".
+email-footer-source-hibp-plain = Údaje o úniku poskytol { -brand-HIBP }: { $hibp_link }
+email-footer-source-hibp = Údaje o úniku poskytuje <hibp-link>{ -brand-HIBP }</hibp-link>
+email-footer-logo-mozilla-alt = { -brand-mozilla }
+email-footer-meta-privacy-notice = Súkromie
+email-unsubscribe-link = <link_to_unsub>Odhlásiť sa z odberu</link_to_unsub>
+# Variables:
+#   $unsub_link (string) - URL to the unsubscribe page, e.g. "https://monitor.mozilla.org/unsubscribe/...".
+email-unsubscribe-link-plain = Odhlásiť sa z odberu: { $unsub_link }
 # Firefox Relay is a product name and should not be translated.
 -product-name-relay = Firefox Relay
 # Mozilla VPN is a product name and should not be translated.
 -product-name-vpn = Mozilla VPN
-# A Firefox Monitor Report is an emailed statement from Firefox Monitor containing a list of known data breaches where the user’s email address was found amongst the stolen data.
-firefox-monitor-report = Správa zo služby { -product-name }
-report-date = Dátum nahlásenia:
-email-address = E-mailová adresa:
-# A link to legal information about mozilla products.
-legal = Právne informácie
-# Unsubscribe link in email.
-email-unsub-link = Odhláste sa
-# This string appears in the footer of breach report and breach alert emails.
-# { $unsubLink } is a link to the user's dashboard where they can unsubscribe from Monitor
-# and uses the text from { email-unsub-link }. { $faqLink } is a link to the 
-# Firefox Monitor SUMO page and uses the text from { frequently-asked-questions }.
-email-footer-blurb =
-    Tento e-mail ste dostali, pretože ste sa prihlásili na odber upozornení zo služby { -product-name }.
-    Neželáte si už dostávať podobné e-maili? { $unsubLink }. Toto je automatický e-mail. Podporu nájdete na { $faqLink }.
-# This string appears in the footer of verification emails. { $faqLink } is a link
-# to the Firefox Monitor SUMO page and uses the text from { frequently-asked-questions }.
-email-verify-footer-copy =
-    Tento e-mail ste dostali, pretože ste sa prihlásili na odber upozornení zo služby { -product-name }.
-    Toto je automatický e-mail. Podporu nájdete na { $faqLink }.
 # Button text
-verify-email-cta = Overiť e-mailovú adresu
-# Button text
-see-all-breaches = Zobraziť všetky úniky
+verify-email-cta = Overiť e‑mailovú adresu
 # Headline of verification email
 email-link-expires = Platnosť tohto odkazu vyprší o 24 hodín
-email-verify-blurb = Overte svoju e-mailovú adresu a prihláste sa tak v službe { -product-name } k odberu upozornení.
-# Email headline
-email-found-breaches-hl = Tu je váš súhrn predchádzajúcich únikov
-# Email headline
-email-breach-summary-for-email = Súhrn únikov pre { $userEmail }
-# Email headline
-email-no-breaches-hl = E-mailová adresa { $userEmail } sa neobjavila v žiadnom známom úniku
-# Email headline
-email-alert-hl = E-mailová adresa { $userEmail } sa objavila v novom úniku dát
+
+##
+
 # Subject line of email
 email-subject-found-breaches = Služba { -product-name } odhalila vaše údaje v týchto únikoch
 # Subject line of email
 email-subject-no-breaches = { -product-name } nenašiel žiadne známe úniky
 # Subject line of email
-email-subject-verify = Overte svoju e-mailovú adresu pre { -product-name }
-# { $fxmLink } is a link to Firefox Monitor and uses the text from { -product-name }.
-learn-more-about-fxm = Ďalšie informácie o { $fxmLink }
-email-sensitive-disclaimer =
-    Kvôli citlivej povahe tohto úniku nie sú uniknuté e-mailové adresy verejne dostupné.
-    Toto upozornenie ste dostali, pretože ste overeným majiteľom tejto e-mailovej adresy.
+email-subject-verify = Overte svoju e‑mailovú adresu pre { -product-name }
 fxm-warns-you-no-breaches =
-    Služba { -product-name } vás upozorňuje na úniky dát, ktorých súčasťou boli aj vaše údaje.
-    Zatiaľ ste sa neobjavili v žiadnom úniku. Ak sa vaša e-mailová adresa objaví v novom úniku, budeme vás o tom informovať.
-fxm-warns-you-found-breaches =
-    Služba { -product-name } vás upozorňuje na úniky dát, ktorých súčasťou boli aj vaše údaje.
-    Ste taktiež zaregistrovaní na odber upozornení v prípade, že sa vaša e-mailová adresa objaví v novom úniku.
-email-breach-alert-blurb =
-    Služba { -product-name } vás upozorňuje na úniky dát, ktorých súčasťou boli aj vaše údaje.
-    Práve sme dostali informácie o ďalšom úniku dát.
-# List headline
-faq-list-headline = Často kladené otázky
-# Link Title
-faq-v2-1 = Nepoznám niektorú z daných spoločností alebo webových stránok. Prečo som súčasťou tohto úniku dát?
-# Link Title
-faq-v2-2 = Musím niečo urobiť, ak sa únik odohral pred rokmi alebo ak ide o starý účet?
-# Link Title
-faq-v2-3 = Moje údaje boli súčasťou úniku dát. Čo teraz?
-# Link Title
-faq-v2-4 = Ako { -product-name } narába s chúlostivými stránkami?
-# This string contains nested markup that becomes a link to Firefox Monitor
-# later in the code. Please do not modify or remove "<a>" and "</a>".
-pre-fxa-message = <a>Vytvorte si { -brand-fxa }</a> a môžete pridať až 15 e-mailových adries.
-# Section headline
-monitor-another-email = Chcete monitorovať ďalšiu e-mailovú adresu?
-# Subject line of email
-pre-fxa-subject = Najnovšie informácie od { -product-name(case: "gen") }
-pre-fxa-headline = Čo sa v súvislosti s { -product-name(case: "ins") } zmenilo
-pre-fxa-blurb = Tu sú informácie o zmenách, ktoré sme urobili od okamihu vašej registrácie do { -product-name(case: "gen") }, čo je služba monitorujúca známe úniky dát pre prípad, že sa v nich objavia vaše osobné údaje. Prepojujeme ju s účtom Firefox.
-pre-fxa-tout-1 = Buďte informovaní o väčšom množstve únikov
-pre-fxa-p-1 = <a>Vytvorte si účet</a> a nechajte si monitorovať až 15 e-mailových adries pre prípad úniku dát. Odporúčame pridať každú e-mailovú adresu, ktorú ste použili pri vytváraní internetových účtov.
-pre-fxa-tout-2 = Získajte nástenku s únikmy
-pre-fxa-p-2 =
-    Majte všetky úniky dát pekne na jednom mieste, aby ste vedeli, ktoré heslá máte zmeniť. 
-    Nástenka s prehľadom únikov je k dispozícii len s účtom.
-pre-fxa-tout-3 = Dostávajte e-mailové upozornenia aj naďalej
-pre-fxa-p-3 = Stále budete dostávať upozornenia od { -product-name(case: "gen") }. Dáme vám vedieť, keď sa vaše údaje vyskytnú v novom úniku dát.
-# Button at the bottom of pre-fxa email.
-create-account = Vytvoriť účet
-# More security products
-more-products-headline = Chráňte sa pomocou ďalších našich produktov
-more-products-vpn = Ochrana pre celé vaše zariadenie, na každom zariadení.
-more-products-cta-vpn = Získajte { -product-name-vpn }
-more-products-relay = Skryte svoju skutočnú e-mailovú adresu, aby ste chránili svoju identitu.
-more-products-cta-relay = Získajte { -product-name-relay }
+    Služba { -product-name } vás upozorňuje na úniky údajov, ktorých súčasťou boli aj vaše údaje.
+    Zatiaľ ste sa neobjavili v žiadnom úniku. Ak sa vaša e‑mailová adresa objaví v novom úniku, budeme vás o tom informovať.
+
+## 2022 email template. HTML tags should not be translated, e.g. `<a>`
+
+# Have I Been Pwned attribution
+# Variables:
+#   $hibp-link-attr (String) - Link to Have I Been Pwned
+email-2022-hibp-attribution = Údaje o úniku poskytuje <a { $hibp-link-attr }>{ -brand-HIBP }</a>
+
+## Verification email
+
+email-verify-heading = Chráňte svoje údaje, začnite hneď teraz
+email-verify-simply-click = Overenie účtu dokončíte kliknutím na odkaz nižšie.
+
+## Breach report
+
+email-breach-summary = Tu je sumár únikov údajov
+# Variables:
+#   $email-address (string) - Email address, bolded
+email-breach-detected = Výsledky vyhľadávania pre váš účet { $email-address } zistili, že váš e‑mail mohol byť odhalený. Odporúčame vám, aby ste okamžite začali daný únik riešiť.
+email-dashboard-cta = Prejsť na nástenku
+
+## Breach alert email
+
+email-breach-alert-all-subject = Bol zistený nový únik údajov
+email-breach-alert-all-preview = Prevedieme vás krokmi, ako to vyriešiť.
+email-breach-alert-all-hero-heading = Vaše údaje sú súčasťou nového úniku údajov
+email-breach-alert-all-hero-subheading = Nebojte sa, môžeme vám pomôcť tento únik vyriešiť
+email-breach-alert-all-lead = { -brand-mozilla-monitor } zistil nasledujúci únik údajov, ktorý zahŕňa vaše osobné údaje:
+email-breach-alert-all-source-title = Zdroj úniku:
+email-breach-alert-all-data-points-title = Vaše uniknuté údaje:
+email-breach-alert-all-next-steps-lead = Prevedieme vás krok za krokom, ako vyriešiť tento únik údajov.
+email-breach-alert-all-next-steps-cta-label = Začíname
+email-breach-alert-all-next-steps-button-dashboard = Prejsť na nástenku
+
+## Breach alert redesigned strings
+
+# $company-name is the name of the company/site that was breached.
+email-breach-alert-all-hero-heading-1 = Podrobnosti o úniku údajov spoločnosti { $company-name }
+# $company-name is the name of the company/site that was breached.
+# $breach-date is the date of the breach.
+email-breach-alert-all-lead-1 = { -brand-mozilla-monitor } našiel vaše informácie v rámci úniku údajov spoločnosti { $company-name } dňa { $breach-date }. Toto upozornenie dostávate, pretože ste sa prihlásili na odber <link_to_settings>upozornení na úniky údajov</link_to_settings>.
+email-breach-alert-all-source-title-1 = Podrobnosti o úniku
+email-breach-alert-company = Spoločnosť:
+email-breach-alert-date-of-breach = Dátum úniku:
+email-breach-alert-info-exposed = Vaše odhalené informácie:
+email-breach-alert-next-steps = Ďalšie kroky
+email-breach-alert-next-steps-description = <sign_in_link>Prihláste sa</sign_in_link> do nástenky služby { -brand-mozilla-monitor }. Prevedieme vás krokmi potrebnými na jeho vyriešenie.
+email-breach-alert-all-next-steps-button-resolve-breach-on-dashboard = Vyriešiť únik na nástenke
+email-breach-alert-faqs-title = Často kladené otázky
+email-breach-alert-faq-qn-1 = Prečo mi toto prišlo?
+email-breach-alert-faq-ans-1 = Zaregistrovali ste sa na odber upozornení na únik údajov. <link_to_settings>Svoje predvoľby si môžete kedykoľvek aktualizovať</link_to_settings> v nastaveniach.
+email-breach-alert-faq-qn-2 = Prečo túto spoločnosť alebo stránku nepoznám?
+email-breach-alert-faq-ans-2 = Mohlo dôjsť k zmene vlastníctva alebo názvu, mohlo sa týkať starého účtu alebo účtu, ktorý bol vytvorený pre vás, alebo pochádzať zo zakúpeného zoznamu odhalených osobných údajov.
+email-breach-alert-faq-qn-3 = Čo je to upozornenie na únik údajov?
+email-breach-alert-faq-ans-3 = Upozornenie služba { -brand-mozilla-monitor } odošle, keď sú sledované osobné údaje odhalené, ukradnuté alebo skopírované bez povolenia.
+email-breach-alert-faq-qn-4 = Čo je { -brand-mozilla-monitor }?
+email-breach-alert-faq-ans-4 = Bezplatná služba na upozornenie na únik údajov, ktorá vás upozorní, ak boli vaše online účty súčasťou do úniku údajov.

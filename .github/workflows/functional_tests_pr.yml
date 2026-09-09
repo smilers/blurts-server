@@ -1,0 +1,88 @@
+name: Functional Test Suite (PR)
+
+permissions: {}
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  functional-tests:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    # Service containers to run with `container-job`
+    services:
+      # Label used to access the service container
+      postgres:
+        # Docker Hub image
+        image: postgres
+        # Provide the password for postgres
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: blurts
+        # Set health checks to wait until postgres has started
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+        - 5432:5432
+
+    steps:
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v6
+        with:
+          node-version: 20.20.x
+
+      - name: Install dependencies
+        run: npm ci
+      - name: Setting up postgres
+        run: npm run db:migrate
+        env:
+          DATABASE_URL: postgres://postgres:postgres@localhost:5432/blurts
+
+      - name: Store Playwright’s Version
+        run: |
+          # Get the current Playwright version listed in package.json
+          PLAYWRIGHT_VERSION=$(npx playwright --version | sed 's/Version //')
+          echo "Playwright Version: $PLAYWRIGHT_VERSION"
+          echo "PLAYWRIGHT_VERSION=$PLAYWRIGHT_VERSION" >> $GITHUB_ENV
+      - name: Cache Playwright Browsers for Playwright's Version
+        id: cache-playwright-browsers
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v5
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-browsers-${{ env.PLAYWRIGHT_VERSION }}
+
+      - name: Setup Playwright Browser
+        if: steps.cache-playwright-browsers.outputs.cache-hit != 'true'
+        run: npx playwright install --with-deps
+
+      - name: Run Playwright tests
+        if: github.event.pull_request.user.login != 'dependabot[bot]'
+        run: npm run functional-tests
+        timeout-minutes: 20
+        env:
+          ADMINS: ${{ secrets.ADMINS }}
+          DATABASE_URL: postgres://postgres:postgres@localhost:5432/blurts
+          E2E_TEST_SECRET: ${{ secrets.E2E_TEST_SECRET }}
+          E2E_TEST_ACCOUNT_BASE_EMAIL: ${{ secrets.E2E_TEST_ACCOUNT_BASE_EMAIL }}
+          E2E_TEST_ACCOUNT_BASE_PASSWORD: ${{ secrets.E2E_TEST_ACCOUNT_BASE_PASSWORD }}
+          E2E_TEST_ENV: local
+          FXA_CI_SECRET_STAGE: ${{ secrets.FXA_CI_SECRET_STAGE }}
+          HIBP_API_TOKEN: ${{ secrets.HIBP_API_TOKEN }}
+          HIBP_KANON_API_ROOT: "http://localhost:6060/api/mock/hibp"
+          HIBP_KANON_API_TOKEN: ${{ secrets.HIBP_KANON_API_TOKEN }}
+          NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
+          NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}
+          OAUTH_ACCOUNT_URI: ${{ secrets.OAUTH_ACCOUNT_URI }}
+          OAUTH_CLIENT_SECRET: ${{ secrets.OAUTH_CLIENT_SECRET_LOCAL }}
+          REDIS_URL: "redis://redis.mock"
+          SENTRY_DSN: "Unused for the test run, but required to be present when loading env vars"
+          EMAIL_FROM: "Unused for the test run, but required to be present when loading env vars"
+          S3_BUCKET: "Unused for the test run, but required to be present when loading env vars"

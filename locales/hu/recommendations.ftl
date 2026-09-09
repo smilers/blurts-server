@@ -1,3 +1,7 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
 # Recommendation subhead
 rec-ssn-subhead = Tekintse át a hitelkártya-jelentéseit
 # Link title
@@ -10,16 +14,16 @@ rec-ssn =
 rec-pw-1-subhead = Változtassa meg a jelszavát
 # Link title
 rec-pw-1-cta = Cserélje le a jelszavát ennél az oldalnál
-rec-pw-1 =
+rec-pw-1-2 =
     Ez a jelszó legyen egyedi és különbözzön az összes Ön által használt jelszótól. 
     Jó stratégia kettő vagy több egymással nem kapcsolatos szó használata, 
-    amelyből egy teljes jelmondatot tud létrehozni.
+    amelyből egy teljes jelmondatot tud létrehozni, és használjon számokat és jeleket.
 # Recommendation subhead
 rec-pw-2-subhead = Frissítse a többi bejelentkezését, amelyek ugyanazt a jelszót használják
 # Link title
 rec-pw-2-cta-fx = Bejelentkezések megtekintése a { -brand-name }ban
 rec-pw-2 =
-    A jelszavak újbóli felhasználása azt okozza, hogy egy adatsértésből több lesz.
+    A jelszavak újbóli felhasználása azt okozza, hogy egy adatvédelmi incidensből több lesz.
     Mivel a jelszava már kikerült, így a hackerek más fiókjaiba is megpróbálhatnak belépni.
 # Recommendation subhead
 rec-pw-3-subhead = Használjon egy jelszókezelőt, és vigye el a jelszavait bárhová
@@ -50,35 +54,26 @@ rec-cc =
     Figyeljen a furcsa terhelésekre a hitelkártyáján. Lehet, hogy érdemes
     új kártyát igényelnie (új kártyaszámmal) a hitelkártya kibocsátójától.
 # Recommendation subhead
-rec-email-subhead = Használjon e-mail álneveket
+rec-email-mask-subhead = Használjon e-mail-maszkot
 rec-email-cta = Próbálja ki a { -brand-relay }t
 rec-email =
     A valódi e-mail-címének megadása megkönnyíti a hackerek vagy követők számára, hogy
     megtalálják a jelszavát vagy Önt célozzák az interneten. Egy olyan szolgáltatás, mint a { -brand-relay },
     elrejti a valódi e-mail-címét, miközben továbbítja azokat a valódi postaládájába.
 # Recommendation subhead
-rec-ip-subhead = Használjon olyan szolgáltatást, amely elfedi az IP-címét
-# Link title
-rec-ip-us-cta = Próbálja ki a { -brand-fpn }öt
-rec-ip-us =
-    Az Internet Protocol címe (IP-címe) pontosan meghatározza a helyét
-    és internetszolgáltatóját. Egy olyan szolgáltatás, mint a { -brand-fpn }
-    elrejtik az IP-címét, hogy elrejtse a helyét.
-rec-ip-non-us =
-    Az Internet Protocol címe (IP-címe) pontosan meghatározza a helyét
-    és internetszolgáltatóját. Egy virtuális magánhálózattal (VPN-nel) elrejtheti
-    a tartózkodási helyét és az IP-címét.
+rec-ip-subhead-2 = Használjon VPN-t az IP-címe elrejtéséhez
 # Recommendation subhead
 rec-moz-vpn-cta = Próbálja ki a { -brand-mozilla-vpn }-t
-rec-moz-vpn-update =
-    Az Internet Protocol címe (IP-címe) felfedheti a helyét és internetszolgáltatóját. Egy olyan szolgáltatás, mint a { -brand-mozilla-vpn }
-    elrejti az eszköze IP-címét és tartózkodási helyét.
+rec-moz-vpn-update-2 =
+    Az Internet Protocol címe (IP-címe) pontosan meghatározza a helyét
+    és internetszolgáltatóját. Az olyan szolgáltatások, mint a { -brand-mozilla-vpn },
+    elrejtik az IP-címét, hogy elrejtsék a tartózkodási helyét.
 rec-hist-pw-subhead = Kerülje a jelszavak újbóli felhasználását
 # Link title
 rec-hist-pw-cta-fx = Bejelentkezések megtekintése a { -brand-name }ban
 rec-hist-pw =
     Használjon egyedi, erős jelszavakat minden fiókhoz. Ha kikerül egy jelszava
-    egy adatsértés esetén, akkor csak azt a bejelentkezést kell frissítenie.
+    egy adatvédelmi incidens esetén, akkor csak azt a bejelentkezést kell frissítenie.
 # Recommendation subhead
 rec-sec-qa-subhead = Hozzon létre egyedi válaszokat a biztonsági kérdésekhez
 rec-sec-qa =
@@ -126,7 +121,7 @@ rec-gen-3-subhead = Legyen óvatos, amikor személyes információkat oszt meg
 # Link title
 rec-gen-3-cta = Olvasson további biztonsági tippeket
 rec-gen-3 =
-    Ne adja ki a személyes adatait, ha nem muszáj. Ha elkérik az e-mail címét,
+    Ne adja ki a személyes adatait, ha nem muszáj. Ha elkérik az e-mail-címét,
     irányítószámát vagy telefonszámát, akkor mondhat nemet.
 # Recommendation subhead
 rec-gen-4-subhead = Rendszeresen frissítse a szoftvereit és alkalmazásait

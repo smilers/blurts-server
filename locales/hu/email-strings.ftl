@@ -1,104 +1,108 @@
-# Firefox Monitor is a product name and should not be translated.
--product-name = Firefox Monitor
-# Firefox is a brand name and should not be translated.
--brand-name = Firefox
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+## Email headers
+
+email-header-button-sign-in = Bejelentkezés
+
+## Email footers
+
+email-footer-support-heading = Kérdése van a { -brand-mozilla-monitor }ral kapcsolatban?
+email-footer-support-content = Segítségért keresse fel a <support-link>Támogatói központunkat</support-link>
+email-footer-trigger-transactional = Ezt az e-mailt a { -brand-mozilla-monitor } feliratkozójaként kapja.
+email-footer-reason-subscriber = Ezt az automatikus levelet mint a { -brand-mozilla-monitor } feliratkozója kapja. Ha tévedésből kapta, nincs teendője. További információkért keresse fel a <support-link>{ -brand-mozilla } támogatást</support-link>.
+email-footer-reason-subscriber-one-time = Azért kapta ezt az egyszeri automatikus levelet, mert előfizetett a következőre: { -brand-monitor-plus }. Nem fog több ehhez hasonló e-mailt kapni. További információkért keresse fel a <support-link>{ -brand-mozilla } támogatást</support-link>.
+# Variables:
+#    $support_link (string) - The URL the user can visit for support, e.g. "https://support.mozilla.org"
+email-footer-support-content-plain =
+    Segítségért keresse fel Támogatási központunkat:
+    { $support_link }
+# Variables:
+#   $hibp_link (string) - URL to Have I Been Pwned, e.g. "https://haveibeenpwned.com".
+email-footer-source-hibp-plain = Az adatvédelmi incidensek adatait a { -brand-HIBP } szolgáltatta: { $hibp_link }
+email-footer-source-hibp = Az adatvédelmi incidensek adatait a <hibp-link>{ -brand-HIBP }</hibp-link> szolgáltatta
+email-footer-logo-mozilla-alt = { -brand-mozilla }
+email-footer-meta-privacy-notice = Adatvédelem
+email-unsubscribe-link = <link_to_unsub>Leiratkozás</link_to_unsub>
+# Variables:
+#   $unsub_link (string) - URL to the unsubscribe page, e.g. "https://monitor.mozilla.org/unsubscribe/...".
+email-unsubscribe-link-plain = Leiratkozás: { $unsub_link }
 # Firefox Relay is a product name and should not be translated.
 -product-name-relay = Firefox Relay
 # Mozilla VPN is a product name and should not be translated.
 -product-name-vpn = Mozilla VPN
-# A Firefox Monitor Report is an emailed statement from Firefox Monitor containing a list of known data breaches where the user’s email address was found amongst the stolen data.
-firefox-monitor-report = { -product-name } jelentés
-report-date = Jelentés ideje:
-email-address = E-mail cím:
-# A link to legal information about mozilla products.
-legal = Jogi információk
-# Unsubscribe link in email.
-email-unsub-link = Leiratkozás
-# This string appears in the footer of breach report and breach alert emails.
-# { $unsubLink } is a link to the user's dashboard where they can unsubscribe from Monitor
-# and uses the text from { email-unsub-link }. { $faqLink } is a link to the 
-# Firefox Monitor SUMO page and uses the text from { frequently-asked-questions }.
-email-footer-blurb =
-    Azért kapja ezt az e-mailt, mert feliratkozott a { -product-name } figyelmeztetéseire.
-    Már nem szeretné ezeket a leveleket? { $unsubLink }. Ez egy automatikus levél. Támogatásért keresse fel a { $faqLink } oldalt.
-# This string appears in the footer of verification emails. { $faqLink } is a link
-# to the Firefox Monitor SUMO page and uses the text from { frequently-asked-questions }.
-email-verify-footer-copy =
-    Azért kapja ezt az e-mailt, mert feliratkozott a { -product-name } figyelmeztetéseire.
-    Ez egy automatikus levél. Támogatásért keresse fel a { $faqLink } oldalt.
 # Button text
-verify-email-cta = E-mail cím megerősítése
-# Button text
-see-all-breaches = Az összes adatsértés megtekintése
+verify-email-cta = E-mail-cím megerősítése
 # Headline of verification email
 email-link-expires = Ez a hivatkozás 24 óra múlva lejár
-email-verify-blurb = Erősítse meg az e-mail címét a { -product-name }hoz hozzáadáshoz, és iratkozzon fel az adatsértési figyelmeztetésekre.
-# Email headline
-email-found-breaches-hl = Íme a múltbeli adatsértéseinek összefoglalása
-# Email headline
-email-breach-summary-for-email = A(z) { $userEmail } adatsértési összefoglalója
-# Email headline
-email-no-breaches-hl = A(z) { $userEmail } cím 0 ismert adatsértésben jelent meg
-# Email headline
-email-alert-hl = A(z) { $userEmail } cím egy adatsértésben jelent meg
+
+##
+
 # Subject line of email
-email-subject-found-breaches = A { -product-name } ezekben az adatsértésekben találta meg az információit
+email-subject-found-breaches = A { -product-name } ezekben az adatvédelmi incidensekben találta meg az információit
 # Subject line of email
-email-subject-no-breaches = A { -product-name } nem talált ismert adatsértést
+email-subject-no-breaches = A { -product-name } nem talált ismert adatvédelmi incidenst
 # Subject line of email
-email-subject-verify = Erősítse meg a { -product-name }hoz használt e-mail címét
-# { $fxmLink } is a link to Firefox Monitor and uses the text from { -product-name }.
-learn-more-about-fxm = Tudjon meg többet a { $fxmLink }ról
-email-sensitive-disclaimer =
-    Az adatsértés érzékeny jellege miatt, az érintett e-mail címek nem nyilvánosak.
-    Azért kapja ezt a figyelmeztetést, mert megerősítette, hogy Ön az e-mail cím tulajdonosa.
+email-subject-verify = Erősítse meg a { -product-name }hoz használt e-mail-címét
 fxm-warns-you-no-breaches =
-    A { -product-name } figyelmezteti az Ön személyes információit érintő adatsértésekről.
-    Eddig egyetlen adatsértés sem található. Figyelmeztetést küldünk Önnek, ha az e-mail címe új adatsértésben jelenik meg.
-fxm-warns-you-found-breaches =
-    A { -product-name } figyelmezteti az Ön személyes információit érintő adatsértésekről.
-    Arra is feliratkozott, hogy figyelmeztetést kapjon, ha az e-mail címe új adatsértésben jelenik meg.
-email-breach-alert-blurb =
-    A { -product-name } figyelmezteti az Ön személyes információit érintő adatsértésekről.
-    Épp most kaptunk részleteket egy másik céget érintő adatsértésről.
-# List headline
-faq-list-headline = Gyakran ismételt kérdések
-# Link Title
-faq-v2-1 = Nem ismerem ezeket a cégeket vagy weboldalakat? Miért szerepelek ebben az adatsértésben?
-# Link Title
-faq-v2-2 = Kell-e valamit tennem, ha ez az adatsértés évekkel ezelőtt történt vagy egy régi fiókomat érinti?
-# Link Title
-faq-v2-3 = Észrevettem, hogy szereplek egy adatsértésben. Mit legyen a következő lépésem?
-# Link Title
-faq-v2-4 = Hogyan kezeli a { -product-name } az érzékeny webhelyeket?
-# This string contains nested markup that becomes a link to Firefox Monitor
-# later in the code. Please do not modify or remove "<a>" and "</a>".
-pre-fxa-message = <a>Hozzon létre egy ingyenes { -brand-fxa }ot</a>, és akár 15 e-mail címet is hozzáadhat.
-# Section headline
-monitor-another-email = Egy másik e-mail címet is figyelni szeretne?
-# Subject line of email
-pre-fxa-subject = Frissítés a { -product-name }tól
-pre-fxa-headline = Mi változik a { -product-name }ban
-pre-fxa-blurb =
-    Ezek változtak, mióta feliratkozott a { -product-name }ra, a szolgáltatásra, amely 
-    az ismert adatsértéseket figyeli az Ön személyes adatait keresve. Ezt összekötjük a Firefox fiókokkal.
-pre-fxa-tout-1 = Figyeljen a további adatsértésekre
-pre-fxa-p-1 =
-    <a>Hozzon létre egy fiókot</a>, amellyel akár 15 e-mail címet figyelhet meg, 
-    adatsértést keresve. Javasoljuk, hogy minden olyan e-mail címet adjon hozzá, amelyet online fiókok létrehozásához használt.
-pre-fxa-tout-2 = Vezérlőpult nézet beszerzése
-pre-fxa-p-2 =
-    Tekintse meg az összes adatsértést egy helyen, hogy tudja, mely jelszavakat kell megváltoztatnia. 
-    Az adatsértés vezérlőpult csak akkor érhető el, ha rendelkezik fiókkal.
-pre-fxa-tout-3 = E-mail értesítések fenntartása
-pre-fxa-p-3 =
-    A { -product-name }tól továbbra is kap értesítéseket. Értesíteni fogjuk, ha az Ön adatai 
-    új adatsértésben jelentek meg.
-# Button at the bottom of pre-fxa email.
-create-account = Fiók létrehozása
-# More security products
-more-products-headline = Védje meg magát a többi termékünkkel
-more-products-vpn = Teljes eszközvédelem, minden eszközön.
-more-products-cta-vpn = { -product-name-vpn } beszerzése
-more-products-relay = Rejtse el a valódi e-mail-címét, hogy megvédje személyazonosságát.
-more-products-cta-relay = { -product-name-relay } beszerzése
+    A { -product-name } figyelmezteti az Ön személyes információit érintő adatvédelmi incidensekről.
+    Eddig egyetlen adatvédelmi incidens sem található. Figyelmeztetést küldünk Önnek, ha az e-mail-címe új adatvédelmi incidensben jelenik meg.
+
+## 2022 email template. HTML tags should not be translated, e.g. `<a>`
+
+# Have I Been Pwned attribution
+# Variables:
+#   $hibp-link-attr (String) - Link to Have I Been Pwned
+email-2022-hibp-attribution = Az adatvédelmi incidensek adatait a <a { $hibp-link-attr }>{ -brand-HIBP }</a> szolgáltatta
+
+## Verification email
+
+email-verify-heading = Védje meg az adatait, már most
+email-verify-simply-click = Egyszerűen kattintson az alábbi hivatkozásra a fiókja ellenőrzésének befejezéséhez.
+
+## Breach report
+
+email-breach-summary = Íme az adatvédelmi incidens összefoglalója
+# Variables:
+#   $email-address (string) - Email address, bolded
+email-breach-detected = Az Ön { $email-address } fiókjához tartozó keresési találatok azt észlelték, hogy e-mail-címe nyilvánosságra került. Javasoljuk, hogy azonnal intézkedjen az adatvédelmi incidens megszüntetése érdekében.
+email-dashboard-cta = Ugrás a vezérlőpulthoz
+
+## Breach alert email
+
+email-breach-alert-all-subject = Új adatvédelmi incidens észlelve
+email-breach-alert-all-preview = Végigvezetjük a megoldási lépéseken.
+email-breach-alert-all-hero-heading = Egy adatvédelmi incidensben volt érintett
+email-breach-alert-all-hero-subheading = Ne aggódjon, segíthetünk megoldani ezt a kitettséget
+email-breach-alert-all-lead = A { -brand-mozilla-monitor } felfedezte a következő adatvédelmi incidenst, amely az Ön személyes információit is tartalmazza:
+email-breach-alert-all-source-title = Adatvédelmi incidens forrása:
+email-breach-alert-all-data-points-title = A kikerült adatai:
+email-breach-alert-all-next-steps-lead = Lépésről lépésre végigvezetjük az adatvédelmi incidens megoldásán.
+email-breach-alert-all-next-steps-cta-label = Kezdjünk hozzá
+email-breach-alert-all-next-steps-button-dashboard = Ugrás a vezérlőpulthoz
+
+## Breach alert redesigned strings
+
+# $company-name is the name of the company/site that was breached.
+email-breach-alert-all-hero-heading-1 = A(z) { $company-name } adatvédelmi incidensének részletei
+# $company-name is the name of the company/site that was breached.
+# $breach-date is the date of the breach.
+email-breach-alert-all-lead-1 = A { -brand-mozilla-monitor } megtalálta az adatait a(z) { $company-name } adatvédelmi incidensében ekkor: { $breach-date }. Azért kapja ezt a figyelmeztetést, mert feliratkozott az <link_to_settings>adatvédelmi incidensek értesítéseire</link_to_settings>.
+email-breach-alert-all-source-title-1 = Adatvédelmi incidens részletei
+email-breach-alert-company = Cég:
+email-breach-alert-date-of-breach = Az adatvédelmi incidens dátuma:
+email-breach-alert-info-exposed = Érintett információk:
+email-breach-alert-next-steps = Következő lépések
+email-breach-alert-next-steps-description = <sign_in_link>Jelentkezzen be</sign_in_link> a { -brand-mozilla-monitor } vezérlőpultjára. Végigvezetjük a megoldásához szükséges lépéseken.
+email-breach-alert-all-next-steps-button-resolve-breach-on-dashboard = Adatvédelmi incidens megoldása a vezérlőpulton
+email-breach-alert-faqs-title = GYIK
+email-breach-alert-faq-qn-1 = Miért kapom ezt?
+email-breach-alert-faq-ans-1 = Feliratkozott az adatvédelmi incidensek figyelmeztetéseire. <link_to_settings>Beállításait bármikor frissítheti</link_to_settings>.
+email-breach-alert-faq-qn-2 = Miért nem ismerem ezt a céget vagy webhelyet?
+email-breach-alert-faq-ans-2 = Előfordulhat, hogy a tulajdonosa vagy a neve megváltozott, régi vagy az Ön számára létrehozott fiókra vonatkozik, vagy kikerült személyes adatok vásárolt listájáról származik.
+email-breach-alert-faq-qn-3 = Mi az az adatvédelmiincidens-riasztás?
+email-breach-alert-faq-ans-3 = Egy értesítést küld a { -brand-mozilla-monitor }, ha az Ön által figyelt személyes adatai kikerülnek, ellopják vagy engedély nélkül másolják azokat.
+email-breach-alert-faq-qn-4 = Mi az a { -brand-mozilla-monitor }?
+email-breach-alert-faq-ans-4 = Egy ingyenes értesítési szolgáltatás, amely figyelmezteti, ha az online fiókjai adatvédelmi incidensben voltak érintettek.

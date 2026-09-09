@@ -1,3 +1,7 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
 # Recommendation subhead
 rec-ssn-subhead = Revise seus relatórios de crédito
 # Link title
@@ -10,10 +14,9 @@ rec-ssn =
 rec-pw-1-subhead = Mude sua senha
 # Link title
 rec-pw-1-cta = Mudar a senha neste site
-rec-pw-1 =
-    Torne essa senha única e diferente das outras que você usa. 
-    Uma boa estratégia a seguir é combinar duas ou mais palavras 
-    sem relação entre si para criar uma senha completa.
+rec-pw-1-2 =
+    Torne essa senha exclusiva, diferente das outras que você usa.
+    Uma boa estratégia para criar uma senha é combinar duas ou mais palavras sem relação entre si e incluir números e símbolos.
 # Recommendation subhead
 rec-pw-2-subhead = Atualize outras contas de acesso que têm a mesma senha
 # Link title
@@ -48,25 +51,16 @@ rec-cc =
     Procure cobranças estranhas no seu cartão de crédito. Se precisar você pode
     solicitar um novo cartão com outro número ao emissor do seu cartão de crédito.
 # Recommendation subhead
-rec-email-subhead = Use endereços de redirecionamento de email
+rec-email-mask-subhead = Use uma máscara de email
 rec-email-cta = Experimente o { -brand-relay }
 rec-email =
     Fornecer seu endereço de email real facilita aos hackers e rastreadores
     encontrar suas senhas e direcionar material online para você. Um serviço como o { -brand-relay } oculta seu endereço de email real e encaminha as mensagens para sua caixa de entrada.
 # Recommendation subhead
-rec-ip-subhead = Use um serviço que oculta seu endereço IP
-# Link title
-rec-ip-us-cta = Experimente o { -brand-fpn }
-rec-ip-us =
-    Seu endereço IP indica sua localização e seu provedor de acesso à internet. 
-    Um serviço como o { -brand-fpn } mascara seu endereço IP para ocultar sua localização.
-rec-ip-non-us =
-    Seu endereço IP indica sua localização e seu provedor de acesso à internet. 
-    Com uma rede privativa virtual (VPN), você pode ocultar sua localização 
-    e mascarar seu endereço IP.
+rec-ip-subhead-2 = Use uma VPN para mascarar seu endereço IP
 # Recommendation subhead
 rec-moz-vpn-cta = Experimente o { -brand-mozilla-vpn }
-rec-moz-vpn-update = Seu endereço de protocolo de internet (endereço IP) pode revelar sua localização e seu provedor de acesso à internet. Um serviço como o { -brand-mozilla-vpn } oculta seu endereço IP e sua localização em todo o seu dispositivo.
+rec-moz-vpn-update-2 = Seu endereço de protocolo de internet (endereço IP) pode revelar sua localização e seu provedor de acesso à internet. Um serviço como o { -brand-mozilla-vpn } oculta seu endereço IP para ocultar sua localização.
 rec-hist-pw-subhead = Evite reusar senhas
 # Link title
 rec-hist-pw-cta-fx = Ver contas no { -brand-name }
@@ -110,7 +104,7 @@ rec-gen-1 =
 # Recommendation subhead
 rec-gen-2-subhead = Armazene senhas em um lugar seguro
 # Link title
-rec-gen-2-cta = Mitos sobre gerenciadores de senhas
+rec-gen-2-cta = Lendas sobre gerenciadores de senhas
 rec-gen-2 =
     Coloque os detalhes de suas contas em um lugar seguro que só você pode acessar, como um 
     gerenciador de senhas. Isso também facilita o controle de todas as suas diferentes senhas.

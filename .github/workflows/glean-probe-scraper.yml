@@ -1,0 +1,16 @@
+name: Glean probe-scraper
+
+permissions: {}
+
+on:
+  push:
+    paths:
+      - src/telemetry/metrics.yaml
+      - src/telemetry/backend-metrics.yaml
+  pull_request:
+    paths:
+      - src/telemetry/metrics.yaml
+      - src/telemetry/backend-metrics.yaml
+jobs:
+  glean-probe-scraper:
+    uses: mozilla/probe-scraper/.github/workflows/glean.yaml@main

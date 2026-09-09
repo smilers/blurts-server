@@ -1,0 +1,386 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+import type { Profile } from "next-auth";
+import type { EmailAddressRow, SubscriberRow } from "knex/types/tables";
+import createDbConnection from "../connect";
+import { SerializedSubscriber } from "../../next-auth.js";
+import { config } from "../../config";
+import { logger } from "../../app/functions/server/logging";
+import { getSha1 } from "../../utils/fxa";
+import { subscribeHash } from "../../utils/hibp";
+import { type Knex } from "knex";
+
+const knex = createDbConnection();
+
+// Not covered by tests; mostly side-effects. See test-coverage.md#mock-heavy
+/* c8 ignore start */
+async function getSubscribersByHashes(
+  hashes: string[],
+  options?: { activeWithinMs?: number },
+) {
+  const query = knex("subscribers")
+    .whereIn("primary_sha1", hashes)
+    .andWhere("primary_verified", "=", true);
+  if (options?.activeWithinMs !== undefined) {
+    query.andWhere(
+      "fxa_session_expiry",
+      ">",
+      new Date(Date.now() - options.activeWithinMs),
+    );
+  }
+  return await query;
+}
+/* c8 ignore stop */
+
+// Not covered by tests; mostly side-effects. See test-coverage.md#mock-heavy
+/* c8 ignore start */
+async function getSubscriberById(
+  id: SubscriberRow["id"],
+): Promise<undefined | (SubscriberRow & WithEmailAddresses)> {
+  const [subscriber] = await knex("subscribers").where({
+    id,
+  });
+  if (!subscriber) {
+    return;
+  }
+  const subscriberAndEmails = await joinEmailAddressesToSubscriber(subscriber);
+  return subscriberAndEmails;
+}
+/* c8 ignore stop */
+
+// Not covered by tests; mostly side-effects. See test-coverage.md#mock-heavy
+/* c8 ignore start */
+async function getSubscriberByFxaUid(
+  uid: SubscriberRow["fxa_uid"],
+): Promise<undefined | (SubscriberRow & WithEmailAddresses)> {
+  const [subscriber] = await knex("subscribers").where({
+    fxa_uid: uid,
+  });
+  if (!subscriber) {
+    return;
+  }
+  const subscriberAndEmails = await joinEmailAddressesToSubscriber(subscriber);
+  return subscriberAndEmails;
+}
+/* c8 ignore stop */
+
+/**
+ * Update primary email for subscriber
+ */
+
+async function updatePrimaryEmail(
+  subscriber: SubscriberRow,
+  updatedEmail: string,
+): Promise<SubscriberRow | null> {
+  try {
+    const subscriberTableUpdated = await knex.transaction(async (trx) => {
+      // update subscriber primary email to updated email
+      const subscriberTableUpdated = await trx("subscribers")
+        .where("id", "=", subscriber.id)
+        .update({
+          primary_email: updatedEmail,
+          primary_sha1: getSha1(updatedEmail.toLowerCase()),
+          // @ts-ignore knex.fn.now() results in it being set to a date,
+          // even if it's not typed as a JS date object:
+          updated_at: knex.fn.now(),
+        })
+        .returning("*");
+
+      // if email_addresses table has updatedEmail as a secondary in Monitor
+      // swap it with the current primary
+      // Fixing: MNTOR-1748
+      await trx("email_addresses")
+        .where("email", "=", updatedEmail)
+        .update({
+          email: subscriber.primary_email,
+          sha1: getSha1(subscriber.primary_email.toLowerCase()),
+          // @ts-ignore knex.fn.now() results in it being set to a date,
+          // even if it's not typed as a JS date object:
+          updated_at: knex.fn.now() as unknown as Date,
+        });
+
+      // Subscribe the new primary email's hash to HIBP breach notifications
+      await subscribeHash(getSha1(updatedEmail.toLowerCase()));
+
+      return subscriberTableUpdated[0] ?? null;
+    });
+    return subscriberTableUpdated;
+  } catch (error) {
+    logger.error("updatePrimaryEmail", error);
+    return null;
+  }
+}
+
+/**
+ * Update fxa_refresh_token and fxa_profile_json for subscriber
+ *
+ * @param subscriber knex object in DB
+ * @param fxaAccessToken from Firefox Account Oauth
+ * @param fxaRefreshToken from Firefox Account Oauth
+ * @param sessionExpiresAt from Firefox Account Oauth
+ * @param fxaProfileData from Firefox Account
+ * @returns updated subscriber knex object in DB
+ */
+// Not covered by tests; mostly side-effects. See test-coverage.md#mock-heavy
+/* c8 ignore start */
+async function updateFxAData(
+  subscriber: SubscriberRow | SerializedSubscriber,
+  fxaAccessToken: string | null,
+  fxaRefreshToken: string | null,
+  sessionExpiresAt: number,
+  fxaProfileData?: Profile,
+): Promise<SubscriberRow | undefined | null> {
+  const fxaUID = fxaProfileData?.uid;
+  const updated = await knex("subscribers")
+    .where("id", "=", subscriber.id)
+    .update({
+      fxa_uid: fxaUID,
+      fxa_access_token: fxaAccessToken,
+      fxa_refresh_token: fxaRefreshToken,
+      fxa_session_expiry: new Date(sessionExpiresAt),
+      fxa_profile_json: fxaProfileData,
+      // @ts-ignore knex.fn.now() results in it being set to a date,
+      // even if it's not typed as a JS date object:
+      updated_at: knex.fn.now(),
+    })
+    .returning("*");
+  return Array.isArray(updated) ? updated[0] : null;
+}
+/* c8 ignore stop */
+
+/**
+ * Update fxa tokens for subscriber
+ *
+ * @param subscriber knex object in DB
+ * @param fxaAccessToken from Firefox Account Oauth
+ * @param fxaRefreshToken from Firefox Account Oauth
+ * @param sessionExpiresAt from Firefox Account Oauth
+ * @returns updated subscriber knex object in DB
+ */
+// Not covered by tests; mostly side-effects. See test-coverage.md#mock-heavy
+/* c8 ignore start */
+async function updateFxATokens(
+  subscriber: SubscriberRow | SerializedSubscriber,
+  fxaAccessToken: string | null,
+  fxaRefreshToken: string | null,
+  sessionExpiresAt: number,
+): Promise<SubscriberRow | undefined | null> {
+  const updateResp = await knex("subscribers")
+    .where("id", "=", subscriber.id)
+    .update({
+      fxa_access_token: fxaAccessToken,
+      fxa_refresh_token: fxaRefreshToken,
+      fxa_session_expiry: new Date(sessionExpiresAt),
+      // @ts-ignore knex.fn.now() results in it being set to a date,
+      // even if it's not typed as a JS date object:
+      updated_at: knex.fn.now(),
+    })
+    .returning("*");
+  return Array.isArray(updateResp) && updateResp.length > 0
+    ? updateResp[0]
+    : null;
+}
+
+/* c8 ignore stop */
+
+/**
+ * Get fxa tokens and expiry for subscriber
+ */
+// Not covered by tests; mostly side-effects. See test-coverage.md#mock-heavy
+/* c8 ignore start */
+async function getFxATokens(subscriberId: SubscriberRow["id"]) {
+  const res = await knex("subscribers")
+    .first("fxa_access_token", "fxa_refresh_token", "fxa_session_expiry")
+    .where("id", subscriberId);
+  return res ?? null;
+}
+/* c8 ignore stop */
+
+/**
+ * Update fxa_profile_json for subscriber
+ */
+// Not covered by tests; mostly side-effects. See test-coverage.md#mock-heavy
+/* c8 ignore start */
+async function updateFxAProfileData(
+  subscriber: SubscriberRow,
+  fxaProfileData: SubscriberRow["fxa_profile_json"],
+) {
+  await knex("subscribers").where("id", subscriber.id).update({
+    fxa_profile_json: fxaProfileData,
+    // @ts-ignore knex.fn.now() results in it being set to a date,
+    // even if it's not typed as a JS date object:
+    updated_at: knex.fn.now(),
+  });
+  return getSubscriberById(subscriber.id);
+}
+/* c8 ignore stop */
+
+// Not covered by tests; mostly side-effects. See test-coverage.md#mock-heavy
+/* c8 ignore start */
+/**
+ * Set email communication preference
+ *
+ * @param subscriber
+ * @param allEmailsToPrimary null for disabling breach alerts, false for
+ * sending each alert to the affected address (default), and true for
+ * sending all alerts to the primary email address
+ * @param trx an optional open transaction object, for grouping updates;
+ * if left undefined will use shared knex connection pool
+ */
+async function setAllEmailsToPrimary(
+  subscriber: SubscriberRow,
+  allEmailsToPrimary: SubscriberRow["all_emails_to_primary"],
+  trx?: Knex.Transaction,
+) {
+  const conn = trx ?? knex;
+  const updated = await conn("subscribers")
+    .where("id", subscriber.id)
+    .update({
+      all_emails_to_primary: allEmailsToPrimary,
+      // @ts-ignore knex.fn.now() results in it being set to a date,
+      // even if it's not typed as a JS date object:
+      updated_at: knex.fn.now(),
+    })
+    .returning("*");
+  const updatedSubscriber = Array.isArray(updated) ? updated[0] : null;
+  return updatedSubscriber;
+}
+/* c8 ignore stop */
+
+/**
+ * Set "breach_resolution" column with the latest breach resolution object.
+ */
+// Not covered by tests; mostly side-effects. See test-coverage.md#mock-heavy
+/* c8 ignore start */
+async function setBreachResolution(
+  user: SubscriberRow,
+  updatedBreachesResolution: SubscriberRow["breach_resolution"],
+): Promise<(SubscriberRow & WithEmailAddresses) | null> {
+  await knex("subscribers").where("id", user.id).update({
+    breach_resolution: updatedBreachesResolution,
+    // @ts-ignore knex.fn.now() results in it being set to a date,
+    // even if it's not typed as a JS date object:
+    updated_at: knex.fn.now(),
+  });
+  return (await getSubscriberByFxaUid(user.fxa_uid)) ?? null;
+}
+/* c8 ignore stop */
+
+// Not covered by tests; mostly side-effects. See test-coverage.md#mock-heavy
+/* c8 ignore start */
+async function deleteUnverifiedSubscribers() {
+  const expiredDateTime = new Date(
+    Date.now() - config.deleteUnverifiedSubscribersTimer * 1000,
+  );
+  const expiredTimeStamp = expiredDateTime.toISOString();
+  const numDeleted = await knex("subscribers")
+    .where("primary_verified", false)
+    .andWhere("created_at", "<", expiredTimeStamp)
+    .del();
+  logger.info("deleteUnverifiedSubscribers", {
+    msg: `Deleted ${numDeleted} rows.`,
+  });
+}
+/* c8 ignore stop */
+
+/**
+ * Delete subscriber when a FxA user id is provided
+ * Also deletes all the additional email addresses associated with the account
+ */
+// Not covered by tests; mostly side-effects. See test-coverage.md#mock-heavy
+/* c8 ignore start */
+async function deleteSubscriber(sub: SubscriberRow | SerializedSubscriber) {
+  logger.debug("deleteSubscriber", { id: sub.id });
+  try {
+    await knex("subscribers")
+      .returning("id")
+      .where("fxa_uid", sub.fxa_uid)
+      .del();
+  } catch (error) {
+    // @ts-ignore Type annotations added later; type unknown:
+    logger.error("deleteSubscriber", { error });
+  }
+}
+/* c8 ignore stop */
+
+// Not covered by tests; mostly side-effects. See test-coverage.md#mock-heavy
+/* c8 ignore start */
+async function deleteResolutionsWithEmail(id: number, email: string) {
+  /** @type {any} */
+  const [subscriber] = await knex("subscribers").where({
+    id,
+  });
+  /** @type {{ breach_resolution: any }} */
+  const { breach_resolution: breachResolution } = subscriber;
+  // if email exists in breach resolution, remove it
+  if (breachResolution && breachResolution[email]) {
+    delete breachResolution[email];
+    logger.info(`Deleting resolution with email: ${email}`);
+    return await setBreachResolution(subscriber, breachResolution);
+  }
+  logger.info(`No resolution with ${email} found, skip`);
+}
+/* c8 ignore stop */
+
+// Not covered by tests; mostly side-effects. See test-coverage.md#mock-heavy
+/* c8 ignore start */
+
+type WithEmailAddresses = SubscriberRow & {
+  email_addresses: EmailAddressRow[];
+};
+async function joinEmailAddressesToSubscriber(
+  subscriber: SubscriberRow,
+): Promise<SubscriberRow & WithEmailAddresses> {
+  const emailAddressRecords = await knex("email_addresses").where({
+    subscriber_id: subscriber.id,
+  });
+  subscriber.email_addresses = emailAddressRecords.map((emailAddress) => ({
+    id: emailAddress.id,
+    email: emailAddress.email,
+  }));
+  return subscriber as SubscriberRow & WithEmailAddresses;
+}
+/* c8 ignore stop */
+
+/* c8 ignore start */
+// Not covered by tests; mostly side-effects. See test-coverage.md#mock-heavy
+// TODO(MNTOR-5160): Determine if this is still needed
+// https://mozilla-hub.atlassian.net/browse/MNTOR-5160
+/* c8 ignore start */
+async function getSignInCount(subscriberId: SubscriberRow["id"]) {
+  const res = await knex("subscribers")
+    .select("sign_in_count")
+    .where("id", subscriberId);
+  return res?.[0]?.["sign_in_count"] ?? null;
+}
+/* c8 ignore stop */
+
+/* c8 ignore start */
+async function unresolveAllBreaches(subscriberId: SubscriberRow["id"]) {
+  const currentDate = new Date();
+  await knex("subscribers")
+    .where("id", subscriberId)
+    .update({ breach_resolution: null, updated_at: currentDate });
+}
+/* c8 ignore stop */
+
+export {
+  getSubscribersByHashes,
+  getSubscriberById,
+  getSubscriberByFxaUid,
+  updatePrimaryEmail,
+  updateFxAData,
+  updateFxATokens,
+  getFxATokens,
+  updateFxAProfileData,
+  setAllEmailsToPrimary,
+  setBreachResolution,
+  deleteUnverifiedSubscribers,
+  deleteSubscriber,
+  deleteResolutionsWithEmail,
+  getSignInCount,
+  unresolveAllBreaches,
+  knex as knexSubscribers,
+};

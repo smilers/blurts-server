@@ -1,96 +1,108 @@
-# Firefox Monitor is a product name and should not be translated.
--product-name = Firefox Monitor
-# Firefox is a brand name and should not be translated.
--brand-name = Firefox
-# A Firefox Monitor Report is an emailed statement from Firefox Monitor containing a list of known data breaches where the user’s email address was found amongst the stolen data.
-firefox-monitor-report = { -product-name }-rapport
-report-date = Rapportdato:
-email-address = E-postadresse:
-# A link to legal information about mozilla products.
-legal = Juridisk
-# Unsubscribe link in email.
-email-unsub-link = Avslutt abonnement
-# This string appears in the footer of breach report and breach alert emails.
-# { $unsubLink } is a link to the user's dashboard where they can unsubscribe from Monitor
-# and uses the text from { email-unsub-link }. { $faqLink } is a link to the 
-# Firefox Monitor SUMO page and uses the text from { frequently-asked-questions }.
-email-footer-blurb =
-    Du mottar denne e-postmeldingen fordi du registrerte deg for { -product-name }-varsler.
-    Vil du ikke lenger ha disse e-postmeldingene? { $unsubLink }. Dette er en automatisert e-post. Hvis du ønsker brukerstøtte, besøk { $faqLink }.
-# This string appears in the footer of verification emails. { $faqLink } is a link
-# to the Firefox Monitor SUMO page and uses the text from { frequently-asked-questions }.
-email-verify-footer-copy =
-    Du mottar denne e-postmeldingen fordi du registrerte deg for { -product-name }-varsler. 
-    Dette er en automatisert e-post. Hvis du ønsker brukerstøtte, besøk { $faqLink }.
-# Button text that takes the user to their signed in user dashboard.
-view-my-dashboard-cta = Vis min oversikt
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+## Email headers
+
+email-header-button-sign-in = Logg inn
+
+## Email footers
+
+email-footer-support-heading = Spørsmål om { -brand-mozilla-monitor }?
+email-footer-support-content = Besøk vårt <support-link>brukerstøttesenter</support-link> for å få hjelp
+email-footer-trigger-transactional = Du mottar denne e-posten som abonnent på { -brand-mozilla-monitor }.
+email-footer-reason-subscriber = Du mottar denne automatiske e-posten fordi du abonnerer på { -brand-mozilla-monitor }. Hvis du har mottatt den ved en feil, trenger du ikke å gjøre noe. For mer informasjon kan du besøke <support-link>{ -brand-mozilla } kundestøtte</support-link>.
+email-footer-reason-subscriber-one-time = Du har mottatt denne engangs automatiserte e-posten fordi du abonnerer på { -brand-monitor-plus }. Du vil ikke motta flere e-poster som denne. For mer informasjon kan du besøke <support-link>{ -brand-mozilla }-brukerstøtte</support-link>.
+# Variables:
+#    $support_link (string) - The URL the user can visit for support, e.g. "https://support.mozilla.org"
+email-footer-support-content-plain =
+    Besøk brukerstøttesenteret vårt for hjelp:
+    { $support_link }
+# Variables:
+#   $hibp_link (string) - URL to Have I Been Pwned, e.g. "https://haveibeenpwned.com".
+email-footer-source-hibp-plain = Datalekkasjeinformasjon levert av { -brand-HIBP }: { $hibp_link }
+email-footer-source-hibp = Informasjon om datalekkasje stammer fra <hibp-link>{ -brand-HIBP }</hibp-link>
+email-footer-logo-mozilla-alt = { -brand-mozilla }
+email-footer-meta-privacy-notice = Personvern
+email-unsubscribe-link = <link_to_unsub>Avslutt abonnement</link_to_unsub>
+# Variables:
+#   $unsub_link (string) - URL to the unsubscribe page, e.g. "https://monitor.mozilla.org/unsubscribe/...".
+email-unsubscribe-link-plain = Avslutt abonnement: { $unsub_link }
+# Firefox Relay is a product name and should not be translated.
+-product-name-relay = Firefox Relay
+# Mozilla VPN is a product name and should not be translated.
+-product-name-vpn = Mozilla VPN
 # Button text
 verify-email-cta = Bekreft e-post
-# Button text
-see-all-breaches = Vis alle datalekkasjer
 # Headline of verification email
 email-link-expires = Denne lenken utløper om 24 timer
-email-verify-blurb = Bekreft e-postadressen din for å legge den til { -product-name } og registrere deg for varsler om datalekkasjer.
-# Email headline
-email-found-breaches-hl = Her er et sammendrag av tidligere datalekkasjer
-# Email headline
-email-breach-summary-for-email = Datalekkasje-oppsummering for { $userEmail }
-# Email headline
-email-no-breaches-hl = { $userEmail } dukket opp i 0 kjente datalekkasjer
-# Email headline
-email-alert-hl = { $userEmail } dukket opp i en ny datalekkasje
+
+##
+
 # Subject line of email
 email-subject-found-breaches = { -product-name } fant din informasjon i disse datalekkasjene
 # Subject line of email
 email-subject-no-breaches = { -product-name } fant ingen kjente datalekkasjer
 # Subject line of email
 email-subject-verify = Bekreft e-postadressen din for { -product-name }
-# { $fxmLink } is a link to Firefox Monitor and uses the text from { -product-name }.
-learn-more-about-fxm = Les mer om { $fxmLink }
-email-sensitive-disclaimer =
-    På grunn av denne datalekkasjens følsomme natur, er de involverte e-postadressene ikke offentlig tilgjengelig. 
-    Du mottar dette varselet fordi du er den bekreftede eieren av denne e-postadressen.
 fxm-warns-you-no-breaches =
     { -product-name } advarer deg om datalekkasjer som involverer din personlige informasjon. 
     Så langt har det ikke hendt. Vi sender deg et varsel hvis e-postadressen din vises i en ny datalekkasje.
-fxm-warns-you-found-breaches =
-    { -product-name } advarer deg om datalekkasjer som involverer din personlige informasjon. 
-    Du er også registrert for å motta varsler hvis e-postadressen din opptrer i en ny datalekkasje.
-email-breach-alert-blurb =
-    { -product-name } advarer deg om datalekkasjer som involverer din personlige informasjon. 
-    Vi har nettopp mottatt detaljer om et annet selskaps datalekkasje.
-# List headline
-faq-list-headline = Ofte stilte spørsmål
-# Link Title
-faq-v2-1 = Jeg kjenner ikke igjen noen av disse selskapene eller nettsteder. Hvorfor er jeg i denne datalekkasjen?
-# Link Title
-faq-v2-2 = Trenger jeg gjøre noe hvis en datalekkasje skjedde for mange år siden, eller hvis det er en gammel konto?
-# Link Title
-faq-v2-3 = Jeg har nettopp funnet ut at jeg er omfattet av en datalekkasje. Hva gjør jeg nå?
-# Link Title
-faq-v2-4 = Hvordan behandler { -product-name } sensitive nettsteder?
-# This string contains nested markup that becomes a link to Firefox Monitor
-# later in the code. Please do not modify or remove "<a>" and "</a>".
-pre-fxa-message = <a>Opprett en gratis { -brand-fxa }</a>, og du kan legge til opptil 15 e-postadresser.
-# Section headline
-monitor-another-email = Vil du overvåke en annen e-postadresse?
-# Subject line of email
-pre-fxa-subject = En oppdatering fra { -product-name }
-pre-fxa-headline = Endringer i { -product-name }
-pre-fxa-blurb =
-    Dette er hva som er endret siden du registrerte deg for { -product-name }, tjenesten som 
-    overvåker kjente datalekkasjer for din personlige informasjon. Vi kobler det til Firefox-kontoer.
-pre-fxa-tout-1 = Vær oppmerksom på flere datalekkasjer
-pre-fxa-p-1 =
-    <a>Opprett en konto</a> for å overvåke opptil 15 e-postadresser for
-    datalekkasjer. Vi anbefaler å legge til e-postadresser du har brukt for å opprette kontoer på nettet.
-pre-fxa-tout-2 = Få en oversikt
-pre-fxa-p-2 =
-    Se alle datalekkasjer ett sted slik at du vet hvilke passord du bør endre. 
-    Oversikten med datalekkasjer er bare tilgjengelig med en konto.
-pre-fxa-tout-3 = Fortsett å få e-postvarsler
-pre-fxa-p-3 =
-    Du vil fortsatt motta varsler fra { -product-name }. Vi gir beskjed om informasjonen din 
-    vises i en ny datalekkasje.
-# Button at the bottom of pre-fxa email.
-create-account = Opprett konto
+
+## 2022 email template. HTML tags should not be translated, e.g. `<a>`
+
+# Have I Been Pwned attribution
+# Variables:
+#   $hibp-link-attr (String) - Link to Have I Been Pwned
+email-2022-hibp-attribution = Informasjon om datalekkasje stammer fra <a { $hibp-link-attr }>{ -brand-HIBP }</a>
+
+## Verification email
+
+email-verify-heading = Beskytt dine data med det samme
+email-verify-simply-click = Bare klikk på lenken nedenfor for å fullføre bekreftelsen av kontoen din.
+
+## Breach report
+
+email-breach-summary = Her er sammendraget ditt av datalekkasjer
+# Variables:
+#   $email-address (string) - Email address, bolded
+email-breach-detected = Søkeresultatene for { $email-address }-kontoen din viser at e-postadressen din kan ha blitt eksponert. Vi anbefaler at du setter i verk tiltak nå for å håndtere denne datalekkasjen.
+email-dashboard-cta = Gå til oversikten
+
+## Breach alert email
+
+email-breach-alert-all-subject = Ny datalekkasje oppdaget
+email-breach-alert-all-preview = Vi veileder deg gjennom trinnene for å løse det.
+email-breach-alert-all-hero-heading = Du har vært involvert i en nytt datalekkasje
+email-breach-alert-all-hero-subheading = Ikke bekymre deg, vi kan hjelpe deg med å løse denne eksponeringen
+email-breach-alert-all-lead = { -brand-mozilla-monitor } oppdaget følgende datalekkasje som inkluderer dine personopplysninger:
+email-breach-alert-all-source-title = Lekkasjekilde:
+email-breach-alert-all-data-points-title = Dine eksponerte data:
+email-breach-alert-all-next-steps-lead = Vi vil veilede deg trinn for trinn i hvordan du løser denne datalekkasjen
+email-breach-alert-all-next-steps-cta-label = La oss komme i gang
+email-breach-alert-all-next-steps-button-dashboard = Gå til oversikten
+
+## Breach alert redesigned strings
+
+# $company-name is the name of the company/site that was breached.
+email-breach-alert-all-hero-heading-1 = Detaljer om datalekkasje hos { $company-name }
+# $company-name is the name of the company/site that was breached.
+# $breach-date is the date of the breach.
+email-breach-alert-all-lead-1 = { -brand-mozilla-monitor } fant opplysningene dine i en datalekkasje hos { $company-name } den { $breach-date }. Du får dette varselet fordi du registrerte deg for <link_to_settings>varsler om datalekkasjer</link_to_settings>.
+email-breach-alert-all-source-title-1 = Datalekasjedetaljer
+email-breach-alert-company = Firma:
+email-breach-alert-date-of-breach = Dato for datalekkasje:
+email-breach-alert-info-exposed = Din eksponerte informasjon:
+email-breach-alert-next-steps = Neste steg
+email-breach-alert-next-steps-description = <sign_in_link>Logg inn</sign_in_link> på kontrollpanelet ditt i { -brand-mozilla-monitor }. Vi veileder deg gjennom trinnene som trengs for å løse det.
+email-breach-alert-all-next-steps-button-resolve-breach-on-dashboard = Løs datalekkasjen i kontrollpanelet
+email-breach-alert-faqs-title = Ofte stilte spørsmål
+email-breach-alert-faq-qn-1 = Hvorfor mottar jeg dette?
+email-breach-alert-faq-ans-1 = Du registrerte deg for varsler om datalekkasjer. <link_to_settings>Oppdater dine innstillinger</link_to_settings> når som helst i innstillinger.
+email-breach-alert-faq-qn-2 = Hvorfor kjenner jeg ikke igjen dette firmaet eller nettstedet?
+email-breach-alert-faq-ans-2 = Den kan ha endret eierskap eller navn, involvere en gammel konto eller en som ble opprettet for deg, eller komme fra en kjøpt liste med eksponert personlig informasjon.
+email-breach-alert-faq-qn-3 = Hva er et varsel om datalekkasje?
+email-breach-alert-faq-ans-3 = Et varsel som { -brand-mozilla-monitor } sender når personopplysninger du overvåker blir eksponert, stjålet eller kopiert uten tillatelse.
+email-breach-alert-faq-qn-4 = Hva er { -brand-mozilla-monitor }?
+email-breach-alert-faq-ans-4 = En gratis varslingstjeneste for datalekkasjer som advarer deg hvis nettkontoene dine har vært involvert i en datalekkasje.

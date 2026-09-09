@@ -1,3 +1,7 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
 # Recommendation subhead
 rec-ssn-subhead = Zkontrolujte výpisy své platební karty
 # Link title
@@ -9,9 +13,9 @@ rec-ssn =
 rec-pw-1-subhead = Změňte si své heslo
 # Link title
 rec-pw-1-cta = Změňte si heslo na tomto serveru
-rec-pw-1 =
+rec-pw-1-2 =
     Používejte unikátní hesla, vždy různá pro každý server.
-    Dobrým způsobem je třeba kombinace více zcela nesouvisejících slov.
+    Dobrým způsobem je třeba kombinace více zcela nesouvisejících slov zahrnujících čísla a symboly.
 # Recommendation subhead
 rec-pw-2-subhead = Aktualizujte přihlašovací údaje všude, kde jste používali stejné heslo
 # Link title
@@ -48,27 +52,20 @@ rec-cc =
     Podívejte se po podivných platbách uskutečněných vaší kartou.  
     Pokud nějaké najdete, požádejte o vydání nové karty s jiným číslem.
 # Recommendation subhead
-rec-email-subhead = Použijte e-mailové aliasy
+rec-email-mask-subhead = Používejte e-mailovou masku
 rec-email-cta = Vyzkoušejte { -brand-relay }
 rec-email =
     Poskytnutí skutečné e-mailové adresy usnadňuje hackerům nebo sledovacím prvkům
     zjištění vašeho hesla nebo cílení na vás na internetu. Služba jako je { -brand-relay }
     skryje vaši skutečnou e-mailovou adresu, přičemž e-maily bude přeposílat do vaší skutečné poštovní schránky.
 # Recommendation subhead
-rec-ip-subhead = Použijte službu, které skryje vaši IP adresu
-# Link title
-rec-ip-us-cta = Vyzkoušejte { -brand-fpn }
-rec-ip-us =
-    Vaše internetová adresa (IP adresa) prozrazuje vaši pozici a informace 
-    o poskytovateli internetového připojení. Služby jako { -brand-fpn } 
-    pomáhají skrýt vaši IP adresu a tím i vaši pozici.
-rec-ip-non-us =
-    Vaše internetová adresa (IP adresa) prozrazuje vaši pozici a informace 
-    o poskytovateli internetového připojení. V použitím virtuální privátní sítě (VPN), 
-    můžete skrýt svou IP adresu a tím i pozici.
+rec-ip-subhead-2 = Pro maskování vaší IP adresy použijte VPN
 # Recommendation subhead
 rec-moz-vpn-cta = Vyzkoušejte službu { -brand-mozilla-vpn }
-rec-moz-vpn-update = Vaše internetová adresa (IP adresa) může prozradit vaši pozici a informace o poskytovateli internetového připojení. Služby jako { -brand-mozilla-vpn } skrývají vaši IP adresu a tím i pozici vašeho zařízení.
+rec-moz-vpn-update-2 =
+    Vaše internetová adresa (IP adresa) prozrazuje vaši pozici a informace 
+    o poskytovateli internetového připojení. Služby jako { -brand-mozilla-vpn }
+    pomáhají skrýt vaši IP adresu a tím i vaši pozici.
 rec-hist-pw-subhead = Vyhněte se opakovanému používání stejného hesla
 # Link title
 rec-hist-pw-cta-fx = Zobrazit přihlašovací údaje ve { -brand-name(case: "loc") }

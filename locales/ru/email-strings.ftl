@@ -1,96 +1,108 @@
-# Firefox Monitor is a product name and should not be translated.
--product-name = Firefox Monitor
-# Firefox is a brand name and should not be translated.
--brand-name = Firefox
-# A Firefox Monitor Report is an emailed statement from Firefox Monitor containing a list of known data breaches where the user’s email address was found amongst the stolen data.
-firefox-monitor-report = Отчёт { -product-name }
-report-date = Дата отчёта:
-email-address = Адрес электронной почты:
-# A link to legal information about mozilla products.
-legal = Юридическая информация
-# Unsubscribe link in email.
-email-unsub-link = Отписаться
-# This string appears in the footer of breach report and breach alert emails.
-# { $unsubLink } is a link to the user's dashboard where they can unsubscribe from Monitor
-# and uses the text from { email-unsub-link }. { $faqLink } is a link to the 
-# Firefox Monitor SUMO page and uses the text from { frequently-asked-questions }.
-email-footer-blurb =
-    Вы получили это письмо, потому что вы подписались на уведомления { -product-name }.
-    Больше не хотите получать такие письма? { $unsubLink }. Это автоматическое письмо. Для получения помощи, посетите { $faqLink }.
-# This string appears in the footer of verification emails. { $faqLink } is a link
-# to the Firefox Monitor SUMO page and uses the text from { frequently-asked-questions }.
-email-verify-footer-copy =
-    Вы получили это письмо, потому что вы подписались на уведомления { -product-name }.
-    Это автоматическое письмо. Для получения помощи, посетите { $faqLink }.
-# Button text that takes the user to their signed in user dashboard.
-view-my-dashboard-cta = Посмотреть мою панель
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+## Email headers
+
+email-header-button-sign-in = Войти
+
+## Email footers
+
+email-footer-support-heading = Есть вопросы о { -brand-mozilla-monitor }?
+email-footer-support-content = Посетите наш <support-link>Центр поддержки</support-link> для получения помощи
+email-footer-trigger-transactional = Вы получаете эти письма как подписчик { -brand-mozilla-monitor }.
+email-footer-reason-subscriber = Вы получаете это автоматическое электронное письмо как подписчик { -brand-mozilla-monitor }. Если вы получили его по ошибке, не требуется никаких действий. Для получения дополнительной информации посетите <support-link>Поддержку { -brand-mozilla }</support-link>.
+email-footer-reason-subscriber-one-time = Вы получили это одноразовое автоматическое письмо, потому что вы подписаны на { -brand-monitor-plus }. Вы больше не будете получать подобные письма. Для получения дополнительной информации посетите <support-link>Поддержку { -brand-mozilla }</support-link>.
+# Variables:
+#    $support_link (string) - The URL the user can visit for support, e.g. "https://support.mozilla.org"
+email-footer-support-content-plain =
+    Посетите наш Центр поддержки для получения помощи:
+    { $support_link }
+# Variables:
+#   $hibp_link (string) - URL to Have I Been Pwned, e.g. "https://haveibeenpwned.com".
+email-footer-source-hibp-plain = Данные об утечке данных предоставлены { -brand-HIBP }: { $hibp_link }
+email-footer-source-hibp = Данные об утечке данных предоставлены <hibp-link>{ -brand-HIBP }</hibp-link>
+email-footer-logo-mozilla-alt = { -brand-mozilla }
+email-footer-meta-privacy-notice = Приватность
+email-unsubscribe-link = <link_to_unsub>Отписаться</link_to_unsub>
+# Variables:
+#   $unsub_link (string) - URL to the unsubscribe page, e.g. "https://monitor.mozilla.org/unsubscribe/...".
+email-unsubscribe-link-plain = Отписаться: { $unsub_link }
+# Firefox Relay is a product name and should not be translated.
+-product-name-relay = Firefox Relay
+# Mozilla VPN is a product name and should not be translated.
+-product-name-vpn = Mozilla VPN
 # Button text
 verify-email-cta = Подтвердить адрес эл. почты
-# Button text
-see-all-breaches = Посмотреть все утечки
 # Headline of verification email
 email-link-expires = Срок действия этой ссылки истекает через 24 часа
-email-verify-blurb = Подтвердите адрес электронной почты, чтобы добавить его в { -product-name } и подписаться на уведомления об утечках.
-# Email headline
-email-found-breaches-hl = Вот ваша сводка прошлых утечек данных
-# Email headline
-email-breach-summary-for-email = Сводка утечек для { $userEmail }
-# Email headline
-email-no-breaches-hl = { $userEmail } появлялся в 0 известных утечках данных
-# Email headline
-email-alert-hl = { $userEmail } появился в новой утечке данных
+
+##
+
 # Subject line of email
 email-subject-found-breaches = { -product-name } нашел вашу информацию в этих утечках
 # Subject line of email
 email-subject-no-breaches = { -product-name } не обнаружил известных утечек
 # Subject line of email
 email-subject-verify = Подтвердите адрес электронной почты для { -product-name }
-# { $fxmLink } is a link to Firefox Monitor and uses the text from { -product-name }.
-learn-more-about-fxm = Узнайте больше о { $fxmLink }
-email-sensitive-disclaimer =
-    Из-за чувствительного характера этой утечки соответствующие электронные адреса не раскрываются публично.
-    Вы получили это предупреждение, потому что являетесь подтвержденным владельцем этого адреса электронной почты.
 fxm-warns-you-no-breaches =
     { -product-name } предупреждает вас об утечках данных, связанных с вашей личной информацией.
     Пока никаких утечек не обнаружено. Мы отправим вам уведомление, если ваш адрес электронной почты появится в новой утечке.
-fxm-warns-you-found-breaches =
-    { -product-name } предупреждает вас об утечках данных, связанных с вашей личной информацией.
-    Вы также подписаны на получение уведомлений, если ваш адрес электронной почты появится в новой утечке.
-email-breach-alert-blurb =
-    { -product-name } предупреждает вас об утечках данных, связанных с вашей личной информацией.
-    Мы только что получили информацию об утечке данных другой компании.
-# List headline
-faq-list-headline = Часто задаваемые вопросы
-# Link Title
-faq-v2-1 = Я не узнаю одну из этих компаний или один из этих веб-сайтов. Почему эта утечка меня затронула?
-# Link Title
-faq-v2-2 = Нужно ли что-то делать, если утечка произошла несколько лет назад или это старый аккаунт?
-# Link Title
-faq-v2-3 = Я только что узнал(а), что меня затронула эта утечка данных. Что мне делать дальше?
-# Link Title
-faq-v2-4 = Как { -product-name } обращается с сайтами с конфиденциальной информацией?
-# This string contains nested markup that becomes a link to Firefox Monitor
-# later in the code. Please do not modify or remove "<a>" and "</a>".
-pre-fxa-message = <a>Создайте бесплатный { -brand-fxa }</a>, и вы сможете добавить до 15 адресов электронной почты.
-# Section headline
-monitor-another-email = Хотите проверить ещё один адрес электронной почты?
-# Subject line of email
-pre-fxa-subject = Обновление от { -product-name }
-pre-fxa-headline = Что изменилось в { -product-name }
-pre-fxa-blurb =
-    Вот что изменилось с тех пор, как вы зарегистрировались в { -product-name }, службе, которая
-    проверяет известные утечки данных на наличие вашей личной информации. Мы связываем наш продукт с Аккаунтами Firefox.
-pre-fxa-tout-1 = Будьте в курсе всех утечек
-pre-fxa-p-1 =
-    <a>Создайте аккаунт</a>, чтобы отслеживать до 15 адресов электронной почты на затрагивание
-    утечками данных. Мы рекомендуем добавить все адреса электронной почты, которые вы использовали для создания аккаунтов в Интернете.
-pre-fxa-tout-2 = Получите доступ к удобной панели
-pre-fxa-p-2 =
-    Просматривайте все утечки данных в одном месте, чтобы знать, какие пароли необходимо изменить.
-    Панель утечек доступна только при наличии аккаунта.
-pre-fxa-tout-3 = Продолжайте получать уведомления
-pre-fxa-p-3 =
-    Вы по-прежнему будете получать уведомления от { -product-name }. Мы сообщим вам, если ваша информация
-    будет затронута новой утечкой данных.
-# Button at the bottom of pre-fxa email.
-create-account = Создать аккаунт
+
+## 2022 email template. HTML tags should not be translated, e.g. `<a>`
+
+# Have I Been Pwned attribution
+# Variables:
+#   $hibp-link-attr (String) - Link to Have I Been Pwned
+email-2022-hibp-attribution = Данные об утечке данных предоставлены <a { $hibp-link-attr }>{ -brand-HIBP }</a>
+
+## Verification email
+
+email-verify-heading = Защитите свои данные, начните прямо сейчас
+email-verify-simply-click = Просто нажмите на ссылку ниже, чтобы завершить проверку своей учётной записи.
+
+## Breach report
+
+email-breach-summary = Вот сводка ваших утечек данных
+# Variables:
+#   $email-address (string) - Email address, bolded
+email-breach-detected = Результаты поиска для вашей учётной записи { $email-address } обнаружили, что ваша электронная почта могла быть раскрыта. Мы рекомендуем вам действовать сейчас, чтобы устранить эту утечку.
+email-dashboard-cta = Перейти в панель управления
+
+## Breach alert email
+
+email-breach-alert-all-subject = Обнаружена новая утечка данных
+email-breach-alert-all-preview = Мы проведём вас через шаги для её решения.
+email-breach-alert-all-hero-heading = Вы стали жертвой новой утечки данных
+email-breach-alert-all-hero-subheading = Не волнуйтесь, мы можем помочь вам решить эту проблему
+email-breach-alert-all-lead = { -brand-mozilla-monitor } обнаружил следующую утечку данных, включающую вашу личную информацию:
+email-breach-alert-all-source-title = Источник утечки:
+email-breach-alert-all-data-points-title = Ваши раскрытые данные:
+email-breach-alert-all-next-steps-lead = Мы шаг за шагом поможем вам устранить эту утечку данных.
+email-breach-alert-all-next-steps-cta-label = Давайте начнём
+email-breach-alert-all-next-steps-button-dashboard = Перейти на панель управления
+
+## Breach alert redesigned strings
+
+# $company-name is the name of the company/site that was breached.
+email-breach-alert-all-hero-heading-1 = Подробности об утечке данных { $company-name }
+# $company-name is the name of the company/site that was breached.
+# $breach-date is the date of the breach.
+email-breach-alert-all-lead-1 = { -brand-mozilla-monitor } обнаружил вашу информацию в утечке данных { $company-name }, произошедшей { $breach-date }. Вы получили это уведомление, потому что подписались на <link_to_settings>уведомления об утечках</link_to_settings>.
+email-breach-alert-all-source-title-1 = Сведения об утечке
+email-breach-alert-company = Компания:
+email-breach-alert-date-of-breach = Дата утечки:
+email-breach-alert-info-exposed = Ваша раскрытая информация:
+email-breach-alert-next-steps = Следующие шаги
+email-breach-alert-next-steps-description = <sign_in_link>Войдите</sign_in_link> в панель управления { -brand-mozilla-monitor }. Мы проведём вас через шаги, необходимые для её решения.
+email-breach-alert-all-next-steps-button-resolve-breach-on-dashboard = Решить утечку на панели управления
+email-breach-alert-faqs-title = ЧаВо
+email-breach-alert-faq-qn-1 = Почему я это получаю?
+email-breach-alert-faq-ans-1 = Вы подписались на уведомления об утечках данных. <link_to_settings>Обновляйте свои предпочтения</link_to_settings> в настройках в любое время.
+email-breach-alert-faq-qn-2 = Почему я не узнаю эту компанию или сайт?
+email-breach-alert-faq-ans-2 = Он мог изменить владельца или имя, затрагивать старую учётную запись или учётную запись, созданную для вас, или произойти из купленного списка раскрытой личной информации.
+email-breach-alert-faq-qn-3 = Что такое уведомление об утечке данных?
+email-breach-alert-faq-ans-3 = Уведомление { -brand-mozilla-monitor } отправляется, когда личная информация, которую вы отслеживаете, будет раскрыта, украдена или скопирована без разрешения.
+email-breach-alert-faq-qn-4 = Что такое { -brand-mozilla-monitor }?
+email-breach-alert-faq-ans-4 = Бесплатная служба уведомлений об утечках данных, которая предупреждает, если ваши аккаунты были затронуты утечками данных.

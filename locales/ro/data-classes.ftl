@@ -1,9 +1,18 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+
+# Breach Data Classes
+
+academic-records = Dosare academice
 account-balances = solduri ale conturilor
 address-book-contacts = contacte din agendă
 age-groups = categorii de vârstă
 ages = vârste
+ai-prompts = Prompturi AI
+# Refers to medical appointments.
+appointments = Programări
 apps-installed-on-devices = aplicații instalate pe dispozitive
 astrological-signs = semne astrologice
 audio-recordings = înregistrări audio
@@ -12,7 +21,7 @@ avatars = avataruri
 bank-account-numbers = numere de conturi bancare
 beauty-ratings = evaluări de frumusețe
 biometric-data = date biometrice
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = date biografice
 browser-user-agent-details = detalii privind agentul utilizator din browser
@@ -23,19 +32,34 @@ career-levels = niveluri de carieră
 cellular-network-names = denumiri de rețele celulare
 charitable-donations = donații caritabile
 chat-logs = jurnaluri de chat
+citizenship-statuses = Statute de cetățenie
+clothing-sizes = Mărimi de îmbrăcăminte
+comments = Comentarii
+company-names = Denumiri de firme
 credit-card-cvv = coduri de securitate (CVV/CVC) ale cardurilor de credit
 credit-cards = carduri de credit
+credit-scores = Scoruri de credit
 credit-status-information = informații privind starea creditelor
+cryptocurrency-wallet-addresses = Adrese de portofele de criptomonede
 cryptocurrency-wallet-hashes = Hashuri portofel de criptomonede
 customer-feedback = feedback de la clienți
 customer-interactions = interacțiuni cu clienții
+customer-service-comments = Comentarii de la serviciul pentru clienți
 dates-of-birth = date de naștere
 deceased-date = date de deces
 deceased-statuses = stări de deces
+# Instructions that you can set up in online shopping services to get your orders
+# delivered (e.g. deliver to a specific neighbor, entrance location, etc.).
+delivery-instructions = Instrucțiuni de livrare
 device-information = informații despre dispozitive
+device-serial-numbers = Numere de serie ale dispozitivelor
 device-usage-tracking-data = date de urmărire a utilizării dispozitivelor
+disabilities = Dizabilități
+display-names = Denumiri afișate
 drinking-habits = obiceiuri privind consumul de alcool
+driver-s-licenses = Permise de conducere
 drug-habits = obiceiuri privind consumul de droguri
+earnings = Câștiguri
 eating-habits = obiceiuri alimentare
 education-levels = nivel de educație
 email-addresses = adrese de e-mail
@@ -50,11 +74,14 @@ family-structure = structură familială
 financial-investments = investiții financiare
 financial-transactions = tranzacții financiare
 fitness-levels = nivel de condiție fizică
+flights-taken = Zboruri efectuate
+forum-posts = Postări pe forumuri
 genders = sexe
 geographic-locations = localizări geografice
 government-issued-ids = documente de identificare emise de stat
 health-insurance-information = informații privind asigurările de sănătate
 historical-passwords = istoric de parole
+hiv-statuses = Statusuri HIV
 home-loan-information = informații despre împrumuturi rezidențiale
 home-ownership-statuses = stări privind deținerea de proprietăți imobiliare (case)
 homepage-urls = URL-uri pentru pagina de start
@@ -63,11 +90,21 @@ imsi-numbers = numere IMSI
 income-levels = niveluri de venituri
 instant-messenger-identities = identități de mesagerie instantanee
 ip-addresses = adrese IP
+iq-levels = Niveluri IQ
 job-applications = Cereri de angajare
 job-titles = profesii/meserii
+language-preferences = Preferințe de limbă
+latitude-and-longitude-pairs = Perechi de latitudine și longitudine
+# This string refers to vehicle license plates.
+licence-plates = Plăcuțe de înmatriculare
 living-costs = Costuri de trai
+# This string refers to financial loans.
+loan-information = Informații despre împrumuturi
+login-histories = Istoric de autentificări
+loyalty-program-details = Detalii despre programul de fidelitate
 mac-addresses = adrese MAC
 marital-statuses = stare civilă
+military-service = Serviciu militar
 # Mnemonic phrases are a group of words used to access the content of cryptocurrency wallets.
 mnemonic-phrases = Fraze mnemonice
 mothers-maiden-names = Nume de fată ale mamelor
@@ -75,9 +112,16 @@ names = nume
 nationalities = naționalități
 net-worths = valori nete
 nicknames = pseudonime
+# no data classes found
+none-data-class = Niciuna
 occupations = ocupații
+# various data classes grouped together
+other-data-class = Altele
 parenting-plans = planuri parentale
 partial-credit-card-data = date parțiale privind carduri de credit
+partial-dates-of-birth = Date parțiale de naștere
+partial-government-issued-ids = Documente de identitate parțiale emise de stat
+partial-phone-numbers = Numere de telefon parțiale
 passport-numbers = numere de pașaport
 password-hints = indicii pentru parole
 password-strengths = Puterea parolelor
@@ -98,6 +142,7 @@ political-views = opinii politice
 private-messages = mesaje private
 professional-skills = aptitudini profesionale
 profile-photos = fotografii de profil
+profile-statistics = Statistici profil
 purchases = achiziții
 purchasing-habits = obiceiuri de cumpărare
 races = rase
@@ -110,23 +155,32 @@ school-grades-class-levels = clasă (nivel educațional)
 security-questions-and-answers = întrebări și răspunsuri de securitate
 sexual-fetishes = fetișuri sexuale
 sexual-orientations = orientări sexuale
+shipment-tracking-numbers = Numere de urmărire livrări
 smoking-habits = obiceiuri de fumat
 sms-messages = mesaje SMS
 social-connections = contacte pe rețele sociale
 social-media-profiles = profiluri pe rețelele sociale
 social-security-numbers = coduri numerice personale
+socioeconomic-levels = Niveluri socioeconomice
 spoken-languages = limbi vorbite
 spouses-names = Numele consorților
 support-tickets = tichete de asistență tehnică
 survey-results = rezultate ale sondajelor
+tattoo-status = Stare tatuaje
 taxation-records = registre fiscale
+telecommunications-carrier = Operatori de telecomunicații
 time-zones = fusuri orare
 travel-habits = obiceiuri de călătorie
+travel-plans = Planuri de călătorie
 user-statuses = stări ale utilizatorilor
 user-website-urls = URL-uri ale site-urilor web ale utilizatorilor
 usernames = nume de utilizatori
 utility-bills = facturi de utilități
 vehicle-details = detalii despre vehicule
+vehicle-identification-numbers-vins = Numere de identificare a vehiculelor (VIN)
+vehicle-registration-plates = Plăcuțe de înmatriculare vehicule
+vip-statuses = Stări VIP
+warranty-claims = Cereri în garanție
 website-activity = activitate pe site
 work-habits = obiceiuri profesionale
 years-of-birth = ani de naștere

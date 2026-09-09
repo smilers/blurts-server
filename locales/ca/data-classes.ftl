@@ -1,4 +1,9 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+# Breach Data Classes
 
 account-balances = saldo de comptes
 address-book-contacts = contactes de la llibreta d'adreces
@@ -12,7 +17,7 @@ avatars = avatars
 bank-account-numbers = números de comptes bancaris
 beauty-ratings = valoracions de bellesa
 biometric-data = dades biomètriques
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = biografies
 browser-user-agent-details = detalls de l'agent d'usuari del navegador
@@ -75,12 +80,12 @@ passport-numbers = números de passaport
 password-hints = pistes de contrasenyes
 passwords = contrasenyes
 payment-histories = historials de pagaments
-payment-methods = mètodes de pagament
+payment-methods = formes de pagament
 personal-descriptions = descripcions personals
 personal-health-data = dades de salut personals
-personal-interests = interesos personals
+personal-interests = interessos personals
 phone-numbers = números de telèfon
-photos = fotografies
+photos = fotos
 physical-addresses = adreces físiques
 physical-attributes = atributs físics
 pins = codis PIN
@@ -88,7 +93,7 @@ political-donations = donatius polítics
 political-views = opinions polítiques
 private-messages = missatges privats
 professional-skills = competències professionals
-profile-photos = fotografies de perfils
+profile-photos = fotos de perfils
 purchasing-habits = hàbits de compra
 races = perfils racials
 recovery-email-addresses = adreces electròniques de recuperació

@@ -1,0 +1,93 @@
+# See the documentation for all configuration options:
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 8
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 8
+    open-pull-requests-limit: 10
+    groups:
+      eslint:
+        patterns:
+          - "@typescript-eslint/*"
+          - "eslint"
+          - "eslint-*"
+        exclude-patterns:
+          - "eslint-config-next"
+          - "eslint-plugin-storybook"
+      vitest:
+        patterns:
+          - "vitest"
+          - "@vitest/*"
+          - "vite"
+          - "@vitejs/*"
+          - "vite-tsconfig-paths"
+      testing-library:
+        patterns:
+          - "@testing-library/dom"
+          - "@testing-library/react"
+          - "@testing-library/user-event"
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+          - "react-test-renderer"
+      sentry:
+        patterns:
+          - "@sentry/*"
+      aws-sdk:
+        patterns:
+          - "@aws-sdk/*"
+      storybook:
+        patterns:
+          - "storybook"
+          - "@storybook/*"
+          - "eslint-plugin-storybook"
+        exclude-patterns:
+          - "eslint-config-next"
+      fluent:
+        patterns:
+          - "@fluent/*"
+      nextjs:
+        patterns:
+          - "eslint-config-next"
+          - "next"
+          - "@next/*"
+      react-aria:
+        patterns:
+          - "react-aria"
+          - "react-stately"
+      stylelint:
+        patterns:
+          - "stylelint"
+          - "stylelint-scss"
+          - "stylelint-config-recommended-scss"
+      otel:
+        patterns:
+          - "@opentelemetry/*"
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 8
+    allow:
+      - dependency-type: "all"
+    ignore:
+      - dependency-name: "node"
+        # Odd-numbered versions are unstable releases, so skip those.
+        # This is using Ruby's version range syntax, specifically, the "twiddle-wakka"
+        # to indicate any matching version until the next major one..
+        # See https://docs.github.com/en/code-security/dependabot/working-with-dependabot/dependabot-options-reference#versions-ignore
+        # and https://guides.rubygems.org/patterns/#pessimistic-version-constraint
+        versions: ["~> 23", "<= 24.10", "~> 25", "~> 27", "~> 29"]

@@ -1,0 +1,27 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+"use strict";
+
+/**
+ * Cron: Daily
+ * From all the HIBP breaches, we parse out the new breaches that are not already present
+ * in firefox remote settings, and update the data source accordingly
+ */
+
+import * as Sentry from "@sentry/node";
+import { config } from "../../../config";
+
+Sentry.init({
+  environment: config.appEnv,
+  dsn: config.sentryDsn,
+  tracesSampleRate: 1.0,
+});
+
+Sentry.setTag("job", "updateBreachesInRemoteSettings");
+
+import { logger } from "../../../app/functions/server/logging";
+import { main } from "./updateBreachesInRemoteSettings";
+
+await main(logger);

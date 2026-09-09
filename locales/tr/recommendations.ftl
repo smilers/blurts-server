@@ -1,3 +1,7 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
 # Recommendation subhead
 rec-ssn-subhead = Kredi raporlarınızı inceleyin
 # Link title
@@ -12,9 +16,9 @@ rec-ssn =
 rec-pw-1-subhead = Parolanızı değiştirin
 # Link title
 rec-pw-1-cta = Bu sitedeki parolanızı değiştirin
-rec-pw-1 =
+rec-pw-1-2 =
     Benzersiz ve başka yerlerde kullanmadığınız bir parola seçin. 
-    Birbiriyle ilgisiz iki veya daha fazla kelimeyi birleştirerek iyi bir parola oluşturabilirsiniz.
+    Sayı ve sembol içeren birbiriyle ilgisiz iki veya daha fazla kelimeyi birleştirerek iyi bir parola oluşturabilirsiniz.
 # Recommendation subhead
 rec-pw-2-subhead = Aynı parolayı kullanan diğer hesaplarınızı güncelleyin
 # Link title
@@ -33,7 +37,7 @@ rec-pw-4-subhead = İki aşamalı kimlik doğrulamasını (2FA) kullanın
 # Link title
 rec-pw-4-cta = 2FA sunan sitelere bakın
 rec-pw-4 =
-    Birçok web sitesi, ekstra bir güvenlik önlemi olarak 2FA (iki faktörlü doğrulama) sunar. Bu, hesabınıza 
+    Birçok web sitesi, ekstra bir güvenlik önlemi olarak 2FA (iki aşamalı kimlik doğrulaması) sunar. Bu, hesabınıza 
     giriş yapmak için kısa mesajla (SMS) aldığınız bir defalık kod gibi başka bir 
     bilgiyi de girmenizi gerektirir.
 # Recommendation subhead
@@ -47,25 +51,17 @@ rec-cc =
     Kredi kartınızdaki tuhaf ücretlere dikkat edin. 
     Gerekirse kredi kartınızı iptal ederek yeni bir kredi kartı talep edin.
 # Recommendation subhead
-rec-email-subhead = E-posta takma adları kullanın
+rec-email-mask-subhead = E-posta maskesi kullanın
 rec-email-cta = { -brand-relay }’i deneyin
 rec-email = Gerçek e-posta adresinizi vermek, hacker’ların ve botların parolalarınızı bulmasını ve sizi hedef almasını kolaylaştırır { -brand-relay } gerçek e-posta adresinizi gizler ve gelen e-postaları gerçek gelen kutunuza iletir.
 # Recommendation subhead
-rec-ip-subhead = IP adresinizi gizleyen bir servis kullanın
-# Link title
-rec-ip-us-cta = { -brand-fpn }'i deneyin
-rec-ip-us =
-    IP adresiniz konumunuzu ve internet servis sağlayıcısınızı açığa çıkarır. { -brand-fpn } gibi bir hizmeti kullanarak
-    IP adresinizi maskeleyip konumunuzu gizleyebilirsiniz.
-rec-ip-non-us =
-    İnternet Protokolü adresiniz (IP adresi) konumunuzu ve internet servis 
-    sağlayıcınızı belirler. Sanal özel ağ (VPN) ile konumunuzu gizleyebilir ve 
-    IP adresinizi maskeleyebilirsiniz.
+rec-ip-subhead-2 = VPN kullanarak IP adresinizi gizleyin
 # Recommendation subhead
 rec-moz-vpn-cta = { -brand-mozilla-vpn }’i deneyin
-rec-moz-vpn-update =
-    IP adresiniz konumunuzu ve internet servis sağlayıcısınızı açığa çıkarabilir. { -brand-mozilla-vpn } gibi bir hizmeti kullanarak
-    IP adresinizi ve cihazınızın konumunu gizleyebilirsiniz.
+rec-moz-vpn-update-2 =
+    IP adresiniz konumunuzu ve internet servis sağlayıcınızı açığa çıkarır.
+    { -brand-mozilla-vpn } gibi bir hizmeti kullanarak
+    IP adresinizi maskeleyip konumunuzu gizleyebilirsiniz.
 rec-hist-pw-subhead = Aynı parolayı başka yerlerde kullanmayın
 # Link title
 rec-hist-pw-cta-fx = { -brand-name } hesaplarınızı görüntüleyin
@@ -95,7 +91,7 @@ rec-pins =
 rec-address-subhead = Parolalarda adresinizi kullanmayın
 rec-address =
     Adresleri veya büyüdüğünüz sokağı kullanmak parolalarınızı
-    zayıflatır. Bu bilgileri herkese açık olarak bulmak kolay olduğundan, bu şifrelerin 
+    zayıflatır. Bu bilgileri herkese açık olarak bulmak kolay olduğundan, bu parolaların 
     tahmin edilmesini kolaylaştırır.
 # Recommendation subhead
 rec-gen-1-subhead = Her hesap için benzersiz ve güçlü parolalar kullanın

@@ -1,3 +1,7 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
 # Recommendation subhead
 rec-ssn-subhead = Gennemse dine kredit-rapporter
 # Link title
@@ -10,10 +14,10 @@ rec-ssn =
 rec-pw-1-subhead = Skift din adgangskode
 # Link title
 rec-pw-1-cta = Skift adgangskode for dette websted
-rec-pw-1 =
-    Sørg for at denne adgangskode er unik og anderledes end andre adgangskoder, du bruger. 
-    En god strategi er at kombinere to eller flere urelaterede 
-    ord for at få en lang adgangskode.
+rec-pw-1-2 =
+    Søg for at adgangskoden er unik og anderledes end dine andre adgangskoder.
+    En god løsning er at kombinere to eller flere ord, der ikke er relaterede, med
+    tal og symboler for at skabe en sikker adgangskode.
 # Recommendation subhead
 rec-pw-2-subhead = Opdater andre logins, der bruger den samme adgangskode
 # Link title
@@ -48,7 +52,7 @@ rec-cc =
     Hold øje med underlige betalinger fra dit kreditkort. Overvejs at 
     bede din kreditkortudsteder om et nyt kort med et nyt nummer.
 # Recommendation subhead
-rec-email-subhead = Brug mail-aliasser
+rec-email-mask-subhead = Maskér din mailadresse
 rec-email-cta = Prøv { -brand-relay }
 rec-email =
     Ved at dele din rigtige mailadresse gør du det nemmere for hackere eller 
@@ -56,20 +60,13 @@ rec-email =
     Med en service som { -brand-relay } kan du skjule din rigtige mailadresse
     og få sendt mails videre til din rigtige indbakke.
 # Recommendation subhead
-rec-ip-subhead = Brug en tjeneste, der maskerer din IP-adresse
-# Link title
-rec-ip-us-cta = Prøv { -brand-fpn }
-rec-ip-us =
-    Din IP-adresse (Internet Protocol address) afslører din placering
-    og din internet-udbyder. Med en service som { -brand-fpn }
-    kan du skjule din IP-adresse og dermed din placering.
-rec-ip-non-us =
-    Din IP-adresse (Internet Protocol address) afslører din placering
-    og din internet-udbyder. Med en VPN (virtual private network)
-    kan du skjule din placering og tilsløre din IP-adresse.
+rec-ip-subhead-2 = Brug en VPN for at skjule din IP-adresse
 # Recommendation subhead
 rec-moz-vpn-cta = Prøv { -brand-mozilla-vpn }
-rec-moz-vpn-update = Din IP-adresse (Internet Protocol address) kan afsløre din placering og hvilken internet-udbyder, du bruger. Med en service som { -brand-mozilla-vpn } kan du skjule din IP-adresse og din placering for hele din enhed.
+rec-moz-vpn-update-2 =
+    Din IP-adresse (Internet-protokol-adresse) identificerer din placering
+    og din internet-udbyder. En tjeneste som { -brand-mozilla-vpn } skjuler
+    din IP-adresse og dermed din placering.
 rec-hist-pw-subhead = Undgå at genbruge adgangskoder
 # Link title
 rec-hist-pw-cta-fx = Se logins i { -brand-name }

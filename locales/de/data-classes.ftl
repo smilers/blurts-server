@@ -1,9 +1,16 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+
+# Breach Data Classes
+
+academic-records = Akademische Aufzeichnungen
 account-balances = Kontostand
 address-book-contacts = Adressbuch-Kontakte
 age-groups = Altersgruppen
 ages = Alter
+ai-prompts = KI-Anfragen
 # Refers to medical appointments.
 appointments = Arzttermine
 apps-installed-on-devices = Auf Geräten installierte Apps
@@ -14,7 +21,7 @@ avatars = Avatare
 bank-account-numbers = Kontonummern
 beauty-ratings = Schönheitsbewertungen
 biometric-data = Biometrische Daten
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = Kurzprofil
 browser-user-agent-details = Details zum User Agent des Browsers
@@ -25,21 +32,34 @@ career-levels = Karrierestufen
 cellular-network-names = Namen von Mobilfunknetzen
 charitable-donations = Spenden für wohltätige Zwecke
 chat-logs = Chat-Protokolle
+citizenship-statuses = Staatsbürgerschaftsstatus
+clothing-sizes = Bekleidungsgrößen
+comments = Kommentare
+company-names = Firmennamen
 credit-card-cvv = Kartenprüfwert (CVV) von Kreditkarten
 credit-cards = Kreditkarten
+credit-scores = Kreditscores
 credit-status-information = Kreditstatusinformationen
+cryptocurrency-wallet-addresses = Brieftaschen-Adressen für Kryptowährungen
 cryptocurrency-wallet-hashes = Brieftaschen-Hashes für Kryptowährungen
 customer-feedback = Kundenbewertung
 customer-interactions = Kundeninteraktionen
+customer-service-comments = Kommentare zum Kundenservice
 dates-of-birth = Geburtsdaten
 deceased-date = Sterbedatum
 deceased-statuses = Sterbemitteilungen
+# Instructions that you can set up in online shopping services to get your orders
+# delivered (e.g. deliver to a specific neighbor, entrance location, etc.).
+delivery-instructions = Zustellanweisungen
 device-information = Geräteinformationen
 device-serial-numbers = Seriennummern des Geräts
 device-usage-tracking-data = Tracking-Daten zur Gerätenutzung
+disabilities = Behinderungen
+display-names = Anzeigenamen
 drinking-habits = Trinkgewohnheiten
 driver-s-licenses = Führerscheine
 drug-habits = Drogengewohnheiten
+earnings = Einnahmen
 eating-habits = Essgewohnheiten
 education-levels = Bildungsstufen
 email-addresses = E-Mail-Adressen
@@ -54,11 +74,14 @@ family-structure = Familienstruktur
 financial-investments = Finanzielle Investitionen
 financial-transactions = Finanztransaktionen
 fitness-levels = Fitness-Level
+flights-taken = Genommene Flüge
+forum-posts = Beiträge im Forum
 genders = Geschlecht
 geographic-locations = Geografische Standorte
 government-issued-ids = Staatliche Identifikationsdokumente
 health-insurance-information = Informationen zur Krankenversicherung
 historical-passwords = Frühere Passwörter
+hiv-statuses = HIV-Status
 home-loan-information = Informationen zum Wohnungsbaudarlehen
 home-ownership-statuses = Wohneigentumsstatus
 homepage-urls = Adressen von Homepages
@@ -67,14 +90,21 @@ imsi-numbers = IMSI-Nummern
 income-levels = Einkommensniveau
 instant-messenger-identities = Instant-Messenger-Identitäten
 ip-addresses = IP-Adressen
+iq-levels = IQ-Niveau
 job-applications = Stellenbewerbungen
 job-titles = Berufsbezeichnungen
-# This string refers to vehicle license plates. 
+language-preferences = Spracheinstellungen
+latitude-and-longitude-pairs = Breiten- und Längengradpaare
+# This string refers to vehicle license plates.
 licence-plates = Nummernschilder
 living-costs = Lebenshaltungskosten
+# This string refers to financial loans.
+loan-information = Kreditinformationen
 login-histories = Login-Chronik
+loyalty-program-details = Details zum Bonusprogramm
 mac-addresses = MAC-Adressen
 marital-statuses = Familienstand
+military-service = Wehrdienst
 # Mnemonic phrases are a group of words used to access the content of cryptocurrency wallets.
 mnemonic-phrases = Mnemonische Sätze
 mothers-maiden-names = Mädchennamen der Mutter
@@ -82,10 +112,16 @@ names = Namen
 nationalities = Nationalitäten
 net-worths = Nettovermögen
 nicknames = Spitznamen
+# no data classes found
+none-data-class = Keine
 occupations = Berufe
+# various data classes grouped together
+other-data-class = Andere
 parenting-plans = Erziehungspläne
 partial-credit-card-data = Teile von Kreditkartendaten
 partial-dates-of-birth = Teile von Geburtsdaten
+partial-government-issued-ids = Teile von staatlichen Ausweisdokumenten
+partial-phone-numbers = Teile von Telefonnummern
 passport-numbers = Reisepassnummern
 password-hints = Passwort-Hinweise
 password-strengths = Passwort-Stärke
@@ -106,6 +142,7 @@ political-views = Politische Ansichten
 private-messages = Private Nachrichten
 professional-skills = Berufliche Fähigkeiten
 profile-photos = Profilfotos
+profile-statistics = Profil-Statistiken
 purchases = Käufe
 purchasing-habits = Kaufgewohnheiten
 races = Rassen
@@ -118,23 +155,32 @@ school-grades-class-levels = Schulnoten (Klassenstufen)
 security-questions-and-answers = Sicherheitsfragen und -antworten
 sexual-fetishes = Sexuelle Fetische
 sexual-orientations = Sexuelle Orientierungen
+shipment-tracking-numbers = Sendungsverfolgungsnummern
 smoking-habits = Rauchgewohnheiten
 sms-messages = SMS-Nachrichten
 social-connections = Soziale Verbindungen
 social-media-profiles = Social-Media-Profile
 social-security-numbers = Sozialversicherungsnummern
+socioeconomic-levels = sozioökonomische Ebene
 spoken-languages = Sprachkenntnisse
 spouses-names = Namen der Ehepartner
 support-tickets = Hilfe-Tickets
 survey-results = Umfrageergebnisse
+tattoo-status = Tatoo-Status
 taxation-records = Steuerdaten
+telecommunications-carrier = Telekommunikationsbetreiber
 time-zones = Zeitzonen
 travel-habits = Reisegewohnheiten
+travel-plans = Reisepläne
 user-statuses = Benutzerstatus
 user-website-urls = Adressen von Benutzerwebsites
 usernames = Benutzernamen
 utility-bills = Stromrechnungen
 vehicle-details = Fahrzeugangaben
+vehicle-identification-numbers-vins = Fahrzeug-Identifizierungsnummern (FIN)
+vehicle-registration-plates = Fahrzeugnummernschilder
+vip-statuses = VIP-Status
+warranty-claims = Garantieansprüche
 website-activity = Website-Aktivitäten
 work-habits = Arbeitsgewohnheiten
 years-of-birth = Geburtsjahr

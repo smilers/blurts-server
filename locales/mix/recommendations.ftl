@@ -1,3 +1,7 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
 # Recommendation subhead
 rec-ssn-subhead = kunche'e tutu kuenta ku
 # Link title
@@ -10,10 +14,6 @@ rec-ssn =
 rec-pw-1-subhead = Sama tu'un se'e
 # Link title
 rec-pw-1-cta = Sama tu'un se'e sitio yo
-rec-pw-1 =
-    Haz esta contraseña única y diferente de cualquier otra que uses. 
-    Una buena estrategia es combinar dos o más palabras sin relación 
-    entre ellas para crear una frase.
 # Recommendation subhead
 rec-pw-2-subhead = Sa tsa'a nixi kitsau tsi tu'un se'e
 # Link title
@@ -44,10 +44,6 @@ rec-cc-subhead = Monitoriza los extractos de tu tarjeta de crédito
 rec-cc =
     Revisa en busca de cargos extraños en tu tarjeta de crédito. Puede que quieras 
     solicitar una nueva tarjeta con un nuevo número de parte de tu emisor de la tarjeta.
-# Recommendation subhead
-rec-ip-subhead = Usa un servicio que oculte tu IP
-# Link title
-rec-ip-us-cta = Kunche'e { -brand-fpn }
 # Recommendation subhead
 rec-moz-vpn-cta = Kunche'e { -brand-mozilla-vpn }
 # Link title

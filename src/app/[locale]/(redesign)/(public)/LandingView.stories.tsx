@@ -1,0 +1,56 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+import type { Meta, StoryObj } from "@storybook/nextjs";
+import { View, Props as ViewProps } from "./LandingView";
+import { getL10n } from "../../../functions/l10n/storybookAndTests";
+import { PublicShell } from "./PublicShell";
+import { defaultExperimentData } from "../../../../telemetry/generated/nimbus/experiments";
+
+const meta: Meta<typeof View> = {
+  title: "Pages/Public/Landing page",
+  component: (props: ViewProps) => {
+    const experimentData =
+      props.experimentData ?? defaultExperimentData["Features"];
+    const enabledFeatureFlags = props.enabledFeatureFlags ?? [];
+    return (
+      <PublicShell
+        l10n={getL10n("en")}
+        experimentData={defaultExperimentData["Features"]}
+      >
+        <View
+          {...props}
+          experimentData={experimentData}
+          enabledFeatureFlags={enabledFeatureFlags}
+        />
+      </PublicShell>
+    );
+  },
+  args: {
+    l10n: getL10n(),
+  },
+};
+
+export default meta;
+type Story = StoryObj<typeof View>;
+
+export const Landing: Story = {
+  name: "Default",
+};
+
+export const LandingDe: Story = {
+  name: "German",
+  args: {
+    countryCode: "de",
+    l10n: getL10n("de"),
+  },
+};
+
+export const LandingFr: Story = {
+  name: "French",
+  args: {
+    countryCode: "fr",
+    l10n: getL10n("fr"),
+  },
+};

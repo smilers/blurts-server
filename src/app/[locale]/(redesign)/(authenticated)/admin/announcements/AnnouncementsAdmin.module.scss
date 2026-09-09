@@ -1,0 +1,277 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@use "../../../../../tokens";
+
+.container {
+  padding: tokens.$layout-xs;
+
+  li {
+    margin: tokens.$spacing-md 0;
+  }
+
+  code {
+    background-color: tokens.$color-grey-10;
+    padding: tokens.$spacing-xs tokens.$spacing-sm;
+    border-radius: tokens.$border-radius-sm;
+    font-family: monospace;
+  }
+
+  h1 {
+    font: tokens.$text-title-2xs;
+  }
+
+  h2 {
+    font: tokens.$text-body-lg;
+    font-weight: 700;
+  }
+
+  h3 {
+    font: tokens.$text-title-3xs;
+  }
+
+  .tabBar {
+    display: flex;
+    margin-bottom: tokens.$spacing-md;
+  }
+
+  .tabButton {
+    padding: tokens.$spacing-sm tokens.$spacing-md;
+    border: none;
+    background: tokens.$color-grey-10;
+    cursor: pointer;
+    margin-right: tokens.$spacing-xs;
+    border-radius: tokens.$border-radius-sm tokens.$border-radius-sm 0 0;
+
+    &:hover {
+      background: tokens.$color-grey-20;
+    }
+
+    &.activeTab {
+      background: tokens.$color-white;
+      border-bottom: 2px solid tokens.$color-purple-70;
+      font-weight: 700;
+    }
+  }
+
+  .stringsView,
+  .wrapper,
+  .documentation {
+    padding: tokens.$layout-xs;
+    border: 2px solid tokens.$color-grey-20;
+  }
+
+  .stringsView {
+    .stringsViewHeader {
+      display: flex;
+      gap: tokens.$spacing-md;
+    }
+
+    ul {
+      margin-top: tokens.$spacing-md;
+
+      .stringCard {
+        border-bottom: 1px solid tokens.$color-grey-10;
+        padding: tokens.$spacing-sm 0;
+        margin-bottom: tokens.$spacing-sm;
+
+        &[id="dialog-empty-state"] {
+          opacity: 0.3;
+        }
+      }
+
+      .stringId {
+        font-family: monospace;
+        font-weight: 700;
+        margin-bottom: tokens.$spacing-xs;
+      }
+    }
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1fr;
+    gap: tokens.$layout-lg;
+
+    .notificationsWrapper {
+      ul {
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+        padding-top: tokens.$spacing-lg;
+
+        li {
+          display: flex;
+          align-items: center;
+          padding: tokens.$spacing-md;
+          border: 1px solid tokens.$color-grey-40;
+          border-radius: tokens.$border-radius-sm;
+          margin-bottom: tokens.$spacing-sm;
+          cursor: pointer;
+
+          &.active {
+            border: 2px solid tokens.$color-purple-70;
+          }
+
+          .title {
+            font-weight: 700;
+          }
+
+          .pills {
+            display: flex;
+            flex-direction: column;
+            margin-left: auto;
+            align-items: center;
+            gap: tokens.$spacing-xs;
+
+            .statusPill {
+              border-radius: tokens.$border-radius-lg;
+              padding: tokens.$spacing-xs tokens.$spacing-sm;
+              text-align: center;
+              min-width: 100px;
+              text-transform: capitalize;
+              font-size: 10px;
+              font-weight: 700;
+
+              &.draft {
+                background-color: tokens.$color-grey-20;
+                color: tokens.$color-grey-50;
+              }
+
+              &.published {
+                background-color: tokens.$color-green-30;
+                color: tokens.$color-green-90;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .notificationSettings {
+      dl {
+        dt {
+          font-weight: 600;
+          color: tokens.$color-grey-50;
+        }
+
+        dd {
+          margin-bottom: tokens.$spacing-md;
+
+          .smallImage {
+            width: 70px;
+            height: auto;
+          }
+
+          .bigImage {
+            width: 300px;
+            height: auto;
+          }
+        }
+      }
+
+      .buttons {
+        display: flex;
+        gap: tokens.$spacing-sm;
+
+        button {
+          all: unset;
+          background-color: tokens.$color-grey-10;
+          font-weight: 600;
+          padding: tokens.$spacing-sm tokens.$spacing-md;
+          border-radius: tokens.$border-radius-md;
+          cursor: pointer;
+
+          &.deleteBtn {
+            background-color: tokens.$color-red-10;
+          }
+        }
+      }
+    }
+
+    .previewModalWrapper {
+      .previewModal {
+        width: 100%;
+        padding: tokens.$spacing-md;
+        border-radius: tokens.$border-radius-sm;
+        border: 1px solid tokens.$color-grey-20;
+        display: flex;
+        flex-direction: column;
+
+        img {
+          object-fit: contain;
+          width: 100%;
+          height: auto;
+        }
+
+        dt {
+          font-size: tokens.$text-body-xl;
+          font-weight: 700;
+          padding: tokens.$spacing-sm 0;
+        }
+
+        a {
+          padding-top: tokens.$spacing-md;
+        }
+      }
+    }
+  }
+
+  .missingLabelContainer {
+    display: flex;
+    gap: tokens.$spacing-sm;
+    align-items: center;
+  }
+
+  .imagePathUnavailable {
+    color: tokens.$color-red-50;
+    font-weight: 600;
+  }
+
+  .addButton {
+    all: unset;
+    background-color: tokens.$color-grey-10;
+    font-weight: 600;
+    padding: tokens.$spacing-sm tokens.$spacing-md;
+    border-radius: tokens.$border-radius-md;
+    cursor: pointer;
+    margin-top: tokens.$spacing-md;
+  }
+
+  .missingLabel {
+    font-size: tokens.$text-body-xs;
+    font-weight: 600;
+    color: tokens.$color-yellow-70;
+    background-color: tokens.$color-yellow-20;
+    border-radius: tokens.$border-radius-lg;
+    padding: tokens.$spacing-xs tokens.$spacing-sm;
+  }
+
+  .documentation {
+    display: flex;
+    flex-direction: column;
+    gap: tokens.$spacing-lg;
+
+    h1,
+    h2 {
+      padding-bottom: tokens.$spacing-sm;
+    }
+
+    section {
+      max-width: tokens.$content-xl;
+      border-bottom: 1px solid tokens.$color-grey-20;
+      padding-bottom: tokens.$spacing-md;
+    }
+
+    .codeBlock {
+      margin-top: tokens.$spacing-md;
+      width: tokens.$content-lg;
+      color: tokens.$color-grey-50;
+      background-color: tokens.$color-grey-05;
+      padding: tokens.$spacing-md;
+      border-radius: tokens.$border-radius-sm;
+      font-family: monospace;
+    }
+  }
+}

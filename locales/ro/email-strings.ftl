@@ -1,92 +1,108 @@
-# Firefox Monitor is a product name and should not be translated.
--product-name = Firefox Monitor
-# Firefox is a brand name and should not be translated.
--brand-name = Firefox
-# A Firefox Monitor Report is an emailed statement from Firefox Monitor containing a list of known data breaches where the user’s email address was found amongst the stolen data.
-firefox-monitor-report = Raport { -product-name }
-report-date = Data raportului:
-email-address = Adresă de e-mail:
-# A link to legal information about mozilla products.
-legal = Mențiuni legale
-# Unsubscribe link in email.
-email-unsub-link = Dezabonează-te
-# This string appears in the footer of breach report and breach alert emails.
-# { $unsubLink } is a link to the user's dashboard where they can unsubscribe from Monitor
-# and uses the text from { email-unsub-link }. { $faqLink } is a link to the 
-# Firefox Monitor SUMO page and uses the text from { frequently-asked-questions }.
-email-footer-blurb = Primești acest e-mail deoarece te-ai înscris pentru alertele { -product-name }. Nu mai vrei să primești e-mailuri? { $unsubLink }. Acesta este un e-mail automat. Pentru asistență, vizitează { $faqLink }.
-# This string appears in the footer of verification emails. { $faqLink } is a link
-# to the Firefox Monitor SUMO page and uses the text from { frequently-asked-questions }.
-email-verify-footer-copy =
-    Primești acest e-mail deoarece te-ai înscris pentru alertele { -product-name }.
-    Acesta este un e-mail automat. Pentru asistență, vizitează { $faqLink }.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+## Email headers
+
+email-header-button-sign-in = Intră în cont
+
+## Email footers
+
+email-footer-support-heading = Întrebări despre { -brand-mozilla-monitor }?
+email-footer-support-content = Intră pe <support-link>Centrul nostru de asistență</support-link> pentru ajutor
+email-footer-trigger-transactional = Primești acest e-mail ca abonat la { -brand-mozilla-monitor }.
+email-footer-reason-subscriber = Primești acest mesaj automat pe e-mail pentru că ești abonat(ă) la { -brand-mozilla-monitor }. Dacă l-ai primit din eroare, nu trebuie să faci nimic. Pentru mai multe informații, încearcă să intri pe <support-link>{ -brand-mozilla } Asistență</support-link>.
+email-footer-reason-subscriber-one-time = Ai primit acest mesaj automat unic pe e-mail pentru că ești abonat(ă) la { -brand-monitor-plus }. Nu vei mai primi alte mesaje de acest gen pe e-mail. Pentru mai multe informații, te rugăm să intri pe <support-link>{ -brand-mozilla } Asistență</support-link>.
+# Variables:
+#    $support_link (string) - The URL the user can visit for support, e.g. "https://support.mozilla.org"
+email-footer-support-content-plain =
+    Vezi Centrul nostru de asistență pentru ajutor:
+    { $support_link }
+# Variables:
+#   $hibp_link (string) - URL to Have I Been Pwned, e.g. "https://haveibeenpwned.com".
+email-footer-source-hibp-plain = Date despre încălcarea securității oferite de { -brand-HIBP }: { $hibp_link }
+email-footer-source-hibp = Datele privind încălcarea securității furnizate de <hibp-link>{ -brand-HIBP }</hibp-link>
+email-footer-logo-mozilla-alt = { -brand-mozilla }
+email-footer-meta-privacy-notice = Confidențialitate
+email-unsubscribe-link = <link_to_unsub>Dezabonare</link_to_unsub>
+# Variables:
+#   $unsub_link (string) - URL to the unsubscribe page, e.g. "https://monitor.mozilla.org/unsubscribe/...".
+email-unsubscribe-link-plain = Dezabonare: { $unsub_link }
+# Firefox Relay is a product name and should not be translated.
+-product-name-relay = Firefox Relay
+# Mozilla VPN is a product name and should not be translated.
+-product-name-vpn = Mozilla VPN
 # Button text
 verify-email-cta = Verifică e-mailul
-# Button text
-see-all-breaches = Vezi toate încălcările securității datelor
 # Headline of verification email
 email-link-expires = Acest link expiră în 24 de ore
-email-verify-blurb = Verifică-ți adresa de e-mail pentru a o adăuga în { -product-name } și abonează-te la alertele privind încălcările securității datelor.
-# Email headline
-email-found-breaches-hl = Iată rezumatul tău privind încălcările securității datelor din trecut
-# Email headline
-email-breach-summary-for-email = Rezumatul încălcărilor securității datelor pentru { $userEmail }
-# Email headline
-email-no-breaches-hl = { $userEmail } a apărut în 0 încălcări cunoscute ale securității datelor
-# Email headline
-email-alert-hl = { $userEmail } a apărut într-o nouă încălcare a securității datelor
+
+##
+
 # Subject line of email
 email-subject-found-breaches = { -product-name } ți-a găsit informațiile în aceste încălcări ale securității datelor
 # Subject line of email
 email-subject-no-breaches = { -product-name } nu a găsit încălcări cunoscute ale securității datelor
 # Subject line of email
 email-subject-verify = Verifică-ți e-mailul pentru { -product-name }
-# { $fxmLink } is a link to Firefox Monitor and uses the text from { -product-name }.
-learn-more-about-fxm = Află mai multe despre { $fxmLink }
-email-sensitive-disclaimer =
-    Datorită caracterului sensibil al acestei încălcări a securității datelor, adresele de e-mail implicate nu pot fi dezvăluite public. 
-    Primești această alertă deoarece ești posesorul confirmat al acestei adrese de e-mail.
 fxm-warns-you-no-breaches =
     { -product-name } te avertizează cu privire la încălcările securității datelor în care sunt implicate informațiile tale cu caracter personal.
     Până în prezent nu au fost găsite încălcări. Îți vom trimite o alertă dacă adresa ta de e-mail apare într-o nouă încălcare.
-fxm-warns-you-found-breaches =
-    { -product-name } te avertizează cu privire la încălcările securității datelor în care sunt implicate informațiile tale cu caracter personal.
-    De asemenea, te-ai înscris pentru a primi alerte dacă adresa ta de e-mail apare într-o nouă încălcare.
-email-breach-alert-blurb =
-    { -product-name } te avertizează cu privire la încălcările securității datelor în care sunt implicate informațiile tale cu caracter personal.
-    Tocmai am primit detalii despre o încălcare a securității datelor suferită de o altă companie.
-# List headline
-faq-list-headline = Întrebări adresate frecvent
-# Link Title
-faq-v2-1 = Nu recunosc una (unul) dintre aceste companii sau site-uri web. De ce apar în această încălcare?
-# Link Title
-faq-v2-2 = Trebuie să fac ceva dacă o încălcare a securității datelor a avut loc cu ani în urmă sau dacă este implicat un cont vechi?
-# Link Title
-faq-v2-3 = Tocmai am aflat că am fost implicat(ă) într-o încălcare a securității datelor. Ce să fac în continuare?
-# Link Title
-faq-v2-4 = Cum tratează { -product-name } site-urile sensibile?
-# This string contains nested markup that becomes a link to Firefox Monitor
-# later in the code. Please do not modify or remove "<a>" and "</a>".
-pre-fxa-message = <a>Creează gratuit un { -brand-fxa }</a> și poți adăuga până la 15 adrese de e-mail.
-# Section headline
-monitor-another-email = Vrei să monitorizezi altă adresă de e-mail?
-# Subject line of email
-pre-fxa-subject = O actualizare de la { -product-name }
-pre-fxa-headline = Ce se schimbă cu { -product-name }
-pre-fxa-blurb =
-    Iată ce s-a schimbat de când te-ai înscris pentru { -product-name }, serviciul care 
-    monitorizează încălcările cunoscute ale securității datelor pentru informațiile tale cu caracter personal. Îl legăm de conturile Firefox.
-pre-fxa-tout-1 = Rămâi la curent cu mai multe încălcări ale securității datelor
-pre-fxa-p-1 =
-    <a>Creează un cont</a> ca să monitorizezi până la 15 adrese de e-mail pentru 
-    încălcări ale securității datelor. Îți recomandăm să adaugi orice adrese de e-mail pe care le-ai folosit ca să creezi conturi online.
-pre-fxa-tout-2 = Obține o vizualizare pe tabloul de bord
-pre-fxa-p-2 =
-    Vezi toate încălcările securității datelor într-un singur loc pentru a ști ce parole să schimbi. 
-    Tabloul de bord pentru încălcările securității datelor este disponibil numai cu un cont.
-pre-fxa-tout-3 = Continuă să primești alerte pe e-mail
-pre-fxa-p-3 =
-    Vei primi în continuare alerte de la { -product-name }. Te vom anunța dacă informațiile tale 
-    apar într-o nouă încălcare a securității datelor.
-# Button at the bottom of pre-fxa email.
-create-account = Creează cont
+
+## 2022 email template. HTML tags should not be translated, e.g. `<a>`
+
+# Have I Been Pwned attribution
+# Variables:
+#   $hibp-link-attr (String) - Link to Have I Been Pwned
+email-2022-hibp-attribution = Datele privind încălcările securității datelor sunt furnizate de <a { $hibp-link-attr }>{ -brand-HIBP }</a>
+
+## Verification email
+
+email-verify-heading = Protejează-ți datele, începând chiar acum
+email-verify-simply-click = Pur și simplu dă clic pe linkul de mai jos pentru a finaliza verificarea contului.
+
+## Breach report
+
+email-breach-summary = Iată rezumatul încălcării securității datelor
+# Variables:
+#   $email-address (string) - Email address, bolded
+email-breach-detected = Rezultatele căutării pentru contul { $email-address } au detectat că este posibil ca e-mailul tău să fi fost expus. Îți recomandăm să acționezi de îndată pentru a rezolva această încălcare a securității datelor.
+email-dashboard-cta = Mergi la tabloul de bord
+
+## Breach alert email
+
+email-breach-alert-all-subject = A fost detectată o nouă încălcare a securității datelor
+email-breach-alert-all-preview = Te vom ghida prin pașii necesari pentru a o rezolva.
+email-breach-alert-all-hero-heading = Ai fost implicat(ă) într-o nouă încălcare a securității datelor
+email-breach-alert-all-hero-subheading = Nu-ți face griji, te putem ajuta să rezolvi această expunere
+email-breach-alert-all-lead = { -brand-mozilla-monitor } a descoperit următoarea încălcare a securității datelor care include informațiile tale personale:
+email-breach-alert-all-source-title = Sursă încălcare securitate:
+email-breach-alert-all-data-points-title = Datele tale expuse:
+email-breach-alert-all-next-steps-lead = Te vom ghida pas cu pas ca să rezolvi această încălcare a securității datelor.
+email-breach-alert-all-next-steps-cta-label = Să începem
+email-breach-alert-all-next-steps-button-dashboard = Mergi la tabloul de bord
+
+## Breach alert redesigned strings
+
+# $company-name is the name of the company/site that was breached.
+email-breach-alert-all-hero-heading-1 = Detalii despre încălcarea securității datelor cu caracter personal pe { $company-name }
+# $company-name is the name of the company/site that was breached.
+# $breach-date is the date of the breach.
+email-breach-alert-all-lead-1 = { -brand-mozilla-monitor } ți-a găsit informațiile într-o încălcare a securității datelor { $company-name } pe { $breach-date }. Primești această alertă pentru că te-ai abonat pentru <link_to_settings>notificări despre încălcări ale securității datelor</link_to_settings>.
+email-breach-alert-all-source-title-1 = Detaliile încălcării securității datelor
+email-breach-alert-company = Companie:
+email-breach-alert-date-of-breach = Data încălcării:
+email-breach-alert-info-exposed = Informații expuse:
+email-breach-alert-next-steps = Pașii următori
+email-breach-alert-next-steps-description = <sign_in_link>Intră în cont</sign_in_link> pe tabloul de bord { -brand-mozilla-monitor }. Te vom ghida prin pașii pe care trebuie să îi urmezi pentru rezolvarea ei.
+email-breach-alert-all-next-steps-button-resolve-breach-on-dashboard = Rezolvă încălcarea securității datelor în tabloul de bord
+email-breach-alert-faqs-title = Întrebări frecvente
+email-breach-alert-faq-qn-1 = De ce primesc asta?
+email-breach-alert-faq-ans-1 = Te-ai înscris pentru alerte privind încălcări ale securității datelor. <link_to_settings>Actualizează-ți preferințele</link_to_settings> oricând în setări.
+email-breach-alert-faq-qn-2 = De ce nu recunosc această companie sau site?
+email-breach-alert-faq-ans-2 = Este posibil să-și fi schimbat proprietarul sau denumirea, să implice un cont vechi sau unul creat pentru tine sau să provină dintr-o listă achiziționată de date personale expuse.
+email-breach-alert-faq-qn-3 = Ce este o alertă de încălcare a securității datelor?
+email-breach-alert-faq-ans-3 = O notificare pe care { -brand-mozilla-monitor } o trimite când datele personale pe care le monitorizezi sunt expuse, furate sau copiate fără permisiune.
+email-breach-alert-faq-qn-4 = Ce este { -brand-mozilla-monitor }?
+email-breach-alert-faq-ans-4 = Un serviciu gratuit de notificare a încălcării securității datelor, care te avertizează dacă conturile tale online au fost implicate într-o încălcare de securitate a datelor.

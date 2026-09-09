@@ -1,4 +1,9 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+# Breach Data Classes
 
 account-balances = اکاؤنٹ بیلنس
 address-book-contacts = ایڈریس بک کے رابطے۔
@@ -64,7 +69,7 @@ instant-messenger-identities = فوری پیغامات کی شناخت
 ip-addresses = IP ایڈریسیس
 job-applications = نوکری کی درخواستیں
 job-titles = جاب عنوان
-# This string refers to vehicle license plates. 
+# This string refers to vehicle license plates.
 licence-plates = لائسنس پلیٹیں
 living-costs = رہائشی اخراجات
 mac-addresses = MAC ایڈریسیس

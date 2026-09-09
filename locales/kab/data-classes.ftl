@@ -1,4 +1,9 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+# Breach Data Classes
 
 account-balances = Tisgar n yimiḍanen
 address-book-contacts = Inermisen n yimedlis n tensa
@@ -14,7 +19,7 @@ avatars = Ivaṭaren
 bank-account-numbers = Uṭṭunen n yimiḍanen n lbanka
 beauty-ratings = tizmilin n cbaḥa
 biometric-data = Isefka biyumitrik
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = tameddurt
 browser-user-agent-details = Talqayt ɣef yimeggi aseqdac n yiminig
@@ -25,6 +30,8 @@ career-levels = aswir n tɣri d uxeddim
 cellular-network-names = ismawen n yiẓedwa n tiliɣri
 charitable-donations = Tawsa n tddukliwin n lxiṛ
 chat-logs = Iɣmisen n usqerdec
+citizenship-statuses = Addaden n tɣennawt
+clothing-sizes = Teɣzi n yiselsa
 credit-card-cvv = Takarḍa n usmad CVV
 credit-cards = Tikarḍiwin n usmad
 credit-status-information = Talɣut ɣef waddad n tkarḍa
@@ -34,6 +41,9 @@ customer-interactions = Timyigawin n yimsaɣen
 dates-of-birth = Izmaz n tlalit
 deceased-date = Azemz n tmettant
 deceased-statuses = Addaden n tmettant
+# Instructions that you can set up in online shopping services to get your orders
+# delivered (e.g. deliver to a specific neighbor, entrance location, etc.).
+delivery-instructions = Iwellihen n usiweḍ
 device-information = Talɣut n yibenk
 device-serial-numbers = Imḍanen n uzrir n yibenk
 device-usage-tracking-data = ISefka n uḍfaṛ n useqdec n yibenkan
@@ -59,6 +69,7 @@ geographic-locations = Idigen iseknakalanen
 government-issued-ids = Tikarḍiwin n timagit n unabaḍ
 health-insurance-information = Talɣut icudden ɣer usenkid n waṭṭan
 historical-passwords = awalen uffiren iqbuṛen
+hiv-statuses = Addaden HIV
 home-loan-information = talɣut ɣef uṛeṭṭal n uxxam
 home-ownership-statuses = Addaden n bab n wuxxam
 homepage-urls = tansiwin n yisebtar igejdanen
@@ -69,7 +80,7 @@ instant-messenger-identities = imuɣna n tirawt taskudant
 ip-addresses = Tansiwin IP
 job-applications = Asuter n uxeddim
 job-titles = axeddim
-# This string refers to vehicle license plates. 
+# This string refers to vehicle license plates.
 licence-plates = Tiplakin n turagin
 living-costs = Tisqamin n tmeddurt
 login-histories = Azray n unekcum
@@ -82,10 +93,15 @@ names = Ismawen
 nationalities = Taɣlent
 net-worths = Azal yeṣfan
 nicknames = Meffer ismawen
+# no data classes found
+none-data-class = Ula yiwen
 occupations = Ixeddimen
+# various data classes grouped together
+other-data-class = Wayeḍ
 parenting-plans = amtawa n yimawlan
 partial-credit-card-data = kra n yisefka n tkarḍiwin n usmad
 partial-dates-of-birth = Azemz n tlalit abruyan
+partial-phone-numbers = Uṭṭunen n tilifun ibruyanen
 passport-numbers = Uṭṭunen n yipaupuṛen
 password-hints = Imataren n wawalen uffiren
 password-strengths = Tizemmar n wawal uffir
@@ -124,7 +140,7 @@ social-connections = aẓṭṭa n tmussniwin
 social-media-profiles = imuɣna n yiẓeḍwa n tmetti
 social-security-numbers = uṭṭunen n tɣellist inmettiyen
 spoken-languages = tutlayin tettmeslayeḍ
-spouses-names = Ismawen n uzgaz d tmeṭṭut-is
+spouses-names = Ismawen n urgaz d tmeṭṭut-is
 support-tickets = asuter n tallelt
 survey-results = igmaḍ n tefranin
 taxation-records = Ikalasen n tebzert

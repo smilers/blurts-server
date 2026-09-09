@@ -1,0 +1,95 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+import { headers } from "next/headers";
+import { redirect } from "next/navigation";
+import { getServerSession } from "../../../../../../../functions/server/getServerSession";
+import { TabType, View } from "../View";
+import { getCountryCode } from "../../../../../../../functions/server/getCountryCode";
+import { getSubscriberBreaches } from "../../../../../../../functions/server/getSubscriberBreaches";
+import {
+  getSignInCount,
+  getSubscriberByFxaUid,
+} from "../../../../../../../../db/tables/subscribers";
+import { getEnabledFeatureFlags } from "../../../../../../../../db/tables/featureFlags";
+import { checkSession } from "../../../../../../../functions/server/checkSession";
+import { initializeUserAnnouncements } from "../../../../../../../../db/tables/user_announcements";
+import { connection } from "next/server";
+import { config } from "../../../../../../../../config";
+
+const dashboardTabSlugs = ["action-needed", "fixed"];
+
+type Props = {
+  params: Promise<{
+    slug: string[] | undefined;
+  }>;
+  searchParams: Promise<{
+    dialog?: "subscriptions";
+  }>;
+};
+
+export default async function DashboardPage(props: Props) {
+  // Calling `connection` forces everything below it to be excluded from
+  // prerendering. Technically the page was already dynamic,
+  // but interestingly enough this change seemed to fix the cache-like
+  // behavior we saw in MNTOR-4908.
+  await connection();
+  const searchParams = await props.searchParams;
+  if (searchParams.dialog === "subscriptions") {
+    return redirect("/subscription-plans");
+  }
+
+  const session = await getServerSession();
+  if (!checkSession(session) || !session?.user?.subscriber?.fxa_uid) {
+    return redirect("/auth/logout");
+  }
+
+  const subscriber = await getSubscriberByFxaUid(
+    session.user.subscriber.fxa_uid,
+  );
+  if (!subscriber) {
+    redirect("/auth/logout");
+  }
+
+  const params = await props.params;
+  const { slug } = params;
+  const defaultTab = "action-needed";
+  const activeTab = (slug?.[0] ?? defaultTab) as TabType;
+  // Only allow the tab slugs. Otherwise: Redirect to the default dashboard route.
+  if (
+    typeof slug !== "undefined" &&
+    (!(activeTab && dashboardTabSlugs.includes(activeTab)) || slug.length >= 2)
+  ) {
+    return redirect(`/user/dashboard/${defaultTab}`);
+  }
+
+  const headersList = await headers();
+  const countryCode = getCountryCode(headersList);
+
+  const enabledFeatureFlags = await getEnabledFeatureFlags({
+    email: session.user.email,
+  });
+
+  const subBreaches = await getSubscriberBreaches({
+    fxaUid: subscriber.fxa_uid,
+    countryCode,
+  });
+
+  const fxaSettingsUrl = config.fxaSettingsUrl;
+  const userAnnouncements = await initializeUserAnnouncements(session.user);
+  const signInCount = await getSignInCount(subscriber.id);
+
+  return (
+    <View
+      user={session.user}
+      countryCode={countryCode}
+      userBreaches={subBreaches}
+      enabledFeatureFlags={enabledFeatureFlags}
+      fxaSettingsUrl={fxaSettingsUrl}
+      activeTab={activeTab}
+      signInCount={signInCount}
+      userAnnouncements={userAnnouncements}
+    />
+  );
+}

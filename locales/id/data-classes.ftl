@@ -1,9 +1,18 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+
+# Breach Data Classes
+
+academic-records = Catatan akademis
 account-balances = Saldo akun
 address-book-contacts = Kontak buku alamat
 age-groups = Kelompok usia
 ages = Usia
+ai-prompts = Perintah AI
+# Refers to medical appointments.
+appointments = Jadwal Temu Dokter
 apps-installed-on-devices = Aplikasi yang terpasang di peranti
 astrological-signs = Lambang astrologi
 audio-recordings = Rekaman audio
@@ -12,7 +21,7 @@ avatars = Avatar
 bank-account-numbers = Nomor rekening bank
 beauty-ratings = Penilaian kecantikan
 biometric-data = Data biometrik
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = Bio
 browser-user-agent-details = Detail agen-pengguna peramban
@@ -23,19 +32,34 @@ career-levels = Tingkat karier
 cellular-network-names = Nama jaringan seluler
 charitable-donations = Donasi sosial
 chat-logs = Log obrolan
+citizenship-statuses = Status kewarganegaraan
+clothing-sizes = Ukuran pakaian
+comments = Komentar
+company-names = Nama perusahaan
 credit-card-cvv = CVV kartu kredit
 credit-cards = Kartu kredit
+credit-scores = Nilai kredit
 credit-status-information = Informasi status kredit
+cryptocurrency-wallet-addresses = Alamat dompet Cryptocurrency
 cryptocurrency-wallet-hashes = Hash dompet mata uang kripto
 customer-feedback = Umpan balik pelanggan
 customer-interactions = Interaksi pelanggan
+customer-service-comments = Komentar layanan pelanggan
 dates-of-birth = Tanggal lahir
 deceased-date = Tanggal meninggal
 deceased-statuses = Status meninggal
+# Instructions that you can set up in online shopping services to get your orders
+# delivered (e.g. deliver to a specific neighbor, entrance location, etc.).
+delivery-instructions = Instruksi pengiriman
 device-information = Informasi peranti
+device-serial-numbers = Nomor seri perangkat
 device-usage-tracking-data = Data pelacakan penggunaan perangkat
+disabilities = Disabilitas
+display-names = Tampilkan nama
 drinking-habits = Kebiasaan minum
+driver-s-licenses = SIM
 drug-habits = Kebiasaan konsumsi obat
+earnings = Penghasilan
 eating-habits = Kebiasaan makan
 education-levels = Tingkat pendidikan
 email-addresses = Alamat surel
@@ -50,11 +74,14 @@ family-structure = Struktur keluarga
 financial-investments = Investasi keuangan
 financial-transactions = Transaksi keuangan
 fitness-levels = Tingkat kebugaran
+flights-taken = Penerbangan yang dilakukan
+forum-posts = Entri forum
 genders = Gender
 geographic-locations = Lokasi geografis
 government-issued-ids = Identitas yang dikeluarkan pemerintah
 health-insurance-information = Informasi asuransi kesehatan
 historical-passwords = Riwayat kata sandi
+hiv-statuses = Status HIV
 home-loan-information = Informasi pinjaman rumah
 home-ownership-statuses = Status kepemilikan rumah
 homepage-urls = URL beranda
@@ -63,11 +90,21 @@ imsi-numbers = Nomor IMSI
 income-levels = Tingkat pendapatan
 instant-messenger-identities = Identitas pesan instan
 ip-addresses = Alamat IP
+iq-levels = Tingkat IQ
 job-applications = Lamaran kerja
 job-titles = Jabatan kerja
+language-preferences = Preferensi bahasa
+latitude-and-longitude-pairs = Pasangan garis lintang dan garis bujur
+# This string refers to vehicle license plates.
+licence-plates = Plat Nomor Polisi
 living-costs = Biaya hidup
+# This string refers to financial loans.
+loan-information = Informasi pinjol
+login-histories = Riwayat masuk
+loyalty-program-details = Detail program loyalitas
 mac-addresses = Alamat MAC
 marital-statuses = Status pernikahan
+military-service = Wajib militer
 # Mnemonic phrases are a group of words used to access the content of cryptocurrency wallets.
 mnemonic-phrases = Frasa mnemonik
 mothers-maiden-names = Nama gadis ibu
@@ -75,10 +112,16 @@ names = Nama
 nationalities = Kebangsaan
 net-worths = Kekayaan bersih
 nicknames = Nama alias
+# no data classes found
+none-data-class = Tidak ada
 occupations = Pekerjaan
+# various data classes grouped together
+other-data-class = Lainnya
 parenting-plans = Rencana pengasuhan anak
 partial-credit-card-data = Data kartu kredit parsial
 partial-dates-of-birth = Tanggal lahir parsial
+partial-government-issued-ids = Tanda pengenal yang dikeluarkan pemerintah sebagian
+partial-phone-numbers = Sebagian nomor telepon
 passport-numbers = Nomor paspor
 password-hints = Bantuan kata sandi
 password-strengths = Kekuatan sandi:
@@ -99,6 +142,7 @@ political-views = Pandangan politik
 private-messages = Pesan pribadi
 professional-skills = Kecakapan profesional
 profile-photos = Foto profil
+profile-statistics = Statistik profil
 purchases = Pembelian
 purchasing-habits = Kebiasaan membeli
 races = Ras
@@ -111,23 +155,32 @@ school-grades-class-levels = Tingkat sekolah (level kelas)
 security-questions-and-answers = Pertanyaan keamanan dan jawaban
 sexual-fetishes = Jimat seksual
 sexual-orientations = Orientasi seksual
+shipment-tracking-numbers = Nomor pelacakan pengiriman
 smoking-habits = Kebiasaan merokok
 sms-messages = Pesan SMS
 social-connections = Hubungan sosial
 social-media-profiles = Profil media sosial
 social-security-numbers = Nomor jaminan sosial
+socioeconomic-levels = Tingkat sosial ekonomi
 spoken-languages = Bahasa lisan
 spouses-names = Nama pasangan
 support-tickets = Tiket dukungan
 survey-results = Hasil survei
+tattoo-status = Status tato
 taxation-records = Catatan perpajakan
+telecommunications-carrier = Operator telekomunikasi
 time-zones = Zona waktu
 travel-habits = Kebiasaan bepergian
+travel-plans = Rencana perjalanan
 user-statuses = Status pengguna
 user-website-urls = URL situs pengguna
 usernames = Nama pengguna
 utility-bills = Tagihan utilitas
 vehicle-details = Detail kendaraan
+vehicle-identification-numbers-vins = Nomor identifikasi kendaraan (VIN)
+vehicle-registration-plates = Plat nomor kendaraan
+vip-statuses = Status VIP
+warranty-claims = Klaim garansi
 website-activity = Aktivitas situs web
 work-habits = Kebiasaan kerja
 years-of-birth = Tahun lahir

@@ -1,0 +1,47 @@
+@use "../../../tokens";
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: tokens.$spacing-lg;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: tokens.$screen-sm) {
+    flex-direction: row;
+
+    // label positions will dictate where the CTA is floating
+    &.top {
+      align-items: flex-end;
+    }
+    &.bottom {
+      align-items: flex-start;
+    }
+  }
+
+  div:first-child {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  &.bottom {
+    div:first-child {
+      flex-direction: column-reverse;
+    }
+  }
+
+  input {
+    font: tokens.$text-body-md;
+  }
+
+  button {
+    font: tokens.$text-body-md;
+    font-weight: 600;
+  }
+
+  label {
+    font: tokens.$text-body-sm;
+    font-weight: 500;
+  }
+}

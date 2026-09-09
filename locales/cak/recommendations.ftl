@@ -1,3 +1,7 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
 # Recommendation subhead
 rec-ssn-subhead = Ke'anik'oj ri rutzijol apwaq
 # Link title
@@ -10,10 +14,6 @@ rec-ssn =
 rec-pw-1-subhead = Tajala' ri ewan atzij
 # Link title
 rec-pw-1-cta = Tijal ewan rutzij re ruxaq re'
-rec-pw-1 =
-    Tab'ana' chi re re ewan tzij re' achi'el ruyonil chuqa' man junam ta rik'in jun chik. 
-    Jun jeb'ël rub'eyal ja ri kitunik ka'i' o ch'aqa' taq tzij ri man kiximon ta 
-    ki' richin nitz'uk jun pajtzij.
 # Recommendation subhead
 rec-pw-2-subhead = Ke'ak'exa' ch'aqa' chik tikirib'äl molojri'ïl rik'in xa jun ewan tzij
 # Link title
@@ -49,31 +49,13 @@ rec-cc-subhead = Ke'anik'oj ri atarjeta' richin kre'ito' pan yakb'äl pwäq
 rec-cc =
     Tanik'oj richin ye'akanoj ri man relik ta taq samaj chi rij ri atarjeta' richin kre'ito'. Rik'in jub'a' nawajo' 
     nak'utuj jun k'ak'a' tarjeta' rik'in k'ak'a' rajilab'al, ri xtuya' chawe ri ya'öl tarjeta'.
-# Recommendation subhead
-rec-email-subhead = Tawokisaj tz'ukun rub'i' taqoya'l
 rec-email-cta = Tatojtob'ej { -brand-relay }
 rec-email =
     Toq naya' ri qitzij rochochib'al ataqoya'l anin yekïl
     ri ewan taq atzij ri ajjak pa k'amab'ey. Jun samaj achi'el { -brand-relay }
     tawewaj ri qitzij rochochib'al ataqoya'l toq ye'atäq taqoya'l pa qitzij ataqob'al.
 # Recommendation subhead
-rec-ip-subhead = Tawokisaj jun samajib'äl nrewaj ri IP awochochib'al
-# Link title
-rec-ip-us-cta = Tatojtob'ej { -brand-fpn }
-rec-ip-us =
-    Ri rochochib'al Rub'eyal Nisamäj ri K'amaya'l (IP ochochib'äl) nuya' retal ri ak'ojlib'al 
-    chuqa' ri ya'öl asamajib'al richin k'amaya'l. Jun samaj achi'el  { -brand-fpn } 
-    nuya' ruk'oj ri IP awochochib'al richin nrewaj ri ak'ojlib'al.
-rec-ip-non-us =
-    Ri rochochib'al Rub'eyal Nisamäj ri K'amaya'l (IP ochochib'äl) nuya' retal ri ak'ojlib'al 
-    chuqa' ri ya'öl asamajib'al richin k'amaya'l. Rik'in jun ichinan kematz'ib'il k'amab'ey (VPN) yatikïr nawewaj ri ak'ojlib'al 
-    richin naya' ruk'oj ri IP awochochib'al.
-# Recommendation subhead
 rec-moz-vpn-cta = Titojtob'ëx { -brand-mozilla-vpn }
-rec-moz-vpn =
-    Ri rochochib'al Rub'eyal Nisamäj ri K'amaya'l (IP ochochib'äl) nuya' retal ri ak'ojlib'al chuqa' ri ya'öl asamajib'al richin k'amaya'l. Jun samaj achi'el  
-    { -brand-fpn }  nrewaj ri IP awochochib'al chuqa' ri ak'ojlib'al richin { -brand-name } chuqa' jun samajib'äl achi'el { -brand-mozilla-vpn } nrewaj ri 
-    IP awochochib'al chuqa' ak'ojlib'al pa ronojel taq awokisab'al.
 rec-hist-pw-subhead = Man ke'awokisaj chik ewan taq tzij e'okisan chik
 # Link title
 rec-hist-pw-cta-fx = Titz'et rutikirisaxik molojri'ïl pa { -brand-name }

@@ -1,104 +1,108 @@
-# Firefox Monitor is a product name and should not be translated.
--product-name = Firefox Monitor
-# Firefox is a brand name and should not be translated.
--brand-name = Firefox
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+## Email headers
+
+email-header-button-sign-in = Oanmelde
+
+## Email footers
+
+email-footer-support-heading = Fragen oer { -brand-mozilla-monitor }?
+email-footer-support-content = Besykje ús <support-link>Stipesintrum</support-link> foar help
+email-footer-trigger-transactional = Jo ûntfange dit e-mailberjocht as abonnee fan { -brand-mozilla-monitor }.
+email-footer-reason-subscriber = Jo ûntfange dit automatyske e-mailberjocht as abonnee fan { -brand-mozilla-monitor }. As jo it per fersin ûntfongen hawwe, hoege jo gjin aksje te ûndernimmen. Besykje foar mear ynformaasje <support-link>{ -brand-mozilla } Support</support-link>.
+email-footer-reason-subscriber-one-time = Jo ûntfange dit ienmalige automatyske e-mailberjocht omdat jo abonnearre binne op { -brand-monitor-plus }. As jo it per fersin ûntfongen hawwe, hoege jo gjin aksje te ûndernimmen. Besykje foar mear ynformaasje <support-link>{ -brand-mozilla } Support</support-link>.
+# Variables:
+#    $support_link (string) - The URL the user can visit for support, e.g. "https://support.mozilla.org"
+email-footer-support-content-plain =
+    Besykje ús Stipesintrum foar help:
+    { $support_link }
+# Variables:
+#   $hibp_link (string) - URL to Have I Been Pwned, e.g. "https://haveibeenpwned.com".
+email-footer-source-hibp-plain = Datalek oanlevere troch { -brand-HIBP }: { $hibp_link }
+email-footer-source-hibp = Datalek oanlevere troch <hibp-link>{ -brand-HIBP }</hibp-link>
+email-footer-logo-mozilla-alt = { -brand-mozilla }
+email-footer-meta-privacy-notice = Privacy
+email-unsubscribe-link = <link_to_unsub>Ofmelde</link_to_unsub>
+# Variables:
+#   $unsub_link (string) - URL to the unsubscribe page, e.g. "https://monitor.mozilla.org/unsubscribe/...".
+email-unsubscribe-link-plain = Ofmelde: { $unsub_link }
 # Firefox Relay is a product name and should not be translated.
 -product-name-relay = Firefox Relay
 # Mozilla VPN is a product name and should not be translated.
 -product-name-vpn = Mozilla VPN
-# A Firefox Monitor Report is an emailed statement from Firefox Monitor containing a list of known data breaches where the user’s email address was found amongst the stolen data.
-firefox-monitor-report = { -product-name }-rapport
-report-date = Rapportdatum:
-email-address = E-mailadres:
-# A link to legal information about mozilla products.
-legal = Juridysk
-# Unsubscribe link in email.
-email-unsub-link = Ofmelde
-# This string appears in the footer of breach report and breach alert emails.
-# { $unsubLink } is a link to the user's dashboard where they can unsubscribe from Monitor
-# and uses the text from { email-unsub-link }. { $faqLink } is a link to the 
-# Firefox Monitor SUMO page and uses the text from { frequently-asked-questions }.
-email-footer-blurb =
-    Jo ûntfange dit e-mailberjocht omdat jo jo oanmelden hawwe foar { -product-name }-warskôgingen.
-    Wolle jo dizze e-mailberjochten net mear ûntfange? { $unsubLink }. Dit is in automatisearre e-mailberjocht. Gean foar stipe nei { $faqLink }.
-# This string appears in the footer of verification emails. { $faqLink } is a link
-# to the Firefox Monitor SUMO page and uses the text from { frequently-asked-questions }.
-email-verify-footer-copy =
-    Jo ûntfange dit e-mailberjocht omdat jo jo oanmelden hawwe foar { -product-name }-warskôgingen.
-    Dit is in automatisearre e-mailberjocht. Gean foar stipe nei { $faqLink }.
 # Button text
 verify-email-cta = E-mailadres ferifiearje
-# Button text
-see-all-breaches = Alle datalekken besjen
 # Headline of verification email
-email-link-expires = Dizze keppeling ferrint oer 24 oer
-email-verify-blurb = Ferifiearje jo e-mailadres om dizze ta te foegjen oan { -product-name } en meld jo oan foar datalekmeldingen.
-# Email headline
-email-found-breaches-hl = Hjirby in oersjoch fan eardere datalekken
-# Email headline
-email-breach-summary-for-email = Datalekoersjoch foar { $userEmail }
-# Email headline
-email-no-breaches-hl = { $userEmail } is yn 0 bekende datalekken ferskynd
-# Email headline
-email-alert-hl = { $userEmail } is yn in bekend datalek ferskynd
+email-link-expires = Dizze keppeling ferrint oer 24 oeren
+
+##
+
 # Subject line of email
 email-subject-found-breaches = { -product-name } hat jo gegevens fûn yn dizze datalekken
 # Subject line of email
 email-subject-no-breaches = { -product-name } hat gjin bekende datalekken fûn
 # Subject line of email
 email-subject-verify = Ferifiearje jo e-mailadres foar { -product-name }
-# { $fxmLink } is a link to Firefox Monitor and uses the text from { -product-name }.
-learn-more-about-fxm = Mear ynfo oer { $fxmLink }
-email-sensitive-disclaimer =
-    Fanwegen de gefoelige aard fan dit datalek, binne de e-mailberjochten dy’t hjirby belutsen binne net publyklik te finen.
-    Jo ûntfange dizze melding omdat jo de ferifiearre eigener fan dit e-mailadres binne.
 fxm-warns-you-no-breaches =
     { -product-name } warskôget jo foar datalekken mei betrekking ta jo persoanlike gegevens.
     Oant no ta binne der gjin datalekken fûn. Wy stjoere jo in melding as jo e-mailadres werjûn wurdt yn in nij datalek.
-fxm-warns-you-found-breaches =
-    { -product-name } warskôget jo foar datalekken mei betrekking ta jo persoanlike gegevens.
-    Jo binne ek oanmeld om meldingen te ûntfangen as jo e-mailadres werjûn wurdt yn in nij datalek.
-email-breach-alert-blurb =
-    { -product-name } warskôget jo foar datalekken mei betrekking ta jo persoanlike gegevens.
-    Wy hawwe sakrekt ynformaasje ûntfongen oer in datalek fan in oar bedriuw.
-# List headline
-faq-list-headline = Faak stelde fragen
-# Link Title
-faq-v2-1 = Ik werken gjin fan dizze bedriuwen of websites. Wêrom kom ik foar yn dit datalek?
-# Link Title
-faq-v2-2 = Moat ik wat dwaan as in datalek jierren lyn bard is of as dit in âld account is?
-# Link Title
-faq-v2-3 = Ik kaam der krekt efter dat ik yn in datalek foar kom. Wat moat ik dwaan?
-# Link Title
-faq-v2-4 = Hoe behannelet { -product-name } gefoelige websites?
-# This string contains nested markup that becomes a link to Firefox Monitor
-# later in the code. Please do not modify or remove "<a>" and "</a>".
-pre-fxa-message = <a>Meitsje in fergees { -brand-fxa }</a> en jo kinne maksimaal 15 e-mailadressen tafoegje.
-# Section headline
-monitor-another-email = Wolle jo in oar e-mailadres kontrolearje?
-# Subject line of email
-pre-fxa-subject = In fernijing fan { -product-name }
-pre-fxa-headline = Wat wiziget der oan { -product-name }
-pre-fxa-blurb =
-    Dit is der wizige sûnt jo jo oanmeld hawwe foar { -product-name }, de service dy’t 
-    bekende datalekken monitort foar jo persoanlike gegevens. Wy keppelje dizze oan Firefox-accounts.
-pre-fxa-tout-1 = Bliuw alert op mear datalekken
-pre-fxa-p-1 =
-    <a>Meitsje in account oan</a> om oant 15 e-mailadressen te monitoarjen op 
-    datalekken. We riede oan om alle e-mailadressen, dy’t jo brûkt hawwe om online accounts oan te meitsjen, ta te foegjen.
-pre-fxa-tout-2 = Untfang in dashboerdwerjefte
-pre-fxa-p-2 =
-    Besjoch alle datalekken op ien plak, sadat jo witte hokker wachtwurden jo wizigje moatte. 
-    It datalekdashboerd is allinnich beskikber mei in account.
-pre-fxa-tout-3 = Bliuw e-mailmeldingen ûntfange
-pre-fxa-p-3 =
-    Jo ûntfange noch hieltyd meldingen fan { -product-name }. Wy litte jo witte oft jo gegevens 
-    yn in nij datalek ferskine.
-# Button at the bottom of pre-fxa email.
-create-account = Account oanmeitsje
-# More security products
-more-products-headline = Beskermje josels mei mear fan ús produkten
-more-products-vpn = Beskerming foar jo folsleine apparaat, op elk apparaat.
-more-products-cta-vpn = Download { -product-name-vpn }
-more-products-relay = Ferbergje jo echte e-mailadres om jo identiteit te beskermjen
-more-products-cta-relay = Download { -product-name-relay }
+
+## 2022 email template. HTML tags should not be translated, e.g. `<a>`
+
+# Have I Been Pwned attribution
+# Variables:
+#   $hibp-link-attr (String) - Link to Have I Been Pwned
+email-2022-hibp-attribution = Datalek oanlevere troch <a { $hibp-link-attr }>{ -brand-HIBP }</a>
+
+## Verification email
+
+email-verify-heading = Beskermje jo gegevens, daliks
+email-verify-simply-click = Klik op de ûndersteande keppeling om de ferifikaasje fan jo account te foltôgjen.
+
+## Breach report
+
+email-breach-summary = Hjir is jo gearfetting fan jo datalek
+# Variables:
+#   $email-address (string) - Email address, bolded
+email-breach-detected = Sykresultaten foar jo account { $email-address } hawwe ûntdutsen dat jo e-mailadres mooglik lekt is. Wy rekommandearje oan dat jo no hannelje om dit datalek op te lossen.
+email-dashboard-cta = Nei it dashboerd
+
+## Breach alert email
+
+email-breach-alert-all-subject = Nij datalek detektearre
+email-breach-alert-all-preview = Wy liede jo troch de stappen om dit op te lossen.
+email-breach-alert-all-hero-heading = Jo binne troffen troch in nij datalek
+email-breach-alert-all-hero-subheading = Gjin soargen, wy kinne jo helpe om dit lek op te lossen
+email-breach-alert-all-lead = { -brand-mozilla-monitor } hat it folgjende datalek ûntdutsen dat jo persoanlike gegevens befettet:
+email-breach-alert-all-source-title = Boarne fan datalek:
+email-breach-alert-all-data-points-title = Jo lekte gegevens:
+email-breach-alert-all-next-steps-lead = Wy helpe jo stap foar stap hoe’t jo dit datalek oplosse kinne.
+email-breach-alert-all-next-steps-cta-label = Litte wy begjinne
+email-breach-alert-all-next-steps-button-dashboard = Nei it dashboerd
+
+## Breach alert redesigned strings
+
+# $company-name is the name of the company/site that was breached.
+email-breach-alert-all-hero-heading-1 = Details oer { $company-name }-datalekken
+# $company-name is the name of the company/site that was breached.
+# $breach-date is the date of the breach.
+email-breach-alert-all-lead-1 = { -brand-mozilla-monitor } hat op { $breach-date } jo gegevens fûn yn in { $company-name }-datalek. Jo krije dizze melding omdat jo jo oanmeld hawwe foar <link_to_settings>meldingen fan datalekken</link_to_settings>.
+email-breach-alert-all-source-title-1 = Datalekdetails
+email-breach-alert-company = Bedriuw:
+email-breach-alert-date-of-breach = Datum fan datalek:
+email-breach-alert-info-exposed = Jo lekte gegevens:
+email-breach-alert-next-steps = Folgjende stappen
+email-breach-alert-next-steps-description = <sign_in_link>Meld jo oan</sign_in_link> by jo { -brand-mozilla-monitor }-dashboerd. Wy liede jo troch de stappen dy’t nedich binne om dit op te lossen.
+email-breach-alert-all-next-steps-button-resolve-breach-on-dashboard = Datalek op dashboerd oplosse
+email-breach-alert-faqs-title = FAQ’s
+email-breach-alert-faq-qn-1 = Wêrom ûntfang ik dit?
+email-breach-alert-faq-ans-1 = Jo hawwe jo oanmeld foar warskôgingen oer datalekken. <link_to_settings>Wurkje op elk winske momint jo foarkarren by</link_to_settings> yn jo ynstellingen.
+email-breach-alert-faq-qn-2 = Wêrom werken ik dit bedriuw of dizze website net?
+email-breach-alert-faq-ans-2 = Dizze kin fan eigener of namme feroare wêze, in âlde of foar jo oanmakke account oanbelangje, of ôfkomstich wêze fan in kochte list mei lekte persoanlike gegevens.
+email-breach-alert-faq-qn-3 = Wat is in datalekwarskôging?
+email-breach-alert-faq-ans-3 = In melding dy’t { -brand-mozilla-monitor } ferstjoert wannear’t persoanlike gegevens dy’t jo beweitsje sûnder tastimming lekt, stellen of kopiearre wurde.
+email-breach-alert-faq-qn-4 = Wat is { -brand-mozilla-monitor }?
+email-breach-alert-faq-ans-4 = In fergeze meldtsjinst foar datalekken dy’t jo warskôgje as jo online accounts belutsen binne by in datalek.

@@ -1,0 +1,217 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+import type { Meta, StoryObj } from "@storybook/nextjs";
+import { View as DashboardEl, TabType } from "./View";
+import { Shell } from "../../../../Shell/Shell";
+import { getL10n } from "../../../../../../functions/l10n/storybookAndTests";
+import {
+  createRandomBreach,
+  createRandomAnnouncement,
+  createRandomUser,
+} from "../../../../../../../apiMocks/mockData";
+import { SubscriberBreach } from "../../../../../../../utils/subscriberBreaches";
+import { CountryCodeProvider } from "../../../../../../../contextProviders/country-code";
+import { SessionProvider } from "../../../../../../../contextProviders/session";
+import { FeatureFlagName } from "../../../../../../../db/tables/featureFlags";
+import { UserAnnouncementWithDetails } from "../../../../../../../db/tables/user_announcements";
+
+// Exported values should be stories, but this was already there when
+// Storybook added this lint rule, so I guess it works?
+
+const breachOptions = {
+  empty: "No data breaches",
+  unresolved: "With unresolved data breaches",
+  resolved: "All data breaches resolved",
+  invalid: "Invalid state (error case)",
+};
+
+export type DashboardWrapperProps = (
+  | {
+      countryCode: "us";
+      premium: boolean;
+    }
+  | {
+      countryCode: "nl";
+    }
+) & {
+  breaches: keyof typeof breachOptions;
+  elapsedTimeInDaysSinceInitialScan?: number;
+  activeTab?: TabType;
+  enabledFeatureFlags?: FeatureFlagName[];
+  signInCount?: number;
+};
+const DashboardWrapper = (props: DashboardWrapperProps) => {
+  const mockedResolvedBreach: SubscriberBreach = createRandomBreach({
+    dataClasses: [
+      "email-addresses",
+      "ip-addresses",
+      "phone-numbers",
+      "passwords",
+      "pins",
+      "social-security-numbers",
+      "partial-credit-card-data",
+      "security-questions-and-answers",
+    ],
+    addedDate: new Date("2023-06-18T14:48:00.000Z"),
+    dataClassesEffected: [
+      { "email-addresses": ["email1@gmail.com", "email2@gmail.com"] },
+      { "ip-addresses": 1 },
+      { "phone-numbers": 1 },
+      { passwords: 1 },
+    ],
+    isResolved: true,
+  });
+
+  const mockedUnresolvedBreach: SubscriberBreach = createRandomBreach({
+    dataClasses: ["email-addresses", "ip-addresses", "phone-numbers"],
+    addedDate: new Date("2023-06-18T14:48:00.000Z"),
+    dataClassesEffected: [
+      {
+        "email-addresses": [
+          "email1@gmail.com",
+          "email2@gmail.com",
+          "email3@gmail.com",
+        ],
+      },
+      { "ip-addresses": 1 },
+      { "phone-numbers": 1 },
+    ],
+    isResolved: false,
+  });
+
+  const mockedUnresolvedBreach2: SubscriberBreach = createRandomBreach({
+    dataClasses: ["email-addresses", "ip-addresses", "phone-numbers"],
+    addedDate: new Date("2023-06-18T14:48:00.000Z"),
+    dataClassesEffected: [
+      {
+        "email-addresses": [
+          "email1@gmail.com",
+          "email2@gmail.com",
+          "email3@gmail.com",
+        ],
+      },
+      { "ip-addresses": 1 },
+      { "phone-numbers": 1 },
+    ],
+    isResolved: false,
+  });
+
+  let breaches: SubscriberBreach[] = [];
+
+  if (props.breaches === "resolved") {
+    breaches = [mockedResolvedBreach];
+  }
+  if (props.breaches === "unresolved") {
+    breaches = [
+      mockedResolvedBreach,
+      mockedUnresolvedBreach,
+      mockedUnresolvedBreach2,
+    ];
+  }
+
+  if (props.breaches === "invalid") {
+    // Invalid state since it does not have data classes effected
+    breaches = [createRandomBreach({ isResolved: false })];
+  }
+
+  const mockedAnnouncements: UserAnnouncementWithDetails[] = [
+    createRandomAnnouncement(),
+    createRandomAnnouncement(),
+    createRandomAnnouncement(),
+  ];
+
+  const user = createRandomUser();
+
+  if ((props.countryCode !== "us" || !props.premium) && user.fxa) {
+    user.fxa.subscriptions = [];
+  }
+
+  const mockedSession = {
+    expires: new Date().toISOString(),
+    user: user,
+  };
+
+  return (
+    <SessionProvider session={mockedSession}>
+      <CountryCodeProvider countryCode={props.countryCode}>
+        <Shell
+          l10n={getL10n()}
+          session={mockedSession}
+          nonce=""
+          countryCode={props.countryCode}
+          enabledFeatureFlags={props.enabledFeatureFlags ?? []}
+          announcements={mockedAnnouncements}
+        >
+          <DashboardEl
+            user={user}
+            userBreaches={breaches}
+            fxaSettingsUrl=""
+            enabledFeatureFlags={props.enabledFeatureFlags ?? []}
+            activeTab={props.activeTab ?? "action-needed"}
+            signInCount={props.signInCount ?? null}
+            userAnnouncements={mockedAnnouncements}
+            countryCode={props.countryCode}
+          />
+        </Shell>
+      </CountryCodeProvider>
+    </SessionProvider>
+  );
+};
+
+const meta: Meta<typeof DashboardWrapper> = {
+  title: "Pages/Logged in/Dashboard",
+  component: DashboardWrapper,
+  argTypes: {
+    breaches: {
+      options: Object.keys(breachOptions),
+      control: {
+        type: "radio",
+        labels: breachOptions,
+      },
+    },
+    elapsedTimeInDaysSinceInitialScan: {
+      name: "Days since initial scan",
+      control: {
+        type: "number",
+      },
+    },
+    signInCount: {
+      name: "Sign-in count",
+      control: {
+        type: "number",
+      },
+    },
+  },
+};
+export default meta;
+type Story = StoryObj<typeof DashboardWrapper>;
+
+export const DashboardNonUsNoBreaches: Story = {
+  name: "No breaches",
+  args: {
+    breaches: "empty",
+  },
+};
+
+export const DashboardNonUsUnresolvedBreaches: Story = {
+  name: "Some breaches unresolved",
+  args: {
+    breaches: "unresolved",
+  },
+};
+
+export const DashboardNonUsResolvedBreaches: Story = {
+  name: "All breaches resolved",
+  args: {
+    breaches: "resolved",
+  },
+};
+
+export const DashboardInvalidState: Story = {
+  name: "Invalid state",
+  args: {
+    breaches: "invalid",
+  },
+};

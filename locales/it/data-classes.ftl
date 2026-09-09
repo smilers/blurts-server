@@ -1,11 +1,18 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+
+# Breach Data Classes
+
+academic-records = registri accademici
 account-balances = saldi di conto corrente
 address-book-contacts = contatti della rubrica
 age-groups = gruppi di età
 ages = età
+ai-prompts = prompt IA
 # Refers to medical appointments.
-appointments = Appuntamenti
+appointments = appuntamenti
 apps-installed-on-devices = app installate sui dispositivi
 astrological-signs = segni astrologici
 audio-recordings = registrazioni audio
@@ -14,7 +21,7 @@ avatars = avatar
 bank-account-numbers = numeri di conto bancario
 beauty-ratings = valutazioni di bellezza
 biometric-data = dati biometrici
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = informazioni biografiche
 browser-user-agent-details = dettagli sull’user agent del browser
@@ -25,28 +32,41 @@ career-levels = posizione lavorativa
 cellular-network-names = nomi di rete cellulare
 charitable-donations = donazioni in beneficenza
 chat-logs = registri di chat
+citizenship-statuses = Stati di cittadinanza
+clothing-sizes = taglie di abbigliamento
+comments = commenti
+company-names = nomi di società
 credit-card-cvv = CVV di carta di credito
 credit-cards = carte di credito
+credit-scores = punteggi relativi al credito
 credit-status-information = informazioni sullo stato del credito
-cryptocurrency-wallet-hashes = Hash del portafoglio di criptovaluta
+cryptocurrency-wallet-addresses = indirizzi di portafogli di criptovaluta
+cryptocurrency-wallet-hashes = hash del portafoglio di criptovaluta
 customer-feedback = valutazioni dei clienti
 customer-interactions = interazioni con i clienti
+customer-service-comments = commenti del servizio clienti
 dates-of-birth = date di nascita
 deceased-date = data di decesso
 deceased-statuses = stato di decesso
+# Instructions that you can set up in online shopping services to get your orders
+# delivered (e.g. deliver to a specific neighbor, entrance location, etc.).
+delivery-instructions = istruzioni per la consegna
 device-information = informazioni sul dispositivo
-device-serial-numbers = Numeri di serie dei dispositivi
+device-serial-numbers = numeri di serie dei dispositivi
 device-usage-tracking-data = dati di tracciamento sull’utilizzo del dispositivo
+disabilities = disabilità
+display-names = nomi visualizzato
 drinking-habits = abitudini di consumo di alcol
-driver-s-licenses = Patenti di guida
+driver-s-licenses = patenti di guida
 drug-habits = abitudini di consumo di droghe
+earnings = salari
 eating-habits = abitudini alimentari
 education-levels = livelli di istruzione
 email-addresses = indirizzi email
 email-messages = messaggi email
 employers = datori di lavoro
 employment-statuses = stati impiego
-encrypted-keys = Chiavi crittate
+encrypted-keys = chiavi crittate
 ethnicities = etnie
 family-members-names = nomi dei familiari
 family-plans = piani familiari
@@ -54,11 +74,14 @@ family-structure = struttura familiare
 financial-investments = investimenti finanziari
 financial-transactions = transazioni finanziarie
 fitness-levels = livelli di fitness
+flights-taken = voli effettuati
+forum-posts = messaggi su forum
 genders = generi
 geographic-locations = posizioni geografiche
 government-issued-ids = documenti di identificazione rilasciati dallo stato
 health-insurance-information = informazioni sull’assicurazione sanitaria
 historical-passwords = cronologia delle password
+hiv-statuses = stati per HIV
 home-loan-information = informazioni sul mutuo della casa
 home-ownership-statuses = stati di proprietà delle case
 homepage-urls = URL della pagina iniziale
@@ -67,25 +90,38 @@ imsi-numbers = numeri IMSI
 income-levels = livelli di reddito
 instant-messenger-identities = identità di messaggistica istantanea
 ip-addresses = indirizzi IP
-job-applications = Domande di lavoro
+iq-levels = livelli di QI
+job-applications = domande di lavoro
 job-titles = qualifiche lavorative
-# This string refers to vehicle license plates. 
-licence-plates = Numeri di targa
+language-preferences = preferenze della lingua
+latitude-and-longitude-pairs = coppie di latitudine e longitudine
+# This string refers to vehicle license plates.
+licence-plates = numeri di targa
 living-costs = costi della vita
-login-histories = Cronologie degli accessi
+# This string refers to financial loans.
+loan-information = informazioni sui prestiti
+login-histories = cronologie degli accessi
+loyalty-program-details = dettagli di programmi fedeltà
 mac-addresses = indirizzi MAC
 marital-statuses = stati coniugali
+military-service = servizio militare
 # Mnemonic phrases are a group of words used to access the content of cryptocurrency wallets.
-mnemonic-phrases = Frasi mnemoniche
+mnemonic-phrases = frasi mnemoniche
 mothers-maiden-names = nomi della madre da nubile
 names = nomi
 nationalities = nazionalità
 net-worths = patrimoni netti
 nicknames = pseudonimi (nickname)
+# no data classes found
+none-data-class = Nessuna categoria
 occupations = occupazioni
+# various data classes grouped together
+other-data-class = altro
 parenting-plans = piani di affido minori
 partial-credit-card-data = dati parziali della carta di credito
-partial-dates-of-birth = Date di nascita parziali
+partial-dates-of-birth = date di nascita parziali
+partial-government-issued-ids = parziali documenti di identificazione rilasciati dallo stato
+partial-phone-numbers = numeri di telefono parziali
 passport-numbers = numeri di passaporto
 password-hints = suggerimenti per la password
 password-strengths = complessità delle password
@@ -106,6 +142,7 @@ political-views = opinioni politiche
 private-messages = messaggi privati
 professional-skills = competenze professionali
 profile-photos = foto del profilo
+profile-statistics = statistiche del profilo
 purchases = acquisti
 purchasing-habits = abitudini di acquisto
 races = razze
@@ -118,23 +155,32 @@ school-grades-class-levels = voti scolastici (livelli di classe)
 security-questions-and-answers = domande di sicurezza e risposte
 sexual-fetishes = feticismi sessuali
 sexual-orientations = orientamenti sessuali
+shipment-tracking-numbers = numeri di tracciabilità delle spedizioni
 smoking-habits = abitudini al fumo
 sms-messages = messaggi SMS
 social-connections = contatti sui social media
 social-media-profiles = profili dei social media
 social-security-numbers = numeri di previdenza sociale
+socioeconomic-levels = livelli socioeconomici
 spoken-languages = lingue parlate
 spouses-names = nomi del coniuge
 support-tickets = richieste di supporto
 survey-results = risultati di sondaggi
-taxation-records = Registri fiscali
+tattoo-status = tatuaggi
+taxation-records = registri fiscali
+telecommunications-carrier = operatori di telecomunicazione
 time-zones = fusi orari
 travel-habits = abitudini di viaggio
+travel-plans = piani di viaggio
 user-statuses = aggiornamenti di stato utente
 user-website-urls = indirizzi del sito web dell’utente
 usernames = nomi utente
 utility-bills = bollette
 vehicle-details = informazioni sul veicolo
+vehicle-identification-numbers-vins = Numeri di identificazione del veicolo (VIN)
+vehicle-registration-plates = targhe di immatricolazione dei veicoli
+vip-statuses = stato VIP
+warranty-claims = richieste di garanzia
 website-activity = attività sul sito web
 work-habits = abitudini lavorative
 years-of-birth = anni di nascita

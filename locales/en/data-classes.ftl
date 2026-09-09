@@ -1,9 +1,15 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+# Breach Data Classes
+
+academic-records = Academic records
 account-balances = Account balances
 address-book-contacts = Address book contacts
 age-groups = Age groups
 ages = Ages
+ai-prompts = AI prompts
 # Refers to medical appointments.
 appointments = Appointments
 apps-installed-on-devices = Apps installed on devices
@@ -14,7 +20,7 @@ avatars = Avatars
 bank-account-numbers = Bank account numbers
 beauty-ratings = Beauty ratings
 biometric-data = Biometric data
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = Bios
 browser-user-agent-details = Browser user agent details
@@ -25,21 +31,34 @@ career-levels = Career levels
 cellular-network-names = Cellular network names
 charitable-donations = Charitable donations
 chat-logs = Chat logs
+citizenship-statuses = Citizenship statuses
+clothing-sizes = Clothing sizes
+comments = Comments
+company-names = Company names
 credit-card-cvv = Credit card CVV
 credit-cards = Credit cards
+credit-scores = Credit scores
 credit-status-information = Credit status information
+cryptocurrency-wallet-addresses = Cryptocurrency wallet addresses
 cryptocurrency-wallet-hashes = Cryptocurrency wallet hashes
 customer-feedback = Customer feedback
 customer-interactions = Customer interactions
+customer-service-comments = Customer service comments
 dates-of-birth = Dates of birth
 deceased-date = Deceased date
 deceased-statuses = Deceased statuses
+# Instructions that you can set up in online shopping services to get your orders
+# delivered (e.g. deliver to a specific neighbor, entrance location, etc.).
+delivery-instructions = Delivery instructions
 device-information = Device information
 device-serial-numbers = Device serial numbers
 device-usage-tracking-data = Device usage tracking data
+disabilities = Disabilities
+display-names = Display names
 drinking-habits = Drinking habits
 driver-s-licenses = Driver’s licenses
 drug-habits = Drug habits
+earnings = Earnings
 eating-habits = Eating habits
 education-levels = Education levels
 email-addresses = Email addresses
@@ -54,11 +73,14 @@ family-structure = Family structure
 financial-investments = Financial investments
 financial-transactions = Financial transactions
 fitness-levels = Fitness levels
+flights-taken = Flights taken
+forum-posts = Forum posts
 genders = Genders
 geographic-locations = Geographic locations
 government-issued-ids = Government issued IDs
 health-insurance-information = Health insurance information
 historical-passwords = Historical passwords
+hiv-statuses = HIV statuses
 home-loan-information = Home loan information
 home-ownership-statuses = Home ownership statuses
 homepage-urls = Homepage URLs
@@ -67,14 +89,21 @@ imsi-numbers = IMSI numbers
 income-levels = Income levels
 instant-messenger-identities = Instant messenger identities
 ip-addresses = IP addresses
+iq-levels = IQ levels
 job-applications = Job applications
 job-titles = Job titles
-# This string refers to vehicle license plates. 
+language-preferences = Language preferences
+latitude-and-longitude-pairs = Latitude and longitude pairs
+# This string refers to vehicle license plates.
 licence-plates = License Plates
 living-costs = Living costs
+# This string refers to financial loans.
+loan-information = Loan information
 login-histories = Login histories
+loyalty-program-details = Loyalty program details
 mac-addresses = MAC addresses
 marital-statuses = Marital statuses
+military-service = Military service
 # Mnemonic phrases are a group of words used to access the content of cryptocurrency wallets.
 mnemonic-phrases = Mnemonic phrases
 mothers-maiden-names = Mothers maiden names
@@ -82,10 +111,16 @@ names = Names
 nationalities = Nationalities
 net-worths = Net worths
 nicknames = Nicknames
+# no data classes found
+none-data-class = None
 occupations = Occupations
+# various data classes grouped together
+other-data-class = Other
 parenting-plans = Parenting plans
 partial-credit-card-data = Partial credit card data
 partial-dates-of-birth = Partial dates of birth
+partial-government-issued-ids = Partial government issued IDs
+partial-phone-numbers = Partial phone numbers
 passport-numbers = Passport numbers
 password-hints = Password hints
 password-strengths = Password strengths
@@ -106,6 +141,7 @@ political-views = Political views
 private-messages = Private messages
 professional-skills = Professional skills
 profile-photos = Profile photos
+profile-statistics = Profile statistics
 purchases = Purchases
 purchasing-habits = Purchasing habits
 races = Races
@@ -118,23 +154,32 @@ school-grades-class-levels = School grades (class levels)
 security-questions-and-answers = Security questions and answers
 sexual-fetishes = Sexual fetishes
 sexual-orientations = Sexual orientations
+shipment-tracking-numbers = Shipment tracking numbers
 smoking-habits = Smoking habits
 sms-messages = SMS messages
 social-connections = Social connections
 social-media-profiles = Social media profiles
 social-security-numbers = Social security numbers
+socioeconomic-levels = Socioeconomic levels
 spoken-languages = Spoken languages
 spouses-names = Spouses names
 support-tickets = Support tickets
 survey-results = Survey results
+tattoo-status = Tattoo status
 taxation-records = Taxation records
+telecommunications-carrier = Telecommunications carriers
 time-zones = Time zones
 travel-habits = Travel habits
+travel-plans = Travel plans
 user-statuses = User statuses
 user-website-urls = User website URLs
 usernames = Usernames
 utility-bills = Utility bills
 vehicle-details = Vehicle details
+vehicle-identification-numbers-vins = Vehicle identification numbers (VINs)
+vehicle-registration-plates = Vehicle registration plates
+vip-statuses = VIP statuses
+warranty-claims = Warranty claims
 website-activity = Website activity
 work-habits = Work habits
 years-of-birth = Years of birth

@@ -1,0 +1,62 @@
+name: "Test Integrations"
+permissions: {}
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-integrations:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
+        with:
+          persist-credentials: false
+
+      # Log into Docker Hub to avoid getting rate-limited
+      - name: Login to Docker Hub
+        # Not giving dependabot secrets access, so continue if login fails
+        # and accept rate limit possibility
+        continue-on-error: true
+        uses: docker/login-action@dbcb813823bdd20940b903addbd779551569679f # v4.6.0
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      # Kick off starting docker compose first, since it can take a bit and can run in the background
+      - name: Start Docker Compose services
+        run: docker compose --env-file=./.env.ci up -d
+
+      # While we wait for docker compose to be healthy we install node and needed packages for this service
+      - name: Set up node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v6
+        with:
+          node-version: 20.20.x
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Wait for the docker services we started earlier to all be healthy
+      - name: Wait for services to be healthy
+        run: docker compose --env-file=./.env.ci up --wait
+
+      - name: Set up postgres
+        run: npm run db:migrate
+        env:
+          DATABASE_URL: postgres://blurts:blurts@localhost:5432/test-blurts
+          NEXTAUTH_SECRET: "Unused for migrations, but required to be present when loading env vars"
+          SENTRY_DSN: "Unused for migrations, but required to be present when loading env vars"
+          EMAIL_FROM: "Unused for migrations, but required to be present when loading env vars"
+          HIBP_KANON_API_TOKEN: "Unused for migrations, but required to be present when loading env vars"
+          S3_BUCKET: "Unused for migrations, but required to be present when loading env vars"
+          FX_REMOTE_SETTINGS_WRITER_SERVER: "Unused for migrations, but required to be present when loading env vars"
+          FX_REMOTE_SETTINGS_WRITER_USER: "Unused for migrations, but required to be present when loading env vars"
+          FX_REMOTE_SETTINGS_WRITER_PASS: "Unused for migrations, but required to be present when loading env vars"
+          NIMBUS_UUID_NAMESPACE: "Unused for migrations, but required to be present when loading env vars"
+          NIMBUS_SIDECAR_URL: "Unused for migrations, but required to be present when loading env vars"
+
+      # Let's run those integration tests!
+      - name: Run service integration tests
+        run: npm run test-integrations

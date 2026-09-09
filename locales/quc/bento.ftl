@@ -1,21 +1,13 @@
-fx-monitor = { -product-name }
-pocket = { -brand-pocket }
-fx-send = { -brand-send }
-fx-lockwise = { -brand-lockwise }
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-## If possible, keep "Firefox Browser" in English, but feel free 
-## to translate browser if that doesn't work for your language.
-
-fx-desktop = { -brand-name } Nik'onel rech ilwach
-fx-mobile = { -brand-name } Nik'onel rech Achib'il ch'aweb'al
-
-##
-
-# Aria label for the Bento button
-bento-button-title = { -brand-name } Taq kojkemchak chi'l taq patanib'al
+toolbar-app-picker-trigger-title = { -brand-mozilla } taq kojkemchak chi'l taq pataninem
+toolbar-app-picker-product-vpn = { -brand-mozilla-vpn }
+toolbar-app-picker-product-relay = { -brand-relay }
+toolbar-app-picker-product-fx-desktop = { -brand-firefox } Rech taq uwach kematz'ib'
+toolbar-app-picker-product-fx-mobile = { -brand-firefox } rech taq silab' ch'aweb'al
+toolbar-app-picker-product-solo = { -brand-solo-ai }
+toolbar-app-picker-by-mozilla = Xb'an rumal { -brand-mozilla }
 # Bento headline
 fx-makes-tech = { -brand-name } are k'ak' eta'mab'al le kukoj uchuq'ab' chech le echeb'alil rech nimk'atz.
-# A link at the bottom of the Bento menu
-made-by-mozilla = B'anom rumal { -brand-Mozilla }
-# Aria label for button that closes the Bento menu
-mobile-close-bento-button-title = Chatz'apij cholokib'al

@@ -1,9 +1,16 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+# Breach Data Classes
 
 account-balances = Rajilab'alil taq kemb'i'aj
 address-book-contacts = Taq ajch'ab'e'n rech le uwujil taq kemriqonib'al
 age-groups = Taq wokaj rech Junab'
 ages = Taq junab'
+# Refers to medical appointments.
+appointments = Taq riqoj ib'
 apps-installed-on-devices = Taq wiqkemchakub'al jeqetal pa taq kojkemchak
 astrological-signs = Taq etal rech nik'onem wachkaj
 audio-recordings = Taq k'olch'ab'alil
@@ -12,7 +19,7 @@ avatars = Taq avatar
 bank-account-numbers = Rajilab'alil taq kemb'i'aj rech ja k'olpwaq
 beauty-ratings = Rajilab'alil taq je'lal
 biometric-data = Juq'attzij rech q'alwinaqilal
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = K'aslem
 browser-user-agent-details = Taq ucholajil kojonel rech nik'onel

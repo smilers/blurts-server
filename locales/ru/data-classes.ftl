@@ -1,9 +1,16 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+
+# Breach Data Classes
+
+academic-records = Академические записи
 account-balances = Остатки на счетах
 address-book-contacts = Контакты адресной книги
 age-groups = Возрастные группы
 ages = Возраст
+ai-prompts = ИИ-промты
 # Refers to medical appointments.
 appointments = Записи к врачу
 apps-installed-on-devices = Приложения, установленные на устройствах
@@ -11,10 +18,10 @@ astrological-signs = Астрологические знаки
 audio-recordings = Аудиозаписи
 auth-tokens = Авторизационные токены
 avatars = Аватары
-bank-account-numbers = Номера банковских счетов
+bank-account-numbers = Номера счетов
 beauty-ratings = Оценки красоты
 biometric-data = Биометрические данные
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = Биографии
 browser-user-agent-details = User agent браузеров
@@ -25,24 +32,37 @@ career-levels = Должности
 cellular-network-names = Названия операторов сотовой связи
 charitable-donations = Благотворительные пожертвования
 chat-logs = История чатов
+citizenship-statuses = Статусы гражданства
+clothing-sizes = Размеры одежды
+comments = Комментарии
+company-names = Названия компаний
 credit-card-cvv = CVV-коды банковских карт
 credit-cards = Банковские карты
+credit-scores = Кредитная история
 credit-status-information = Наличие кредитов
-cryptocurrency-wallet-hashes = Хэши криптовалютных кошельков
+cryptocurrency-wallet-addresses = Адреса криптовалютных кошельков
+cryptocurrency-wallet-hashes = Хеши криптовалютных кошельков
 customer-feedback = Отзывы пользователей
 customer-interactions = Взаимодействие с пользователями
+customer-service-comments = Комментарии службы поддержки
 dates-of-birth = Даты рождения
 deceased-date = Даты смерти
 deceased-statuses = Свидетельства смерти
+# Instructions that you can set up in online shopping services to get your orders
+# delivered (e.g. deliver to a specific neighbor, entrance location, etc.).
+delivery-instructions = Инструкции по доставке
 device-information = Информация об устройствах
 device-serial-numbers = Серийные номера устройств
 device-usage-tracking-data = Данные отслеживания об использовании устройств
+disabilities = Ограниченные возможности
+display-names = Отображаемые имена
 drinking-habits = Употребление алкоголя
 driver-s-licenses = Водительские права
 drug-habits = Употребление лекарств и наркотиков
+earnings = Доходы
 eating-habits = Привычки в питании
 education-levels = Уровни образования
-email-addresses = Адреса электронной почты
+email-addresses = Адреса эл. почты
 email-messages = Почтовые сообщения
 employers = Работодатели
 employment-statuses = Статусы занятости
@@ -54,11 +74,14 @@ family-structure = Структура семей
 financial-investments = Финансовые вложения
 financial-transactions = Финансовые транзакции
 fitness-levels = Уровни физической подготовки
+flights-taken = Выполнено рейсов
+forum-posts = Сообщения на форуме
 genders = Половая принадлежность
 geographic-locations = Географические местоположения
 government-issued-ids = Удостоверения личности выданные государством
 health-insurance-information = Информация о медицинском страховании
 historical-passwords = История изменения паролей
+hiv-statuses = ВИЧ-статусы
 home-loan-information = Наличие кредитов на недвижимость
 home-ownership-statuses = Наличие недвижимости
 homepage-urls = URL домашних страниц
@@ -67,14 +90,21 @@ imsi-numbers = Номера IMSI
 income-levels = Уровни доходов
 instant-messenger-identities = Идентификаторы мессенджеров
 ip-addresses = IP-адреса
+iq-levels = Уровни IQ
 job-applications = Заявления о приёме на работу
 job-titles = Названия должностей
-# This string refers to vehicle license plates. 
+language-preferences = Языковые настройки
+latitude-and-longitude-pairs = Пары «широта» и «долгота»
+# This string refers to vehicle license plates.
 licence-plates = Номерные знаки
 living-costs = Расходы на проживание
+# This string refers to financial loans.
+loan-information = Информация о кредитах
 login-histories = Истории логинов
+loyalty-program-details = Подробности программы лояльности
 mac-addresses = MAC-адреса
 marital-statuses = Семейные положения
+military-service = Служба в армии
 # Mnemonic phrases are a group of words used to access the content of cryptocurrency wallets.
 mnemonic-phrases = Мнемонические фразы
 mothers-maiden-names = Девичьи фамилии матери
@@ -82,10 +112,16 @@ names = Имена
 nationalities = Национальности
 net-worths = Финансовые состояния
 nicknames = Прозвища
+# no data classes found
+none-data-class = Нет
 occupations = Профессии
+# various data classes grouped together
+other-data-class = Другое
 parenting-plans = Планы по «заведению» детей
 partial-credit-card-data = Частичные данные банковских карт
 partial-dates-of-birth = Части дней рождения
+partial-government-issued-ids = Частичные удостоверения личности выданные государством
+partial-phone-numbers = Частичные номера телефонов
 passport-numbers = Номера паспортов
 password-hints = Подсказки для паролей
 password-strengths = Стойкости пароля
@@ -106,6 +142,7 @@ political-views = Политические взгляды
 private-messages = Личные сообщения
 professional-skills = Профессиональные навыки
 profile-photos = Фотографии профилей
+profile-statistics = Статистика профиля
 purchases = Покупки
 purchasing-habits = Привычные покупки
 races = Расы
@@ -118,23 +155,32 @@ school-grades-class-levels = Классы обучения
 security-questions-and-answers = Вопросы для восстановления паролей и ответы на них
 sexual-fetishes = Сексуальные фетиши
 sexual-orientations = Сексуальные ориентации
+shipment-tracking-numbers = Номера для отслеживания посылки
 smoking-habits = Зависимости от курения
 sms-messages = SMS-сообщения
 social-connections = Социальные связи
 social-media-profiles = Профили социальных сетей
 social-security-numbers = Номера социального страхования
+socioeconomic-levels = Социально-экономические уровни
 spoken-languages = Языки общения
 spouses-names = Имена супругов
 support-tickets = Заявки в службы поддержки
 survey-results = Результаты опросов
+tattoo-status = Статус татуировки
 taxation-records = Налоговые отчёты
+telecommunications-carrier = Операторы связи
 time-zones = Часовые пояса
 travel-habits = Туристические привычки
+travel-plans = Планы поездок
 user-statuses = Пользовательские статусы
 user-website-urls = Личные веб-сайты
 usernames = Логины
 utility-bills = Счета за коммунальные услуги
 vehicle-details = Информация о транспортных средствах
+vehicle-identification-numbers-vins = Идентификационные номера транспортных средств (VINы)
+vehicle-registration-plates = Номерные знаки транспортных средств
+vip-statuses = VIP-статусы
+warranty-claims = Заявления о гарантии
 website-activity = Активность на веб-сайтах
 work-habits = Рабочие привычки
 years-of-birth = Года рождения

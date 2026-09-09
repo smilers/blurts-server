@@ -1,94 +1,106 @@
-# Firefox Monitor is a product name and should not be translated.
--product-name = Firefox Monitor
-# Firefox is a brand name and should not be translated.
--brand-name = Firefox
-# A Firefox Monitor Report is an emailed statement from Firefox Monitor containing a list of known data breaches where the user’s email address was found amongst the stolen data.
-firefox-monitor-report = Laporan { -product-name }
-report-date = Tanggal Laporan:
-email-address = Alamat Surel:
-# A link to legal information about mozilla products.
-legal = Legal
-# Unsubscribe link in email.
-email-unsub-link = Berhenti berlangganan
-# This string appears in the footer of breach report and breach alert emails.
-# { $unsubLink } is a link to the user's dashboard where they can unsubscribe from Monitor
-# and uses the text from { email-unsub-link }. { $faqLink } is a link to the 
-# Firefox Monitor SUMO page and uses the text from { frequently-asked-questions }.
-email-footer-blurb =
-    Anda menerima email ini karena Anda mendaftar untuk peringatan { -product-name }
-    Tidak lagi menginginkan surel ini? { $unsubLink }. Ini adalah surel otomatis. Untuk dukungan, kunjungi { $faqLink }.
-# This string appears in the footer of verification emails. { $faqLink } is a link
-# to the Firefox Monitor SUMO page and uses the text from { frequently-asked-questions }.
-email-verify-footer-copy =
-    Anda menerima surel ini karena Anda mendaftar untuk dapatkan peringatan { -product-name }.
-    Ini adalah surel otomatis. Untuk dukungan, kunjungi { $faqLink }.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+## Email headers
+
+email-header-button-sign-in = Masuk
+
+## Email footers
+
+email-footer-support-heading = Ada pertanyaan tentang { -brand-mozilla-monitor }?
+email-footer-support-content = Kunjungi <support-link>Pusat Dukungan</support-link> kami untuk mendapatkan bantuan
+email-footer-trigger-transactional = Anda menerima surel ini sebagai pelanggan { -brand-mozilla-monitor }.
+email-footer-reason-subscriber = Anda menerima surel otomatis ini sebagai pelanggan { -brand-mozilla-monitor }. Jika Anda menerimanya karena kesalahan, tidak ada tindakan yang diperlukan. Untuk informasi lebih lanjut, silakan kunjungi <support-link>{ -brand-mozilla } Support</support-link>.
+email-footer-reason-subscriber-one-time = Anda menerima surel otomatis satu kali ini karena Anda berlangganan { -brand-monitor-plus }. Anda tidak akan menerima surel lagi seperti ini. Untuk informasi lebih lanjut, silakan kunjungi <support-link>{ -brand-mozilla } Support</support-link>.
+# Variables:
+#    $support_link (string) - The URL the user can visit for support, e.g. "https://support.mozilla.org"
+email-footer-support-content-plain = Kunjungi Pusat Dukungan kami untuk mendapatkan bantuan: { $support_link }
+# Variables:
+#   $hibp_link (string) - URL to Have I Been Pwned, e.g. "https://haveibeenpwned.com".
+email-footer-source-hibp-plain = Data pembobolan disediakan oleh { -brand-HIBP }: { $hibp_link }
+email-footer-source-hibp = Data pembobolan disediakan oleh <hibp-link>{ -brand-HIBP }</hibp-link>
+email-footer-logo-mozilla-alt = { -brand-mozilla }
+email-footer-meta-privacy-notice = Privasi
+email-unsubscribe-link = <link_to_unsub>Berhenti berlangganan</link_to_unsub>
+# Variables:
+#   $unsub_link (string) - URL to the unsubscribe page, e.g. "https://monitor.mozilla.org/unsubscribe/...".
+email-unsubscribe-link-plain = Berhenti berlangganan: { $unsub_link }
+# Firefox Relay is a product name and should not be translated.
+-product-name-relay = Firefox Relay
+# Mozilla VPN is a product name and should not be translated.
+-product-name-vpn = Mozilla VPN
 # Button text
 verify-email-cta = Verifikasi Surel
-# Button text
-see-all-breaches = Lihat Semua Pembobolan
 # Headline of verification email
 email-link-expires = Tautan ini kedaluwarsa dalam 24 jam
-email-verify-blurb = Verifikasi surel Anda untuk menambahkannya ke { -product-name } dan mendaftar untuk peringatan kebocoran.
-# Email headline
-email-found-breaches-hl = Berikut ringkasan pembobolan data sebelumnya
-# Email headline
-email-breach-summary-for-email = Ringkasan pembobolan untuk { $userEmail }
-# Email headline
-email-no-breaches-hl = { $userEmail } muncul di 0 pembobolan data yang diketahui
-# Email headline
-email-alert-hl = { $userEmail } muncul dalam pembobolan data baru
+
+##
+
 # Subject line of email
 email-subject-found-breaches = { -product-name } menemukan info Anda dalam pembobolan ini
 # Subject line of email
 email-subject-no-breaches = { -product-name } tidak menemukan pembobolan yang diketahui
 # Subject line of email
 email-subject-verify = Verifikasi surel Anda untuk { -product-name }
-# { $fxmLink } is a link to Firefox Monitor and uses the text from { -product-name }.
-learn-more-about-fxm = Pelajari lebih lanjut tentang { $fxmLink }
-email-sensitive-disclaimer =
-    Karena sifat sensitif dari pembobolan ini, surel yang terlibat tidak dapat ditemukan secara publik.
-    Anda menerima pemberitahuan ini karena Anda adalah pemilik terverifikasi dari alamat surel ini.
 fxm-warns-you-no-breaches =
     { -product-name } memperingatkan Anda tentang pembobolan data yang melibatkan informasi pribadi Anda.
     Sejauh ini, tidak ada pembobolan yang ditemukan. Kami akan mengirimkan peringatan kepada Anda jika alamat surel Anda muncul dalam pembobolan baru.
-fxm-warns-you-found-breaches =
-    { -product-name } memperingatkan Anda tentang pembobolan data yang melibatkan informasi pribadi Anda.
-    Anda juga mendaftar untuk menerima peringatan jika alamat surel Anda muncul dalam pembobolan baru.
-email-breach-alert-blurb =
-    { -product-name } memperingatkan Anda tentang pembobolan data yang melibatkan informasi pribadi Anda.
-    Kami baru saja menerima rinciian tentang pembobolan data perusahaan lain.
-# List headline
-faq-list-headline = Pertanyaan umum
-# Link Title
-faq-v2-1 = Saya tidak mengenali salah satu perusahaan atau situs web ini. Mengapa saya termasuk dalam pembobolan ini?
-# Link Title
-faq-v2-2 = Apakah saya perlu melakukan sesuatu jika pembobolan terjadi bertahun-tahun yang lalu atau ini adalah akun lama?
-# Link Title
-faq-v2-3 = Saya baru tahu saya termasuk korban pembobolan data. Apa yang harus saya lakukan selanjutnya?
-# Link Title
-faq-v2-4 = Bagaimana { -product-name } memperlakukan situs sensitif?
-# This string contains nested markup that becomes a link to Firefox Monitor
-# later in the code. Please do not modify or remove "<a>" and "</a>".
-pre-fxa-message = <a>Buat { -brand-fxa } gratis</a>, dan Anda bisa menambahkan hingga 15 alamat surel.
-# Section headline
-monitor-another-email = Ingin memantau surel lainnya?
-# Subject line of email
-pre-fxa-subject = Pembaruan dari { -product-name }
-pre-fxa-headline = Apa yang berubah dengan { -product-name }
-pre-fxa-blurb =
-    Inilah yang berubah sejak Anda mendaftar { -product-name }, layanan yang
-    memantau pembobolan data pribadi Anda yang diketahui. Kami menghubungkannya dengan akun Firefox.
-pre-fxa-tout-1 = Tetap waspada akan pembobolan lainnya
-pre-fxa-p-1 =
-    <a>Buatlah akun</a> untuk memantau pembobolan data hingga
-    15 alamat surel. Kami sarankan untuk menambahkan alamat surel apapun yang Anda gunakan untuk membuat akun daring.
-pre-fxa-tout-2 = Dapatkan tampilan dasbor
-pre-fxa-p-2 =
-    Lihat semua pembobolan data di satu tempat sehingga Anda tahu kata sandi mana yang harus diubah.
-    Dasbor pembobolan hanya tersedia dengan akun.
-pre-fxa-tout-3 = Terus dapatkan peringatan melalui
-pre-fxa-p-3 =
-    Anda akan menerima peringatan dari { -product-name }. Kami akan memberitahu Anda jika informasi Anda
-    muncul pada sebuah pembobolan data terbaru.
-# Button at the bottom of pre-fxa email.
-create-account = Buat Akun
+
+## 2022 email template. HTML tags should not be translated, e.g. `<a>`
+
+# Have I Been Pwned attribution
+# Variables:
+#   $hibp-link-attr (String) - Link to Have I Been Pwned
+email-2022-hibp-attribution = Data pembobolan disediakan oleh <a { $hibp-link-attr }>{ -brand-HIBP }</a>
+
+## Verification email
+
+email-verify-heading = Lindungi data Anda, mulai sekarang
+email-verify-simply-click = Cukup klik tautan di bawah ini untuk menyelesaikan verifikasi akun Anda.
+
+## Breach report
+
+email-breach-summary = Berikut ringkasan pembobolan data Anda
+# Variables:
+#   $email-address (string) - Email address, bolded
+email-breach-detected = Hasil pencarian untuk akun { $email-address } Anda telah mendeteksi bahwa surel Anda mungkin telah terekspos. Kami menyarankan Anda bertindak sekarang untuk menindaklanjuti pelanggaran ini.
+email-dashboard-cta = Buka Dasbor
+
+## Breach alert email
+
+email-breach-alert-all-subject = Pembobolan data baru terdeteksi
+email-breach-alert-all-preview = Kami akan memandu Anda melalui langkah-langkah untuk mengatasinya.
+email-breach-alert-all-hero-heading = Anda mengalami kebocoran data baru
+email-breach-alert-all-hero-subheading = Jangan khawatir, kami dapat membantu Anda mengatasi paparan ini
+email-breach-alert-all-lead = { -brand-mozilla-monitor } menemukan pembobolan data berikut yang mencakup informasi pribadi Anda:
+email-breach-alert-all-source-title = Sumber pembobolan:
+email-breach-alert-all-data-points-title = Data Anda yang terpapar:
+email-breach-alert-all-next-steps-lead = Kami akan memandu Anda langkah demi langkah tentang cara mengatasi kebocoran data ini.
+email-breach-alert-all-next-steps-cta-label = Mari kita mulai
+email-breach-alert-all-next-steps-button-dashboard = Ke Dasbor
+
+## Breach alert redesigned strings
+
+# $company-name is the name of the company/site that was breached.
+email-breach-alert-all-hero-heading-1 = { $company-name } detail kebocoran data
+# $company-name is the name of the company/site that was breached.
+# $breach-date is the date of the breach.
+email-breach-alert-all-lead-1 = { -brand-mozilla-monitor } menemukan info Anda dalam kebocoran data { $company-name } pada { $breach-date }. Anda mendapatkan peringatan ini karena Anda mendaftar ke <link_to_settings>pemberitahuan pembobolan</link_to_settings>.
+email-breach-alert-all-source-title-1 = Detail pembobolan
+email-breach-alert-company = Perusahaan:
+email-breach-alert-date-of-breach = Tanggal pembobolan:
+email-breach-alert-info-exposed = Info Anda yang terekspos:
+email-breach-alert-next-steps = Langkah selanjutnya
+email-breach-alert-next-steps-description = <sign_in_link>Masuk</sign_in_link> ke dasbor { -brand-mozilla-monitor } Anda. Kami akan memandu Anda melalui langkah-langkah yang diperlukan untuk mengatasinya.
+email-breach-alert-all-next-steps-button-resolve-breach-on-dashboard = Selesaikan pelanggaran di dasbor
+email-breach-alert-faqs-title = T&J
+email-breach-alert-faq-qn-1 = Mengapa saya menerima ini?
+email-breach-alert-faq-ans-1 = Anda mendaftar untuk peringatan kebocoran data. <link_to_settings>Perbarui preferensi Anda</link_to_settings> kapan saja di pengaturan.
+email-breach-alert-faq-qn-2 = Mengapa saya tidak mengenali perusahaan atau situs ini?
+email-breach-alert-faq-ans-2 = Ini mungkin telah mengubah kepemilikan atau nama, melibatkan akun lama atau akun yang dibuat untuk Anda, atau berasal dari daftar informasi pribadi terbuka yang dibeli.
+email-breach-alert-faq-qn-3 = Apa itu peringatan kebocoran data?
+email-breach-alert-faq-ans-3 = Notifikasi { -brand-mozilla-monitor } dikirim saat info pribadi yang Anda pantau terungkap, dicuri, atau disalin tanpa izin.
+email-breach-alert-faq-qn-4 = Apa itu { -brand-mozilla-monitor }?
+email-breach-alert-faq-ans-4 = Layanan pemberitahuan pembobolan data gratis yang memperingatkan Anda jika akun daring Anda terlibat dalam pembobolan data.

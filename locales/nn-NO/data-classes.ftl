@@ -1,9 +1,16 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+
+# Breach Data Classes
+
+academic-records = Utdanningsopplysningar
 account-balances = Konto-saldoar
 address-book-contacts = Adressebokskontaktar
 age-groups = Aldersgrupper
 ages = Aldrar
+ai-prompts = AI-instruksar
 # Refers to medical appointments.
 appointments = Avtalar
 apps-installed-on-devices = Appar er installerte på einingar
@@ -14,7 +21,7 @@ avatars = Avatarar
 bank-account-numbers = Bankkontonummer
 beauty-ratings = Venleiksvurderingar
 biometric-data = Biometriske data
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = Personopplysningar
 browser-user-agent-details = Informasjon om brukaragenten til nettlesaren
@@ -25,21 +32,34 @@ career-levels = Karrierenivå
 cellular-network-names = Namn på mobilnettverk
 charitable-donations = Donasjonar til velgjerande føremål
 chat-logs = Chatteloggar
+citizenship-statuses = Status for statsborgarskap
+clothing-sizes = Storleik på klede
+comments = Kommentarar
+company-names = Firmanamn
 credit-card-cvv = CVV-kodar for betalingskort
 credit-cards = Betalingskort
+credit-scores = Kredittvurderingar
 credit-status-information = Informasjon om betalingsevne
+cryptocurrency-wallet-addresses = Adresser til kryptovaluta-lommebøker
 cryptocurrency-wallet-hashes = Hash-verdiar for kryptovaluta-lommebøker
 customer-feedback = Tilbakemeldingar frå kundar
 customer-interactions = Kundesamhandling
+customer-service-comments = Kommentarer frå kundeservice
 dates-of-birth = Fødselsdatoar
 deceased-date = Dødsdato
 deceased-statuses = Dødsannonsar
+# Instructions that you can set up in online shopping services to get your orders
+# delivered (e.g. deliver to a specific neighbor, entrance location, etc.).
+delivery-instructions = Leveringsinstruksjonar
 device-information = Einingsinformasjon
 device-serial-numbers = Serienummer på einingar
 device-usage-tracking-data = Sporingsdata for bruk av einingar
+disabilities = Funksjonshemmingar
+display-names = Visingsnamn
 drinking-habits = Drikkevanar
 driver-s-licenses = Førarkort
 drug-habits = Narkotikavanar
+earnings = Inntekter
 eating-habits = Matvanar
 education-levels = Utdanningsnivå
 email-addresses = E-postadresser
@@ -54,11 +74,14 @@ family-structure = Familiestruktur
 financial-investments = Finansielle investeringar
 financial-transactions = Finansielle transaksjonar
 fitness-levels = Fitnessnivå
+flights-taken = Flyreiser tekne
+forum-posts = Foruminnlegg
 genders = Kjønn
 geographic-locations = Geografiske plasseringar
 government-issued-ids = ID-kort skrivne ut av styremakter
 health-insurance-information = Informasjon om helseforsikring
 historical-passwords = Tidlegare passord
+hiv-statuses = HIV-status
 home-loan-information = Informasjon om bustadlån
 home-ownership-statuses = Bustadsstatus
 homepage-urls = Heimesideadresser
@@ -67,12 +90,21 @@ imsi-numbers = IMSI-nummer
 income-levels = Inntektsnivå
 instant-messenger-identities = Identitetar på Instant messenger-tenester
 ip-addresses = IP-adresser
+iq-levels = IQ-nivå
 job-applications = Jobbsøknadar
 job-titles = Jobbtitlar
+language-preferences = Språkinnstillingar
+latitude-and-longitude-pairs = Breidde- og lengdegradskoordinatar
+# This string refers to vehicle license plates.
+licence-plates = Bilskilt
 living-costs = Levekostnadar
+# This string refers to financial loans.
+loan-information = Låneinformasjon
 login-histories = Innloggingshistorikk
+loyalty-program-details = Detaljar for lojalitetsprogram
 mac-addresses = MAC-adresser
 marital-statuses = Sivilstand
+military-service = Militærteneste
 # Mnemonic phrases are a group of words used to access the content of cryptocurrency wallets.
 mnemonic-phrases = Mnemoniske frasar
 mothers-maiden-names = Mor sitt jentenamn
@@ -80,10 +112,16 @@ names = Namn
 nationalities = Nasjonalitetar
 net-worths = Formue
 nicknames = Kallenamn
+# no data classes found
+none-data-class = Ingen
 occupations = Yrke
+# various data classes grouped together
+other-data-class = Anna
 parenting-plans = Foreldreplanar
 partial-credit-card-data = Delvis kreditkortdata
 partial-dates-of-birth = Delvise fødselsdatoar
+partial-government-issued-ids = Delvis offentleg utskrivne ID-ar
+partial-phone-numbers = Delvise telefonnummer
 passport-numbers = Passnummer
 password-hints = Passordhint
 password-strengths = Passordstyrke
@@ -104,6 +142,7 @@ political-views = Politisk syn
 private-messages = Private meldingar
 professional-skills = Faglege kvalifikasjonar
 profile-photos = Profilbilde
+profile-statistics = Profilstatistikk
 purchases = Innkjøp
 purchasing-habits = Innkjøpsvanar
 races = Tevlingar
@@ -116,23 +155,32 @@ school-grades-class-levels = Skulekarakterar (klassenivå)
 security-questions-and-answers = Tryggingsspørsmål og svar
 sexual-fetishes = Seksuelle fetisjar
 sexual-orientations = Seksuell legning
+shipment-tracking-numbers = Sporingsnummer for sendingar
 smoking-habits = Røykevanar
 sms-messages = SMS-meldingar
 social-connections = Sosiale kontaktar
 social-media-profiles = Profilar på sosiale medium
 social-security-numbers = Personnummer
+socioeconomic-levels = Sosioøkonomiske nivå
 spoken-languages = Talte språk
 spouses-names = Namn på ektefellar
 support-tickets = Support-spørsmål
 survey-results = Undersøkingsresultat
+tattoo-status = Tatoveringsstatus
 taxation-records = Skateopplysningar
+telecommunications-carrier = Teleoperatørar
 time-zones = Tidssoner
 travel-habits = Reisevanar
+travel-plans = Reiseplanar
 user-statuses = Brukarstatusar
 user-website-urls = Adresser til brukarnettstadar
 usernames = Brukarnamn
 utility-bills = El-rekningar
 vehicle-details = Detaljar om køyretøy
+vehicle-identification-numbers-vins = Chassisnummer (VIN)
+vehicle-registration-plates = Registreringsskiltet til køyretøyet
+vip-statuses = VIP-statusar
+warranty-claims = Garantikrav
 website-activity = Nettstadaktivitet
 work-habits = Arbeidsvanar
 years-of-birth = Fødselsår

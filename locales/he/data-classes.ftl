@@ -1,4 +1,9 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+# Breach Data Classes
 
 account-balances = יתרות בחשבון
 address-book-contacts = פרטי אנשי קשר
@@ -12,7 +17,7 @@ avatars = אווטארים
 bank-account-numbers = מספרי חשבון בנק
 beauty-ratings = דירוגי יופי
 biometric-data = נתונים ביומטריים
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = פרטים ביוגרפיים
 browser-user-agent-details = פרטי סוכן משתמש בדפדפן
@@ -25,6 +30,7 @@ charitable-donations = תרומות צדקה
 chat-logs = תמלילי שיחה
 credit-card-cvv = קוד CVV של כרטיסי אשראי
 credit-cards = כרטיסי אשראי
+credit-scores = דירוגי אשראי
 credit-status-information = מצב אשראי
 customer-feedback = משובי לקוחות
 customer-interactions = תקשורת עם לקוחות
@@ -33,6 +39,7 @@ deceased-date = תאריך מוות
 deceased-statuses = מצבי מוות
 device-information = מידע על התקן
 device-usage-tracking-data = נתוני מעקב אחר שימוש במכשיר
+disabilities = מוגבלויות
 drinking-habits = הרגלי שתייה
 drug-habits = הרגלי סמים
 eating-habits = הרגלי אכילה
@@ -63,6 +70,7 @@ income-levels = רמות הכנסה
 instant-messenger-identities = זהויות ברשתות מסרים מידיים
 ip-addresses = כתובות IP
 job-titles = תיאורי תפקיד
+latitude-and-longitude-pairs = זוגות קווי רוחב ואורך
 mac-addresses = כתובות MAC
 marital-statuses = מצבי נישואין
 names = שמות
@@ -108,6 +116,7 @@ sms-messages = מסרונים
 social-connections = קשרים חברתיים
 social-media-profiles = פרופילים במדיה חברתית
 social-security-numbers = מספרי ביטוח לאומי
+socioeconomic-levels = רמות סוציו-אקונומיות
 spoken-languages = שפות מדוברות
 spouses-names = שמות בני זוג
 support-tickets = בקשות תמיכה
